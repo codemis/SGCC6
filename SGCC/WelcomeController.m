@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Johnathan Pulos. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "WelcomeController.h"
 
-@interface FirstViewController ()
+@interface WelcomeController ()
 
 @end
 
-@implementation FirstViewController
+@implementation WelcomeController
 
 - (void)viewDidLoad
 {
