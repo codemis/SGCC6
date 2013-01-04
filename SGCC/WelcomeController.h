@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface WelcomeController : UIViewController
-
+-(IBAction)home:(UIStoryboardSegue*) segue;
 @end
