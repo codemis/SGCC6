@@ -1,5 +1,5 @@
 //
-//  FirstViewController.m
+//  WelcomeViewController.m
 //  SGCC
 //
 //  Created by Johnathan Pulos on 1/3/13.
