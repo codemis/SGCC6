@@ -35,6 +35,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="KSw-E7-t7z" kind="modal" identifier="WhatWeBelieveSegue" id="xwq-QH-2uv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCW-do-m6i">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -45,6 +48,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Csl-iE-bHz" kind="modal" identifier="WhoIsJesusSegue" id="H0z-wd-9SA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bd-BJ-w90">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -91,7 +97,7 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyA-KX-4XO">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">San Gabriel Community Church's beginnings date back to 1889 when Mrs. Victoria Corona dreamed of opening an evangelical church in her San Gabriel home. It took a pioneering faith and a sacrificial spirit in those beginning days.
+                                <string key="text">San Gabriel Community Church's beginnings date back to 1889 when Mrs. Victoria Corona dreamed of opening an evangelical church in her San Gabriel home. It took a pioneering faith and a sacrificial spirit in those beginning days.
 
 In the fall of 1892, an afternoon Bible School was opened; and between 1902 and 1918, the church congregation met in various location in the local San Gabriel area.
 
@@ -103,7 +109,7 @@ A Master Plan Committee was formed in 2003 to investigate, make recommendations 
 
 In June of 2012, the church voted to change our name from San Gabriel Union Church to San Gabriel Community Church to more accurately reflect our purpose and goals. 
 
-Today, 94 years later, San Gabriel Community Church, under the leadership of Pastor Steve Balentine and a Board of Elders, continues to minister and serve that God may be shown to be glorious in all things.</mutableString>
+Today, 94 years later, San Gabriel Community Church, under the leadership of Pastor Steve Balentine and a Board of Elders, continues to minister and serve that God may be shown to be glorious in all things.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -135,7 +141,82 @@ Today, 94 years later, San Gabriel Community Church, under the leadership of Pas
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYH-Dq-1vH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="1tK-H4-zF0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="644" y="-454"/>
+            <point key="canvasLocation" x="668" y="-974"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="p9S-X5-8hQ">
+            <objects>
+                <viewController id="KSw-E7-t7z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p3j-RV-2L7">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4R-mP-Quk">
+                                <color key="tintColor" red="0.25490197539999998" green="0.35294118520000001" blue="0.28627452250000002" alpha="1" colorSpace="deviceRGB"/>
+                                <items>
+                                    <navigationItem title="What We Believe" id="Qvz-Rn-ZN9">
+                                        <barButtonItem key="leftBarButtonItem" title="Close" id="bOR-1S-OCc">
+                                            <connections>
+                                                <segue destination="sRp-j9-A86" kind="unwind" unwindAction="home:" id="QoQ-mT-nvA"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t4R-mP-Quk" firstAttribute="leading" secondItem="p3j-RV-2L7" secondAttribute="leading" type="default" id="4HV-kl-3xr"/>
+                            <constraint firstItem="t4R-mP-Quk" firstAttribute="trailing" secondItem="p3j-RV-2L7" secondAttribute="trailing" type="default" id="FJe-T9-19B"/>
+                            <constraint firstItem="t4R-mP-Quk" firstAttribute="top" secondItem="p3j-RV-2L7" secondAttribute="top" type="default" id="eKT-MJ-KPI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ek5-kT-vAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="sRp-j9-A86" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="668" y="-250"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0jO-xd-fSx">
+            <objects>
+                <viewController id="Csl-iE-bHz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="phK-Dx-FVd">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dks-zt-vJr">
+                                <color key="tintColor" red="0.25490197539999998" green="0.35294118520000001" blue="0.28627452250000002" alpha="1" colorSpace="deviceRGB"/>
+                                <items>
+                                    <navigationItem title="Who is Jesus?" id="UcF-dF-uAe">
+                                        <barButtonItem key="leftBarButtonItem" title="Close" id="vka-zt-b2P">
+                                            <connections>
+                                                <segue destination="Arr-vU-pV5" kind="unwind" unwindAction="home:" id="EVd-GY-2Yt"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWh-IU-dcM">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sWh-IU-dcM" firstAttribute="trailing" secondItem="phK-Dx-FVd" secondAttribute="trailing" type="default" id="5If-sP-avn"/>
+                            <constraint firstItem="sWh-IU-dcM" firstAttribute="bottom" secondItem="phK-Dx-FVd" secondAttribute="bottom" type="default" id="6ib-yN-EnC"/>
+                            <constraint firstItem="sWh-IU-dcM" firstAttribute="leading" secondItem="phK-Dx-FVd" secondAttribute="leading" type="default" id="H5b-82-A0F"/>
+                            <constraint firstItem="Dks-zt-vJr" firstAttribute="leading" secondItem="phK-Dx-FVd" secondAttribute="leading" type="default" id="R2a-gW-xSn"/>
+                            <constraint firstItem="sWh-IU-dcM" firstAttribute="top" secondItem="Dks-zt-vJr" secondAttribute="bottom" type="default" id="gVa-VH-mM9"/>
+                            <constraint firstItem="Dks-zt-vJr" firstAttribute="trailing" secondItem="phK-Dx-FVd" secondAttribute="trailing" type="default" id="wG2-hx-Ppf"/>
+                            <constraint firstItem="Dks-zt-vJr" firstAttribute="top" secondItem="phK-Dx-FVd" secondAttribute="top" type="default" id="xCU-6T-Z6i"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hxu-Jf-daf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Arr-vU-pV5" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="642" y="515"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
