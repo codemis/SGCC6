@@ -7,6 +7,7 @@
 //
 
 #import "WelcomeController.h"
+#import "WebsiteViewController.h"
 
 @interface WelcomeController ()
 @end
@@ -15,6 +16,14 @@
 
 -(void) home:(UIStoryboardSegue *)segue
 {
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"whoIsJesusSegue"]) {
+        WebsiteViewController *controller = [segue destinationViewController];
+        controller.websiteURL = [NSURL URLWithString:@"http://www.matthiasmedia.com.au/2wtl/2wtlonline.html"];
+        controller.viewTitle = @"Who is Jesus?";
+    }
 }
 
 @end

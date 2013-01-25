@@ -49,7 +49,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Csl-iE-bHz" kind="modal" identifier="WhoIsJesusSegue" id="H0z-wd-9SA"/>
+                                    <segue destination="dbC-RZ-TcG" kind="modal" identifier="whoIsJesusSegue" id="umo-f9-4x4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bd-BJ-w90">
@@ -86,6 +86,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="116" y="-272"/>
+        </scene>
+        <!--Website View Controller-->
+        <scene sceneID="G15-mS-fg2">
+            <objects>
+                <viewController id="dbC-RZ-TcG" customClass="WebsiteViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Ss-ZD-tAt">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MgC-Vv-rbZ">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqt-kS-nME">
+                                <color key="tintColor" red="0.25490197539999998" green="0.35294118520000001" blue="0.28627452250000002" alpha="1" colorSpace="deviceRGB"/>
+                                <items>
+                                    <navigationItem title="Title" id="jxH-4O-9ff">
+                                        <barButtonItem key="leftBarButtonItem" title="Close" id="Xed-Vi-Kug">
+                                            <connections>
+                                                <segue destination="hgF-oa-cYg" kind="unwind" unwindAction="home:" id="d3h-V4-KbZ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bqt-kS-nME" firstAttribute="trailing" secondItem="9Ss-ZD-tAt" secondAttribute="trailing" type="default" id="5Ei-Z8-HZ9"/>
+                            <constraint firstItem="bqt-kS-nME" firstAttribute="leading" secondItem="9Ss-ZD-tAt" secondAttribute="leading" type="default" id="E12-mL-SFB"/>
+                            <constraint firstItem="MgC-Vv-rbZ" firstAttribute="bottom" secondItem="9Ss-ZD-tAt" secondAttribute="bottom" type="default" id="FvR-gB-lDZ"/>
+                            <constraint firstItem="bqt-kS-nME" firstAttribute="bottom" secondItem="MgC-Vv-rbZ" secondAttribute="top" type="default" id="SWi-Ov-YXF"/>
+                            <constraint firstItem="MgC-Vv-rbZ" firstAttribute="trailing" secondItem="9Ss-ZD-tAt" secondAttribute="trailing" type="default" id="f2S-d0-1ce"/>
+                            <constraint firstItem="MgC-Vv-rbZ" firstAttribute="leading" secondItem="9Ss-ZD-tAt" secondAttribute="leading" type="default" id="qGA-D8-ue2"/>
+                            <constraint firstItem="bqt-kS-nME" firstAttribute="top" secondItem="9Ss-ZD-tAt" secondAttribute="top" type="default" id="viP-gt-36B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="bqt-kS-nME" id="Fnf-4L-yqX"/>
+                        <outlet property="webView" destination="MgC-Vv-rbZ" id="QRj-m8-zQn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bee-4z-IHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hgF-oa-cYg" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="656" y="-1701"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VCh-2k-gio">
@@ -247,6 +292,13 @@ Today, 94 years later, San Gabriel Community Church, under the leadership of Pas
         </class>
         <class className="UIStoryboardSegue" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
+        </class>
+        <class className="WebsiteViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebsiteViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
         </class>
         <class className="WelcomeController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WelcomeController.h"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		662ED47616B259EE00CBDBDA /* WebsiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ED47516B259EE00CBDBDA /* WebsiteViewController.m */; };
 		6684F66A16968C970052A9C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6684F66916968C970052A9C5 /* UIKit.framework */; };
 		6684F66C16968C980052A9C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6684F66B16968C970052A9C5 /* Foundation.framework */; };
 		6684F66E16968C980052A9C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6684F66D16968C980052A9C5 /* CoreGraphics.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		662ED47416B259EE00CBDBDA /* WebsiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebsiteViewController.h; sourceTree = "<group>"; };
+		662ED47516B259EE00CBDBDA /* WebsiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebsiteViewController.m; sourceTree = "<group>"; };
 		6684F66616968C970052A9C5 /* SGCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6684F66916968C970052A9C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6684F66B16968C970052A9C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -120,6 +123,8 @@
 				6684F68416968C980052A9C5 /* WelcomeController.h */,
 				6684F68516968C980052A9C5 /* WelcomeController.m */,
 				6684F67016968C980052A9C5 /* Supporting Files */,
+				662ED47416B259EE00CBDBDA /* WebsiteViewController.h */,
+				662ED47516B259EE00CBDBDA /* WebsiteViewController.m */,
 			);
 			path = SGCC;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 				6684F67616968C980052A9C5 /* main.m in Sources */,
 				6684F67A16968C980052A9C5 /* AppDelegate.m in Sources */,
 				6684F68616968C980052A9C5 /* WelcomeController.m in Sources */,
+				662ED47616B259EE00CBDBDA /* WebsiteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
