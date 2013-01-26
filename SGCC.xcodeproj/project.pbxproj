@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6616DAB816B4998F00413D45 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6616DAB716B4998F00413D45 /* EventsViewController.m */; };
 		662ED47616B259EE00CBDBDA /* WebsiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ED47516B259EE00CBDBDA /* WebsiteViewController.m */; };
 		6684F66A16968C970052A9C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6684F66916968C970052A9C5 /* UIKit.framework */; };
 		6684F66C16968C980052A9C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6684F66B16968C970052A9C5 /* Foundation.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6616DAB616B4998F00413D45 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		6616DAB716B4998F00413D45 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		662ED47416B259EE00CBDBDA /* WebsiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebsiteViewController.h; sourceTree = "<group>"; };
 		662ED47516B259EE00CBDBDA /* WebsiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebsiteViewController.m; sourceTree = "<group>"; };
 		6684F66616968C970052A9C5 /* SGCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +128,8 @@
 				6684F67016968C980052A9C5 /* Supporting Files */,
 				662ED47416B259EE00CBDBDA /* WebsiteViewController.h */,
 				662ED47516B259EE00CBDBDA /* WebsiteViewController.m */,
+				6616DAB616B4998F00413D45 /* EventsViewController.h */,
+				6616DAB716B4998F00413D45 /* EventsViewController.m */,
 			);
 			path = SGCC;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 				6684F67A16968C980052A9C5 /* AppDelegate.m in Sources */,
 				6684F68616968C980052A9C5 /* WelcomeController.m in Sources */,
 				662ED47616B259EE00CBDBDA /* WebsiteViewController.m in Sources */,
+				6616DAB816B4998F00413D45 /* EventsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
