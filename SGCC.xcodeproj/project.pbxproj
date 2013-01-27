@@ -89,6 +89,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6616DAB916B4A04900413D45 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6684F68416968C980052A9C5 /* WelcomeController.h */,
+				6684F68516968C980052A9C5 /* WelcomeController.m */,
+				662ED47416B259EE00CBDBDA /* WebsiteViewController.h */,
+				662ED47516B259EE00CBDBDA /* WebsiteViewController.m */,
+				6616DAB616B4998F00413D45 /* EventsViewController.h */,
+				6616DAB716B4998F00413D45 /* EventsViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		6684F65D16968C970052A9C5 = {
 			isa = PBXGroup;
 			children = (
@@ -120,16 +133,11 @@
 		6684F66F16968C980052A9C5 /* SGCC */ = {
 			isa = PBXGroup;
 			children = (
+				6616DAB916B4A04900413D45 /* Controllers */,
 				6684F67816968C980052A9C5 /* AppDelegate.h */,
 				6684F67916968C980052A9C5 /* AppDelegate.m */,
 				6684F68116968C980052A9C5 /* MainStoryboard.storyboard */,
-				6684F68416968C980052A9C5 /* WelcomeController.h */,
-				6684F68516968C980052A9C5 /* WelcomeController.m */,
 				6684F67016968C980052A9C5 /* Supporting Files */,
-				662ED47416B259EE00CBDBDA /* WebsiteViewController.h */,
-				662ED47516B259EE00CBDBDA /* WebsiteViewController.m */,
-				6616DAB616B4998F00413D45 /* EventsViewController.h */,
-				6616DAB716B4998F00413D45 /* EventsViewController.m */,
 			);
 			path = SGCC;
 			sourceTree = "<group>";

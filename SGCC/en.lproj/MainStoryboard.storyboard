@@ -61,6 +61,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="contactButtonClicked:" destination="2" eventType="touchUpInside" id="Ikq-W1-aY8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cyan="0.68000000000000005" magenta="0.39000000000000001" yellow="0.60999999999999999" black="0.17999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
@@ -285,6 +288,34 @@ Today, 94 years later, San Gabriel Community Church, under the leadership of Pas
         <image name="home.png" width="28" height="28"/>
         <image name="logo.png" width="280" height="61"/>
     </resources>
+    <classes>
+        <class className="EventsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UIStoryboardSegue" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
+        </class>
+        <class className="WebsiteViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebsiteViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="WelcomeController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WelcomeController.h"/>
+            <relationships>
+                <relationship kind="action" name="contactButtonClicked:"/>
+                <relationship kind="action" name="home:" candidateClass="UIStoryboardSegue"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
