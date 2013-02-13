@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3083" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -191,14 +191,20 @@ Today, 94 years later, San Gabriel Community Church, under the leadership of Pas
             </objects>
             <point key="canvasLocation" x="668" y="-974"/>
         </scene>
-        <!--View Controller-->
+        <!--What We BelieveVC-->
         <scene sceneID="p9S-X5-8hQ">
             <objects>
-                <viewController id="KSw-E7-t7z" sceneMemberID="viewController">
+                <viewController id="KSw-E7-t7z" customClass="WhatWeBelieveVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p3j-RV-2L7">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="orP-mH-WVA">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4R-mP-Quk">
                                 <color key="tintColor" red="0.25490197539999998" green="0.35294118520000001" blue="0.28627452250000002" alpha="1" colorSpace="deviceRGB"/>
                                 <items>
@@ -216,9 +222,16 @@ Today, 94 years later, San Gabriel Community Church, under the leadership of Pas
                         <constraints>
                             <constraint firstItem="t4R-mP-Quk" firstAttribute="leading" secondItem="p3j-RV-2L7" secondAttribute="leading" type="default" id="4HV-kl-3xr"/>
                             <constraint firstItem="t4R-mP-Quk" firstAttribute="trailing" secondItem="p3j-RV-2L7" secondAttribute="trailing" type="default" id="FJe-T9-19B"/>
+                            <constraint firstItem="orP-mH-WVA" firstAttribute="leading" secondItem="p3j-RV-2L7" secondAttribute="leading" type="default" id="QyB-lE-lPF"/>
+                            <constraint firstItem="orP-mH-WVA" firstAttribute="trailing" secondItem="p3j-RV-2L7" secondAttribute="trailing" type="default" id="bbx-VN-6yS"/>
+                            <constraint firstItem="orP-mH-WVA" firstAttribute="top" secondItem="t4R-mP-Quk" secondAttribute="bottom" type="default" id="chx-Y4-2W2"/>
                             <constraint firstItem="t4R-mP-Quk" firstAttribute="top" secondItem="p3j-RV-2L7" secondAttribute="top" type="default" id="eKT-MJ-KPI"/>
+                            <constraint firstItem="orP-mH-WVA" firstAttribute="bottom" secondItem="p3j-RV-2L7" secondAttribute="bottom" type="default" id="t8D-ON-fVK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="orP-mH-WVA" id="Q4Z-o2-mjS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ek5-kT-vAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="sRp-j9-A86" userLabel="Exit" sceneMemberID="exit"/>
@@ -313,6 +326,12 @@ Today, 94 years later, San Gabriel Community Church, under the leadership of Pas
             <relationships>
                 <relationship kind="action" name="contactButtonClicked:"/>
                 <relationship kind="action" name="home:" candidateClass="UIStoryboardSegue"/>
+            </relationships>
+        </class>
+        <class className="WhatWeBelieveVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WhatWeBelieveVC.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
             </relationships>
         </class>
     </classes>

@@ -36,6 +36,7 @@
 		6684F6CA16969F780052A9C5 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6684F6C316969F780052A9C5 /* Icon@2x.png */; };
 		6684F6CB16969F780052A9C5 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 6684F6C416969F780052A9C5 /* iTunesArtwork.png */; };
 		F4E5932416CC26810057F22D /* WhatWeBelieve.attrstr in Resources */ = {isa = PBXBuildFile; fileRef = F4E5932316CC26810057F22D /* WhatWeBelieve.attrstr */; };
+		F4E5932716CC27530057F22D /* WhatWeBelieveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E5932616CC27530057F22D /* WhatWeBelieveVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,8 @@
 		6684F6C316969F780052A9C5 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		6684F6C416969F780052A9C5 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		F4E5932316CC26810057F22D /* WhatWeBelieve.attrstr */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = WhatWeBelieve.attrstr; sourceTree = "<group>"; };
+		F4E5932516CC27530057F22D /* WhatWeBelieveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhatWeBelieveVC.h; sourceTree = "<group>"; };
+		F4E5932616CC27530057F22D /* WhatWeBelieveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhatWeBelieveVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 		6616DAB916B4A04900413D45 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F4E5932516CC27530057F22D /* WhatWeBelieveVC.h */,
+				F4E5932616CC27530057F22D /* WhatWeBelieveVC.m */,
 				6684F68416968C980052A9C5 /* WelcomeController.h */,
 				6684F68516968C980052A9C5 /* WelcomeController.m */,
 				662ED47416B259EE00CBDBDA /* WebsiteViewController.h */,
@@ -268,6 +273,7 @@
 				6684F68616968C980052A9C5 /* WelcomeController.m in Sources */,
 				662ED47616B259EE00CBDBDA /* WebsiteViewController.m in Sources */,
 				6616DAB816B4998F00413D45 /* EventsViewController.m in Sources */,
+				F4E5932716CC27530057F22D /* WhatWeBelieveVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
