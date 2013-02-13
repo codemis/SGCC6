@@ -36,6 +36,7 @@
 		6684F6CA16969F780052A9C5 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6684F6C316969F780052A9C5 /* Icon@2x.png */; };
 		6684F6CB16969F780052A9C5 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 6684F6C416969F780052A9C5 /* iTunesArtwork.png */; };
 		F4E5932916CC298F0057F22D /* WhatWeBelieve.html in Resources */ = {isa = PBXBuildFile; fileRef = F4E5932816CC298F0057F22D /* WhatWeBelieve.html */; };
+		F4E5932C16CC2B1B0057F22D /* WhatWeBelieveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E5932B16CC2B1B0057F22D /* WhatWeBelieveViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,8 @@
 		6684F6C316969F780052A9C5 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		6684F6C416969F780052A9C5 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		F4E5932816CC298F0057F22D /* WhatWeBelieve.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = WhatWeBelieve.html; sourceTree = "<group>"; };
+		F4E5932A16CC2B1B0057F22D /* WhatWeBelieveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhatWeBelieveViewController.h; sourceTree = "<group>"; };
+		F4E5932B16CC2B1B0057F22D /* WhatWeBelieveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhatWeBelieveViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				662ED47516B259EE00CBDBDA /* WebsiteViewController.m */,
 				6616DAB616B4998F00413D45 /* EventsViewController.h */,
 				6616DAB716B4998F00413D45 /* EventsViewController.m */,
+				F4E5932A16CC2B1B0057F22D /* WhatWeBelieveViewController.h */,
+				F4E5932B16CC2B1B0057F22D /* WhatWeBelieveViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 				6684F68616968C980052A9C5 /* WelcomeController.m in Sources */,
 				662ED47616B259EE00CBDBDA /* WebsiteViewController.m in Sources */,
 				6616DAB816B4998F00413D45 /* EventsViewController.m in Sources */,
+				F4E5932C16CC2B1B0057F22D /* WhatWeBelieveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

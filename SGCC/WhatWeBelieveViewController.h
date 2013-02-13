@@ -1,0 +1,2 @@
+@interface WhatWeBelieveViewController : UIViewController
+@end
