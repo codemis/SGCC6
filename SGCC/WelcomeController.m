@@ -8,8 +8,11 @@
 
 #import "WelcomeController.h"
 #import "WebsiteViewController.h"
-#define SGUC_PHONE @"tel://16262870486"
-@interface WelcomeController () <UIActionSheetDelegate>
+#import <MessageUI/MessageUI.h>
+
+#define SGCC_PHONE @"tel://16262870486"
+#define SGCC_EMAIL @"zombieonrails@gmail.com"
+@interface WelcomeController () <UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
 - (IBAction)contactButtonClicked:(id)sender;
 @end
 
@@ -35,23 +38,34 @@
                                                     cancelButtonTitle:@"Cancel"
                                                destructiveButtonTitle:nil
                                                     otherButtonTitles:  @"Call Us",
-                                  @"Email Us",
-                                  @"Directions",
-                                  @"Visit Website",
-                                  nil];
+                                                                        @"Email Us",
+                                                                        @"Directions",
+                                                                        @"Visit Website",
+                                                                        nil];
     [actionSheet showFromTabBar:self.tabBarController.tabBar];
 }
-#pragma mark - UIActionSheetDelegate Functions
+#pragma mark - UIActionSheetDelegate Methods
+-(void) showEmail
+{
+    MFMailComposeViewController *mailComposeVC = MFMailComposeViewController.new;
+    mailComposeVC.mailComposeDelegate = self;
+    [mailComposeVC setSubject:@"Contact from SGCC App"];
+    [mailComposeVC setMessageBody:@"" isHTML:NO];
+    [mailComposeVC setToRecipients:@[SGCC_EMAIL]];
+    [self presentViewController:mailComposeVC animated:YES completion:NULL];
+    
+}
 -(void)     actionSheet:(UIActionSheet *)actionSheet
    clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     switch (buttonIndex) {
         case 0:
             //Call
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:SGUC_PHONE]];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:SGCC_PHONE]];
             break;
         case 1:
             //Email
+            [self showEmail];
             break;
         case 2:
             //Directions
@@ -60,5 +74,42 @@
             //Website
             break;
     }
+}
+#pragma mark - MailComposeDelegate Methods
+- (void) mailComposeController:(MFMailComposeViewController *)controller
+           didFinishWithResult:(MFMailComposeResult)result
+                         error:(NSError *)error
+{
+    NSString *message = @"";
+    NSString *messageTitle = @"";
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            message = @"Thank You!  We will contact you as soon as possible.";
+            messageTitle = @"Thank You";
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            message = @"Thank You!  We will contact you as soon as possible.";
+            messageTitle = @"Thank You";
+            NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            message = @"We had a problem!  Please try again later.";
+            messageTitle = @"Sorry";
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:^(void)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:messageTitle message:message delegate:self cancelButtonTitle:@"Done" otherButtonTitles:NULL, nil];
+        [alert show];
+    }];
 }
 @end
