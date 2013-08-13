@@ -1,97 +1,96 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4488.2" systemVersion="13A538g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
     </dependencies>
     <scenes>
         <!--Welcome Controller - First-->
         <scene sceneID="11">
             <objects>
                 <viewController title="First" id="2" customClass="WelcomeController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xBR-aU-4OP"/>
+                        <viewControllerLayoutGuide type="bottom" id="4DQ-XA-lip"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="16">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="SBg-wS-3uq"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="SBg-wS-3uq">
+                                <rect key="frame" x="20" y="20" width="280" height="61"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYw-l6-gfw">
+                                <rect key="frame" x="20" y="269" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="About Us">
-                                    <color key="titleColor" red="0.80392163991928101" green="0.15686275064945221" blue="0.18431372940540314" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleColor" red="0.83137261867523193" green="0.72156864404678345" blue="0.37647062540054321" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="gcv-wk-ayc" kind="modal" identifier="AboutUsSegue" id="GyO-fJ-xhn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paM-qG-XP2">
+                                <rect key="frame" x="20" y="309" width="280" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="qfJ-xV-0xi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="What We Believe">
-                                    <color key="titleColor" red="0.80392163991928101" green="0.15686275064945221" blue="0.18431372940540314" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleColor" red="0.83137261870000001" green="0.72156864399999998" blue="0.37647062539999998" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="KSw-E7-t7z" kind="modal" identifier="WhatWeBelieveSegue" id="xwq-QH-2uv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCW-do-m6i">
+                                <rect key="frame" x="20" y="365" width="280" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="toT-nS-057"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Who is Jesus?">
-                                    <color key="titleColor" red="0.80392163991928101" green="0.15686275064945221" blue="0.18431372940540314" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleColor" red="0.83137261870000001" green="0.72156864399999998" blue="0.37647062539999998" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="dbC-RZ-TcG" kind="modal" identifier="whoIsJesusSegue" id="umo-f9-4x4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bd-BJ-w90">
+                                <rect key="frame" x="20" y="422" width="280" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="x1M-bK-qKI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Directions &amp; Contact Info">
-                                    <color key="titleColor" red="0.80392163991928101" green="0.15686275064945221" blue="0.18431372940540314" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleColor" red="0.83137261870000001" green="0.72156864399999998" blue="0.37647062539999998" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="contactButtonClicked:" destination="2" eventType="touchUpInside" id="Ikq-W1-aY8"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cyan="0.68000000000000005" magenta="0.39000000000000001" yellow="0.60999999999999999" black="0.17999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MYw-l6-gfw" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0Yu-EI-5Pj"/>
-                            <constraint firstItem="MYw-l6-gfw" firstAttribute="centerY" secondItem="16" secondAttribute="centerY" type="user" id="8zj-lk-uXb"/>
-                            <constraint firstItem="MYw-l6-gfw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="16" secondAttribute="top" constant="81" type="user" id="AKd-UJ-LMB"/>
-                            <constraint firstItem="2bd-BJ-w90" firstAttribute="top" secondItem="ZCW-do-m6i" secondAttribute="bottom" constant="10" type="user" id="GBt-3q-3fn"/>
-                            <constraint firstItem="ZCW-do-m6i" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="MBy-Wg-B4j"/>
-                            <constraint firstItem="2bd-BJ-w90" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="SAb-l1-6FP"/>
-                            <constraint firstItem="ZCW-do-m6i" firstAttribute="top" secondItem="paM-qG-XP2" secondAttribute="bottom" constant="10" type="user" id="YDY-Cj-v1D"/>
-                            <constraint firstAttribute="trailing" secondItem="2bd-BJ-w90" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YpF-iK-eFZ"/>
-                            <constraint firstAttribute="trailing" secondItem="MYw-l6-gfw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="bVT-Hw-vYe"/>
-                            <constraint firstAttribute="trailing" secondItem="paM-qG-XP2" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dS2-DX-Ogi"/>
-                            <constraint firstItem="paM-qG-XP2" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eJW-A3-UEW"/>
-                            <constraint firstItem="SBg-wS-3uq" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fRw-aa-hpB"/>
-                            <constraint firstItem="SBg-wS-3uq" firstAttribute="top" secondItem="16" secondAttribute="top" constant="20" symbolic="YES" type="default" id="qKe-9k-XVy"/>
-                            <constraint firstAttribute="trailing" secondItem="ZCW-do-m6i" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="saU-22-Gvd"/>
-                            <constraint firstItem="paM-qG-XP2" firstAttribute="top" secondItem="MYw-l6-gfw" secondAttribute="bottom" constant="10" type="user" id="t2d-l6-jFf"/>
+                            <constraint firstItem="MYw-l6-gfw" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" id="0Yu-EI-5Pj"/>
+                            <constraint firstItem="MYw-l6-gfw" firstAttribute="centerY" secondItem="16" secondAttribute="centerY" id="8zj-lk-uXb"/>
+                            <constraint firstItem="MYw-l6-gfw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="16" secondAttribute="top" constant="81" id="AKd-UJ-LMB"/>
+                            <constraint firstItem="2bd-BJ-w90" firstAttribute="top" secondItem="ZCW-do-m6i" secondAttribute="bottom" constant="10" id="GBt-3q-3fn"/>
+                            <constraint firstItem="ZCW-do-m6i" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" id="MBy-Wg-B4j"/>
+                            <constraint firstItem="2bd-BJ-w90" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" id="SAb-l1-6FP"/>
+                            <constraint firstItem="ZCW-do-m6i" firstAttribute="top" secondItem="paM-qG-XP2" secondAttribute="bottom" constant="10" id="YDY-Cj-v1D"/>
+                            <constraint firstAttribute="trailing" secondItem="2bd-BJ-w90" secondAttribute="trailing" constant="20" symbolic="YES" id="YpF-iK-eFZ"/>
+                            <constraint firstAttribute="trailing" secondItem="MYw-l6-gfw" secondAttribute="trailing" constant="20" symbolic="YES" id="bVT-Hw-vYe"/>
+                            <constraint firstAttribute="trailing" secondItem="paM-qG-XP2" secondAttribute="trailing" constant="20" symbolic="YES" id="dS2-DX-Ogi"/>
+                            <constraint firstItem="paM-qG-XP2" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" id="eJW-A3-UEW"/>
+                            <constraint firstItem="SBg-wS-3uq" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" id="fRw-aa-hpB"/>
+                            <constraint firstItem="SBg-wS-3uq" firstAttribute="top" secondItem="16" secondAttribute="top" constant="20" symbolic="YES" id="qKe-9k-XVy"/>
+                            <constraint firstAttribute="trailing" secondItem="ZCW-do-m6i" secondAttribute="trailing" constant="20" symbolic="YES" id="saU-22-Gvd"/>
+                            <constraint firstItem="paM-qG-XP2" firstAttribute="top" secondItem="MYw-l6-gfw" secondAttribute="bottom" constant="10" id="t2d-l6-jFf"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home.png" id="7"/>
@@ -104,14 +103,20 @@
         <scene sceneID="G15-mS-fg2">
             <objects>
                 <viewController id="dbC-RZ-TcG" customClass="WebsiteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1CH-jq-Z9g"/>
+                        <viewControllerLayoutGuide type="bottom" id="DF3-Kj-F3K"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9Ss-ZD-tAt">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MgC-Vv-rbZ">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqt-kS-nME">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <color key="tintColor" red="0.25490197539999998" green="0.35294118520000001" blue="0.28627452250000002" alpha="1" colorSpace="deviceRGB"/>
                                 <items>
                                     <navigationItem title="Title" id="jxH-4O-9ff">
@@ -126,13 +131,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bqt-kS-nME" firstAttribute="trailing" secondItem="9Ss-ZD-tAt" secondAttribute="trailing" type="default" id="5Ei-Z8-HZ9"/>
-                            <constraint firstItem="bqt-kS-nME" firstAttribute="leading" secondItem="9Ss-ZD-tAt" secondAttribute="leading" type="default" id="E12-mL-SFB"/>
-                            <constraint firstItem="MgC-Vv-rbZ" firstAttribute="bottom" secondItem="9Ss-ZD-tAt" secondAttribute="bottom" type="default" id="FvR-gB-lDZ"/>
-                            <constraint firstItem="bqt-kS-nME" firstAttribute="bottom" secondItem="MgC-Vv-rbZ" secondAttribute="top" type="default" id="SWi-Ov-YXF"/>
-                            <constraint firstItem="MgC-Vv-rbZ" firstAttribute="trailing" secondItem="9Ss-ZD-tAt" secondAttribute="trailing" type="default" id="f2S-d0-1ce"/>
-                            <constraint firstItem="MgC-Vv-rbZ" firstAttribute="leading" secondItem="9Ss-ZD-tAt" secondAttribute="leading" type="default" id="qGA-D8-ue2"/>
-                            <constraint firstItem="bqt-kS-nME" firstAttribute="top" secondItem="9Ss-ZD-tAt" secondAttribute="top" type="default" id="viP-gt-36B"/>
+                            <constraint firstItem="bqt-kS-nME" firstAttribute="trailing" secondItem="9Ss-ZD-tAt" secondAttribute="trailing" id="5Ei-Z8-HZ9"/>
+                            <constraint firstItem="bqt-kS-nME" firstAttribute="leading" secondItem="9Ss-ZD-tAt" secondAttribute="leading" id="E12-mL-SFB"/>
+                            <constraint firstItem="MgC-Vv-rbZ" firstAttribute="bottom" secondItem="9Ss-ZD-tAt" secondAttribute="bottom" id="FvR-gB-lDZ"/>
+                            <constraint firstItem="bqt-kS-nME" firstAttribute="bottom" secondItem="MgC-Vv-rbZ" secondAttribute="top" id="SWi-Ov-YXF"/>
+                            <constraint firstItem="MgC-Vv-rbZ" firstAttribute="trailing" secondItem="9Ss-ZD-tAt" secondAttribute="trailing" id="f2S-d0-1ce"/>
+                            <constraint firstItem="MgC-Vv-rbZ" firstAttribute="leading" secondItem="9Ss-ZD-tAt" secondAttribute="leading" id="qGA-D8-ue2"/>
+                            <constraint firstItem="bqt-kS-nME" firstAttribute="top" secondItem="9Ss-ZD-tAt" secondAttribute="top" id="viP-gt-36B"/>
                         </constraints>
                     </view>
                     <connections>
@@ -149,11 +154,16 @@
         <scene sceneID="VCh-2k-gio">
             <objects>
                 <viewController id="gcv-wk-ayc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f7c-Rl-5sk"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Ae-SU-cGd"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dIC-6C-YsW">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyA-KX-4XO">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">San Gabriel Community Church's beginnings date back to 1889 when Mrs. Victoria Corona dreamed of opening an evangelical church in her San Gabriel home. It took a pioneering faith and a sacrificial spirit in those beginning days.
 
@@ -172,6 +182,7 @@ Today, 94 years later, San Gabriel Community Church, under the leadership of Pas
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wf1-FR-DcV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <color key="tintColor" red="0.25490197539329529" green="0.35294118523597717" blue="0.28627452254295349" alpha="1" colorSpace="deviceRGB"/>
                                 <items>
                                     <navigationItem title="About Us" id="S85-5t-xb7">
@@ -186,13 +197,13 @@ Today, 94 years later, San Gabriel Community Church, under the leadership of Pas
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oyA-KX-4XO" firstAttribute="leading" secondItem="dIC-6C-YsW" secondAttribute="leading" type="default" id="5LL-Ek-EXd"/>
-                            <constraint firstItem="oyA-KX-4XO" firstAttribute="top" secondItem="Wf1-FR-DcV" secondAttribute="bottom" type="default" id="Fek-Ff-dyT"/>
-                            <constraint firstItem="Wf1-FR-DcV" firstAttribute="top" secondItem="dIC-6C-YsW" secondAttribute="top" type="default" id="brD-3n-Z5H"/>
-                            <constraint firstItem="Wf1-FR-DcV" firstAttribute="leading" secondItem="dIC-6C-YsW" secondAttribute="leading" type="default" id="dha-2j-CYh"/>
-                            <constraint firstItem="oyA-KX-4XO" firstAttribute="bottom" secondItem="dIC-6C-YsW" secondAttribute="bottom" type="default" id="qZi-3A-u9M"/>
-                            <constraint firstItem="oyA-KX-4XO" firstAttribute="trailing" secondItem="dIC-6C-YsW" secondAttribute="trailing" type="default" id="u4r-bz-GHO"/>
-                            <constraint firstItem="Wf1-FR-DcV" firstAttribute="trailing" secondItem="dIC-6C-YsW" secondAttribute="trailing" type="default" id="xgO-6B-cFy"/>
+                            <constraint firstItem="oyA-KX-4XO" firstAttribute="leading" secondItem="dIC-6C-YsW" secondAttribute="leading" id="5LL-Ek-EXd"/>
+                            <constraint firstItem="oyA-KX-4XO" firstAttribute="top" secondItem="Wf1-FR-DcV" secondAttribute="bottom" id="Fek-Ff-dyT"/>
+                            <constraint firstItem="Wf1-FR-DcV" firstAttribute="top" secondItem="dIC-6C-YsW" secondAttribute="top" id="brD-3n-Z5H"/>
+                            <constraint firstItem="Wf1-FR-DcV" firstAttribute="leading" secondItem="dIC-6C-YsW" secondAttribute="leading" id="dha-2j-CYh"/>
+                            <constraint firstItem="oyA-KX-4XO" firstAttribute="bottom" secondItem="dIC-6C-YsW" secondAttribute="bottom" id="qZi-3A-u9M"/>
+                            <constraint firstItem="oyA-KX-4XO" firstAttribute="trailing" secondItem="dIC-6C-YsW" secondAttribute="trailing" id="u4r-bz-GHO"/>
+                            <constraint firstItem="Wf1-FR-DcV" firstAttribute="trailing" secondItem="dIC-6C-YsW" secondAttribute="trailing" id="xgO-6B-cFy"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -205,11 +216,16 @@ Today, 94 years later, San Gabriel Community Church, under the leadership of Pas
         <scene sceneID="p9S-X5-8hQ">
             <objects>
                 <viewController id="KSw-E7-t7z" customClass="WhatWeBelieveViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iQf-3s-9fq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ffk-Ud-Q3z"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="p3j-RV-2L7">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4R-mP-Quk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <color key="tintColor" red="0.25490197539999998" green="0.35294118520000001" blue="0.28627452250000002" alpha="1" colorSpace="deviceRGB"/>
                                 <items>
                                     <navigationItem title="What We Believe" id="Qvz-Rn-ZN9">
@@ -222,18 +238,19 @@ Today, 94 years later, San Gabriel Community Church, under the leadership of Pas
                                 </items>
                             </navigationBar>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AdK-n2-EtA">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="AdK-n2-EtA" firstAttribute="bottom" secondItem="p3j-RV-2L7" secondAttribute="bottom" type="default" id="39h-f6-2lX"/>
-                            <constraint firstItem="t4R-mP-Quk" firstAttribute="leading" secondItem="p3j-RV-2L7" secondAttribute="leading" type="default" id="4HV-kl-3xr"/>
-                            <constraint firstItem="t4R-mP-Quk" firstAttribute="trailing" secondItem="p3j-RV-2L7" secondAttribute="trailing" type="default" id="FJe-T9-19B"/>
-                            <constraint firstItem="AdK-n2-EtA" firstAttribute="leading" secondItem="p3j-RV-2L7" secondAttribute="leading" type="default" id="a8E-nB-mIh"/>
-                            <constraint firstItem="t4R-mP-Quk" firstAttribute="top" secondItem="p3j-RV-2L7" secondAttribute="top" type="default" id="eKT-MJ-KPI"/>
-                            <constraint firstItem="AdK-n2-EtA" firstAttribute="top" secondItem="t4R-mP-Quk" secondAttribute="bottom" type="default" id="pbl-IJ-33h"/>
-                            <constraint firstItem="AdK-n2-EtA" firstAttribute="trailing" secondItem="p3j-RV-2L7" secondAttribute="trailing" type="default" id="rQE-B3-zyy"/>
+                            <constraint firstItem="AdK-n2-EtA" firstAttribute="bottom" secondItem="p3j-RV-2L7" secondAttribute="bottom" id="39h-f6-2lX"/>
+                            <constraint firstItem="t4R-mP-Quk" firstAttribute="leading" secondItem="p3j-RV-2L7" secondAttribute="leading" id="4HV-kl-3xr"/>
+                            <constraint firstItem="t4R-mP-Quk" firstAttribute="trailing" secondItem="p3j-RV-2L7" secondAttribute="trailing" id="FJe-T9-19B"/>
+                            <constraint firstItem="AdK-n2-EtA" firstAttribute="leading" secondItem="p3j-RV-2L7" secondAttribute="leading" id="a8E-nB-mIh"/>
+                            <constraint firstItem="t4R-mP-Quk" firstAttribute="top" secondItem="p3j-RV-2L7" secondAttribute="top" id="eKT-MJ-KPI"/>
+                            <constraint firstItem="AdK-n2-EtA" firstAttribute="top" secondItem="t4R-mP-Quk" secondAttribute="bottom" id="pbl-IJ-33h"/>
+                            <constraint firstItem="AdK-n2-EtA" firstAttribute="trailing" secondItem="p3j-RV-2L7" secondAttribute="trailing" id="rQE-B3-zyy"/>
                         </constraints>
                     </view>
                     <connections>
@@ -249,29 +266,35 @@ Today, 94 years later, San Gabriel Community Church, under the leadership of Pas
         <scene sceneID="0jO-xd-fSx">
             <objects>
                 <viewController id="Csl-iE-bHz" customClass="EventsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tfd-99-4Hj"/>
+                        <viewControllerLayoutGuide type="bottom" id="AFn-kB-Tv8"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="phK-Dx-FVd">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dks-zt-vJr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <color key="tintColor" red="0.25490197539999998" green="0.35294118520000001" blue="0.28627452250000002" alpha="1" colorSpace="deviceRGB"/>
                                 <items>
                                     <navigationItem title="Events" id="UcF-dF-uAe"/>
                                 </items>
                             </navigationBar>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWh-IU-dcM">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sWh-IU-dcM" firstAttribute="trailing" secondItem="phK-Dx-FVd" secondAttribute="trailing" type="default" id="5If-sP-avn"/>
-                            <constraint firstItem="sWh-IU-dcM" firstAttribute="bottom" secondItem="phK-Dx-FVd" secondAttribute="bottom" type="default" id="6ib-yN-EnC"/>
-                            <constraint firstItem="sWh-IU-dcM" firstAttribute="leading" secondItem="phK-Dx-FVd" secondAttribute="leading" type="default" id="H5b-82-A0F"/>
-                            <constraint firstItem="Dks-zt-vJr" firstAttribute="leading" secondItem="phK-Dx-FVd" secondAttribute="leading" type="default" id="R2a-gW-xSn"/>
-                            <constraint firstItem="sWh-IU-dcM" firstAttribute="top" secondItem="Dks-zt-vJr" secondAttribute="bottom" type="default" id="gVa-VH-mM9"/>
-                            <constraint firstItem="Dks-zt-vJr" firstAttribute="trailing" secondItem="phK-Dx-FVd" secondAttribute="trailing" type="default" id="wG2-hx-Ppf"/>
-                            <constraint firstItem="Dks-zt-vJr" firstAttribute="top" secondItem="phK-Dx-FVd" secondAttribute="top" type="default" id="xCU-6T-Z6i"/>
+                            <constraint firstItem="sWh-IU-dcM" firstAttribute="trailing" secondItem="phK-Dx-FVd" secondAttribute="trailing" id="5If-sP-avn"/>
+                            <constraint firstItem="sWh-IU-dcM" firstAttribute="bottom" secondItem="phK-Dx-FVd" secondAttribute="bottom" id="6ib-yN-EnC"/>
+                            <constraint firstItem="sWh-IU-dcM" firstAttribute="leading" secondItem="phK-Dx-FVd" secondAttribute="leading" id="H5b-82-A0F"/>
+                            <constraint firstItem="Dks-zt-vJr" firstAttribute="leading" secondItem="phK-Dx-FVd" secondAttribute="leading" id="R2a-gW-xSn"/>
+                            <constraint firstItem="sWh-IU-dcM" firstAttribute="top" secondItem="Dks-zt-vJr" secondAttribute="bottom" id="gVa-VH-mM9"/>
+                            <constraint firstItem="Dks-zt-vJr" firstAttribute="trailing" secondItem="phK-Dx-FVd" secondAttribute="trailing" id="wG2-hx-Ppf"/>
+                            <constraint firstItem="Dks-zt-vJr" firstAttribute="top" secondItem="phK-Dx-FVd" secondAttribute="top" id="xCU-6T-Z6i"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Events" image="events.png" id="4FI-hy-bOI"/>
@@ -292,6 +315,7 @@ Today, 94 years later, San Gabriel Community Church, under the leadership of Pas
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.80392163989999998" green="0.15686275059999999" blue="0.18431372939999999" alpha="1" colorSpace="deviceRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
@@ -308,40 +332,6 @@ Today, 94 years later, San Gabriel Community Church, under the leadership of Pas
         <image name="home.png" width="28" height="28"/>
         <image name="logo.png" width="280" height="61"/>
     </resources>
-    <classes>
-        <class className="EventsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="UIStoryboardSegue" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
-        </class>
-        <class className="WebsiteViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebsiteViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="WelcomeController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WelcomeController.h"/>
-            <relationships>
-                <relationship kind="action" name="contactButtonClicked:"/>
-                <relationship kind="action" name="home:" candidateClass="UIStoryboardSegue"/>
-            </relationships>
-        </class>
-        <class className="WhatWeBelieveViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WhatWeBelieveViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
