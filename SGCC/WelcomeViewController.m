@@ -6,17 +6,17 @@
 //  Copyright (c) 2013 Johnathan Pulos. All rights reserved.
 //
 
-#import "WelcomeController.h"
+#import "WelcomeViewController.h"
 #import "WebsiteViewController.h"
 #import <MessageUI/MessageUI.h>
 
 #define SGCC_PHONE @"tel://16262870486"
 #define SGCC_EMAIL @"zombieonrails@gmail.com"
-@interface WelcomeController () <UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
+@interface WelcomeViewController () <UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
 - (IBAction)contactButtonClicked:(id)sender;
 @end
 
-@implementation WelcomeController
+@implementation WelcomeViewController
 
 -(void) home:(UIStoryboardSegue *)segue
 {
@@ -27,7 +27,6 @@
     if ([[segue identifier] isEqualToString:@"whoIsJesusSegue"]) {
         WebsiteViewController *controller = [segue destinationViewController];
         controller.websiteURL = [NSURL URLWithString:@"http://www.matthiasmedia.com.au/2wtl/2wtlonline.html"];
-        controller.viewTitle = @"Who is Jesus?";
     }
 }
 

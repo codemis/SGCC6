@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6616DAB816B4998F00413D45 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6616DAB716B4998F00413D45 /* EventsViewController.m */; };
 		662ED47616B259EE00CBDBDA /* WebsiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662ED47516B259EE00CBDBDA /* WebsiteViewController.m */; };
 		663725A01724BD1F00ED4396 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6637259F1724BD1F00ED4396 /* MessageUI.framework */; };
 		6684F66A16968C970052A9C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6684F66916968C970052A9C5 /* UIKit.framework */; };
@@ -17,7 +16,7 @@
 		6684F67616968C980052A9C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6684F67516968C980052A9C5 /* main.m */; };
 		6684F67A16968C980052A9C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6684F67916968C980052A9C5 /* AppDelegate.m */; };
 		6684F68316968C980052A9C5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6684F68116968C980052A9C5 /* MainStoryboard.storyboard */; };
-		6684F68616968C980052A9C5 /* WelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6684F68516968C980052A9C5 /* WelcomeController.m */; };
+		6684F68616968C980052A9C5 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6684F68516968C980052A9C5 /* WelcomeViewController.m */; };
 		6684F6A8169691C00052A9C5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6684F6A7169691C00052A9C5 /* README.md */; };
 		6684F6BC16969B6A0052A9C5 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6684F6BA16969B6A0052A9C5 /* logo.png */; };
 		6684F6BD16969B6A0052A9C5 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6684F6BB16969B6A0052A9C5 /* logo@2x.png */; };
@@ -36,13 +35,12 @@
 		F454933B17BAE78F007CA94D /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F454933317BAE78F007CA94D /* home@2x.png */; };
 		F454933C17BAE78F007CA94D /* sermons.png in Resources */ = {isa = PBXBuildFile; fileRef = F454933417BAE78F007CA94D /* sermons.png */; };
 		F454933D17BAE78F007CA94D /* sermons@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F454933517BAE78F007CA94D /* sermons@2x.png */; };
+		F454934017BAEBC3007CA94D /* TabBarControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F454933F17BAEBC3007CA94D /* TabBarControllerDelegate.m */; };
 		F4E5932916CC298F0057F22D /* WhatWeBelieve.html in Resources */ = {isa = PBXBuildFile; fileRef = F4E5932816CC298F0057F22D /* WhatWeBelieve.html */; };
 		F4E5932C16CC2B1B0057F22D /* WhatWeBelieveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E5932B16CC2B1B0057F22D /* WhatWeBelieveViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6616DAB616B4998F00413D45 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
-		6616DAB716B4998F00413D45 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		662ED47416B259EE00CBDBDA /* WebsiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebsiteViewController.h; sourceTree = "<group>"; };
 		662ED47516B259EE00CBDBDA /* WebsiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebsiteViewController.m; sourceTree = "<group>"; };
 		6637259F1724BD1F00ED4396 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -57,8 +55,8 @@
 		6684F67816968C980052A9C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6684F67916968C980052A9C5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6684F68216968C980052A9C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		6684F68416968C980052A9C5 /* WelcomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WelcomeController.h; sourceTree = "<group>"; };
-		6684F68516968C980052A9C5 /* WelcomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeController.m; sourceTree = "<group>"; };
+		6684F68416968C980052A9C5 /* WelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		6684F68516968C980052A9C5 /* WelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		6684F6A7169691C00052A9C5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		6684F6BA16969B6A0052A9C5 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		6684F6BB16969B6A0052A9C5 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
@@ -77,6 +75,8 @@
 		F454933317BAE78F007CA94D /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
 		F454933417BAE78F007CA94D /* sermons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sermons.png; sourceTree = "<group>"; };
 		F454933517BAE78F007CA94D /* sermons@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sermons@2x.png"; sourceTree = "<group>"; };
+		F454933E17BAEBC3007CA94D /* TabBarControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarControllerDelegate.h; sourceTree = "<group>"; };
+		F454933F17BAEBC3007CA94D /* TabBarControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarControllerDelegate.m; sourceTree = "<group>"; };
 		F4E5932816CC298F0057F22D /* WhatWeBelieve.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = WhatWeBelieve.html; sourceTree = "<group>"; };
 		F4E5932A16CC2B1B0057F22D /* WhatWeBelieveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhatWeBelieveViewController.h; sourceTree = "<group>"; };
 		F4E5932B16CC2B1B0057F22D /* WhatWeBelieveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhatWeBelieveViewController.m; sourceTree = "<group>"; };
@@ -100,12 +100,10 @@
 		6616DAB916B4A04900413D45 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6684F68416968C980052A9C5 /* WelcomeController.h */,
-				6684F68516968C980052A9C5 /* WelcomeController.m */,
+				6684F68416968C980052A9C5 /* WelcomeViewController.h */,
+				6684F68516968C980052A9C5 /* WelcomeViewController.m */,
 				662ED47416B259EE00CBDBDA /* WebsiteViewController.h */,
 				662ED47516B259EE00CBDBDA /* WebsiteViewController.m */,
-				6616DAB616B4998F00413D45 /* EventsViewController.h */,
-				6616DAB716B4998F00413D45 /* EventsViewController.m */,
 				F4E5932A16CC2B1B0057F22D /* WhatWeBelieveViewController.h */,
 				F4E5932B16CC2B1B0057F22D /* WhatWeBelieveViewController.m */,
 			);
@@ -144,6 +142,8 @@
 		6684F66F16968C980052A9C5 /* SGCC */ = {
 			isa = PBXGroup;
 			children = (
+				F454933E17BAEBC3007CA94D /* TabBarControllerDelegate.h */,
+				F454933F17BAEBC3007CA94D /* TabBarControllerDelegate.m */,
 				6616DAB916B4A04900413D45 /* Controllers */,
 				6684F67816968C980052A9C5 /* AppDelegate.h */,
 				6684F67916968C980052A9C5 /* AppDelegate.m */,
@@ -274,9 +274,9 @@
 			files = (
 				6684F67616968C980052A9C5 /* main.m in Sources */,
 				6684F67A16968C980052A9C5 /* AppDelegate.m in Sources */,
-				6684F68616968C980052A9C5 /* WelcomeController.m in Sources */,
+				6684F68616968C980052A9C5 /* WelcomeViewController.m in Sources */,
 				662ED47616B259EE00CBDBDA /* WebsiteViewController.m in Sources */,
-				6616DAB816B4998F00413D45 /* EventsViewController.m in Sources */,
+				F454934017BAEBC3007CA94D /* TabBarControllerDelegate.m in Sources */,
 				F4E5932C16CC2B1B0057F22D /* WhatWeBelieveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

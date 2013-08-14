@@ -7,5 +7,4 @@
 //
 @interface WebsiteViewController : UIViewController
 @property NSURL *websiteURL;
-@property NSString *viewTitle;
 @end
