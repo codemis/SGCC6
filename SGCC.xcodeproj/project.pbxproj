@@ -37,6 +37,7 @@
 		F454933D17BAE78F007CA94D /* sermons@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F454933517BAE78F007CA94D /* sermons@2x.png */; };
 		F454934017BAEBC3007CA94D /* TabBarControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F454933F17BAEBC3007CA94D /* TabBarControllerDelegate.m */; };
 		F4915F4817C4192E00071615 /* AboutUs.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F4915F4717C4192E00071615 /* AboutUs.rtf */; };
+		F4A7A65A17C4304F000BCF2C /* sgcc_church.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4A7A65917C4304F000BCF2C /* sgcc_church.jpg */; };
 		F4E5932916CC298F0057F22D /* WhatWeBelieve.html in Resources */ = {isa = PBXBuildFile; fileRef = F4E5932816CC298F0057F22D /* WhatWeBelieve.html */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		F454933E17BAEBC3007CA94D /* TabBarControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarControllerDelegate.h; sourceTree = "<group>"; };
 		F454933F17BAEBC3007CA94D /* TabBarControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarControllerDelegate.m; sourceTree = "<group>"; };
 		F4915F4717C4192E00071615 /* AboutUs.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = AboutUs.rtf; sourceTree = "<group>"; };
+		F4A7A65917C4304F000BCF2C /* sgcc_church.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sgcc_church.jpg; sourceTree = "<group>"; };
 		F4E5932816CC298F0057F22D /* WhatWeBelieve.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = WhatWeBelieve.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +169,7 @@
 		6684F6A9169699E70052A9C5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F4A7A65917C4304F000BCF2C /* sgcc_church.jpg */,
 				F454932E17BAE78F007CA94D /* articles.png */,
 				F454932F17BAE78F007CA94D /* articles@2x.png */,
 				F454933017BAE78F007CA94D /* events.png */,
@@ -246,6 +249,7 @@
 				F4915F4817C4192E00071615 /* AboutUs.rtf in Resources */,
 				F454933D17BAE78F007CA94D /* sermons@2x.png in Resources */,
 				F454933817BAE78F007CA94D /* events.png in Resources */,
+				F4A7A65A17C4304F000BCF2C /* sgcc_church.jpg in Resources */,
 				6684F6A8169691C00052A9C5 /* README.md in Resources */,
 				F454933917BAE78F007CA94D /* events@2x.png in Resources */,
 				6684F6BC16969B6A0052A9C5 /* logo.png in Resources */,

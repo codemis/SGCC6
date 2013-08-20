@@ -24,22 +24,26 @@
 
 @implementation WelcomeViewController
 #pragma mark - Storyboard-related methods
--(void) home:(UIStoryboardSegue *)segue
-{
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
 }
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    WebsiteViewController *controller = [segue destinationViewController];
+    WebsiteViewController *controller = segue.destinationViewController;
     if ([segue.identifier isEqualToString:@"whoIsJesusSegue"]) {
         controller.websiteURL = [NSURL URLWithString:JESUS_URL];
+        controller.title = @"Who Is Jesus?";
     } else if ([segue.identifier isEqualToString:@"whatWeBelieveSegue"]) {
         NSString *path = [NSBundle.mainBundle pathForResource:BELIEVE_FILE_NAME
                                                        ofType:BELIEVE_FILE_TYPE];
         controller.websiteURL = [NSURL fileURLWithPath:path];
+        controller.title = @"What We Believe";
     } else if ([segue.identifier isEqualToString:@"aboutUsSegue"]) {
         NSString *path = [NSBundle.mainBundle pathForResource:ABOUT_FILE_NAME
                                                        ofType:ABOUT_FILE_TYPE];
         controller.websiteURL = [NSURL fileURLWithPath:path];
+        controller.title = @"About Us";
     }
 }
 - (IBAction)contactButtonClicked:(id)sender
