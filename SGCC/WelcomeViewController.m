@@ -10,6 +10,10 @@
 #import "WebsiteViewController.h"
 #import <MessageUI/MessageUI.h>
 
+//TODO: move defines to
+#define kFileName @"WhatWeBelieve"
+#define kFileType @"html"
+#define kJesusURL @"http://www.matthiasmedia.com.au/2wtl/2wtlonline.html"
 #define SGCC_PHONE @"tel://16262870486"
 #define SGCC_EMAIL @"zombieonrails@gmail.com"
 @interface WelcomeViewController () <UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
@@ -17,19 +21,21 @@
 @end
 
 @implementation WelcomeViewController
-
+#pragma mark - Storyboard-related methods
 -(void) home:(UIStoryboardSegue *)segue
 {
 }
-
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"whoIsJesusSegue"]) {
-        WebsiteViewController *controller = [segue destinationViewController];
-        controller.websiteURL = [NSURL URLWithString:@"http://www.matthiasmedia.com.au/2wtl/2wtlonline.html"];
+    WebsiteViewController *controller = [segue destinationViewController];
+    if ([segue.identifier isEqualToString:@"whoIsJesusSegue"]) {
+        controller.websiteURL = [NSURL URLWithString:kJesusURL];
+    } else if ([segue.identifier isEqualToString:@"whatWeBelieveSegue"]) {
+        NSString *path = [NSBundle.mainBundle pathForResource:kFileName
+                                                       ofType:kFileType];
+        controller.websiteURL = [NSURL fileURLWithPath:path];
     }
 }
-
 - (IBAction)contactButtonClicked:(id)sender
 {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Contact Us"

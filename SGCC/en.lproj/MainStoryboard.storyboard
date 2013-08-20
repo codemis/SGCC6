@@ -42,7 +42,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="KSw-E7-t7z" kind="modal" identifier="WhatWeBelieveSegue" id="xwq-QH-2uv"/>
+                                    <segue destination="M2p-Q0-BMV" kind="modal" identifier="whatWeBelieveSegue" id="5Zd-Se-dGg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCW-do-m6i">
@@ -147,7 +147,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bee-4z-IHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="hgF-oa-cYg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="656" y="-1701"/>
+            <point key="canvasLocation" x="668" y="423"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VCh-2k-gio">
@@ -210,56 +210,6 @@ Today, 94 years later, San Gabriel Community Church, under the leadership of Pas
                 <exit id="1tK-H4-zF0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="668" y="-974"/>
-        </scene>
-        <!--What We Believe View Controller-->
-        <scene sceneID="p9S-X5-8hQ">
-            <objects>
-                <viewController id="KSw-E7-t7z" customClass="WhatWeBelieveViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iQf-3s-9fq"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ffk-Ud-Q3z"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="p3j-RV-2L7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4R-mP-Quk">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <color key="tintColor" red="0.25490197539999998" green="0.35294118520000001" blue="0.28627452250000002" alpha="1" colorSpace="deviceRGB"/>
-                                <items>
-                                    <navigationItem title="What We Believe" id="Qvz-Rn-ZN9">
-                                        <barButtonItem key="leftBarButtonItem" title="Close" id="bOR-1S-OCc">
-                                            <connections>
-                                                <segue destination="sRp-j9-A86" kind="unwind" unwindAction="home:" id="QoQ-mT-nvA"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AdK-n2-EtA">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="AdK-n2-EtA" firstAttribute="bottom" secondItem="p3j-RV-2L7" secondAttribute="bottom" id="39h-f6-2lX"/>
-                            <constraint firstItem="t4R-mP-Quk" firstAttribute="leading" secondItem="p3j-RV-2L7" secondAttribute="leading" id="4HV-kl-3xr"/>
-                            <constraint firstItem="t4R-mP-Quk" firstAttribute="trailing" secondItem="p3j-RV-2L7" secondAttribute="trailing" id="FJe-T9-19B"/>
-                            <constraint firstItem="AdK-n2-EtA" firstAttribute="leading" secondItem="p3j-RV-2L7" secondAttribute="leading" id="a8E-nB-mIh"/>
-                            <constraint firstItem="t4R-mP-Quk" firstAttribute="top" secondItem="p3j-RV-2L7" secondAttribute="top" id="eKT-MJ-KPI"/>
-                            <constraint firstItem="AdK-n2-EtA" firstAttribute="top" secondItem="t4R-mP-Quk" secondAttribute="bottom" id="pbl-IJ-33h"/>
-                            <constraint firstItem="AdK-n2-EtA" firstAttribute="trailing" secondItem="p3j-RV-2L7" secondAttribute="trailing" id="rQE-B3-zyy"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="webView" destination="AdK-n2-EtA" id="8o2-rJ-VMX"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ek5-kT-vAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="sRp-j9-A86" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="668" y="-250"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -325,7 +275,57 @@ Today, 94 years later, San Gabriel Community Church, under the leadership of Pas
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09L-Cb-Ed5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="656" y="469"/>
+            <point key="canvasLocation" x="116" y="423"/>
+        </scene>
+        <!--Website View Controller-->
+        <scene sceneID="49b-aj-2zB">
+            <objects>
+                <viewController id="M2p-Q0-BMV" customClass="WebsiteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S54-6A-xYV"/>
+                        <viewControllerLayoutGuide type="bottom" id="YHJ-rx-vpY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4PB-X6-crN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXY-mf-8zd">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qe6-Bq-GYd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="tintColor" red="0.25490197539999998" green="0.35294118520000001" blue="0.28627452250000002" alpha="1" colorSpace="deviceRGB"/>
+                                <items>
+                                    <navigationItem title="What We Believe" id="kvH-4s-sR1">
+                                        <barButtonItem key="leftBarButtonItem" title="Close" id="DEv-RD-NSC">
+                                            <connections>
+                                                <segue destination="lfH-50-Tfj" kind="unwind" unwindAction="home:" id="mrV-F5-l0W"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hXY-mf-8zd" firstAttribute="trailing" secondItem="4PB-X6-crN" secondAttribute="trailing" id="GCj-WH-0Pl"/>
+                            <constraint firstItem="hXY-mf-8zd" firstAttribute="bottom" secondItem="4PB-X6-crN" secondAttribute="bottom" id="LBJ-bj-kF2"/>
+                            <constraint firstItem="Qe6-Bq-GYd" firstAttribute="top" secondItem="4PB-X6-crN" secondAttribute="top" id="UHD-D4-Z0a"/>
+                            <constraint firstItem="hXY-mf-8zd" firstAttribute="leading" secondItem="4PB-X6-crN" secondAttribute="leading" id="hNO-Sg-lOo"/>
+                            <constraint firstItem="Qe6-Bq-GYd" firstAttribute="trailing" secondItem="4PB-X6-crN" secondAttribute="trailing" id="jT6-MP-LQT"/>
+                            <constraint firstItem="Qe6-Bq-GYd" firstAttribute="bottom" secondItem="hXY-mf-8zd" secondAttribute="top" id="siR-Ie-gql"/>
+                            <constraint firstItem="Qe6-Bq-GYd" firstAttribute="leading" secondItem="4PB-X6-crN" secondAttribute="leading" id="urP-vk-kUm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="hXY-mf-8zd" id="WuL-HJ-Ghd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vpu-rQ-ubu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="lfH-50-Tfj" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="668" y="-272"/>
         </scene>
     </scenes>
     <resources>
