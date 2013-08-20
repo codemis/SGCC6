@@ -28,7 +28,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="gcv-wk-ayc" kind="modal" identifier="AboutUsSegue" id="GyO-fJ-xhn"/>
+                                    <segue destination="0Nu-mj-Bty" kind="modal" identifier="aboutUsSegue" id="TgY-qe-aeb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paM-qG-XP2">
@@ -149,68 +149,6 @@
             </objects>
             <point key="canvasLocation" x="668" y="423"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="VCh-2k-gio">
-            <objects>
-                <viewController id="gcv-wk-ayc" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="f7c-Rl-5sk"/>
-                        <viewControllerLayoutGuide type="bottom" id="2Ae-SU-cGd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="dIC-6C-YsW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyA-KX-4XO">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">San Gabriel Community Church's beginnings date back to 1889 when Mrs. Victoria Corona dreamed of opening an evangelical church in her San Gabriel home. It took a pioneering faith and a sacrificial spirit in those beginning days.
-
-In the fall of 1892, an afternoon Bible School was opened; and between 1902 and 1918, the church congregation met in various location in the local San Gabriel area.
-
-In January 1918, the name changed from San Gabriel Union Sunday School to San Gabriel Union Church with 25 charter members. In 1920 the church's present location on Pine St. was purchased and the first worship service, an Easter Sunrise Service, was held on that vacant lot.
-
-In the 1930s, the sanctuary and administration buildings were erected.  In 1939, dedication services were held for the present sanctuary.  In 1949, the church opened its doors to the community through the ministry of San Gabriel Christian School.  The Stewart building was added to our campus in 1959, and in the 80s, the church constructed the multi-purpose building and acquired additional property, to better meet the needs of a growing congregation and school.
-
-A Master Plan Committee was formed in 2003 to investigate, make recommendations regarding, and implement the Master Plan as set forth by the Board of Elders.  The focus of this committee continues to be investigating possible property acquisitions, development of a pre-school ministry, erecting a new administrative building which would house our adult and youth teaching ministries, and the continued renovation of our existing sanctuary.
-
-In June of 2012, the church voted to change our name from San Gabriel Union Church to San Gabriel Community Church to more accurately reflect our purpose and goals. 
-
-Today, 94 years later, San Gabriel Community Church, under the leadership of Pastor Steve Balentine and a Board of Elders, continues to minister and serve that God may be shown to be glorious in all things.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wf1-FR-DcV">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <color key="tintColor" red="0.25490197539329529" green="0.35294118523597717" blue="0.28627452254295349" alpha="1" colorSpace="deviceRGB"/>
-                                <items>
-                                    <navigationItem title="About Us" id="S85-5t-xb7">
-                                        <barButtonItem key="leftBarButtonItem" title="Close" id="YfH-Ht-Tg9">
-                                            <connections>
-                                                <segue destination="1tK-H4-zF0" kind="unwind" unwindAction="home:" id="04d-Sx-NKE"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="oyA-KX-4XO" firstAttribute="leading" secondItem="dIC-6C-YsW" secondAttribute="leading" id="5LL-Ek-EXd"/>
-                            <constraint firstItem="oyA-KX-4XO" firstAttribute="top" secondItem="Wf1-FR-DcV" secondAttribute="bottom" id="Fek-Ff-dyT"/>
-                            <constraint firstItem="Wf1-FR-DcV" firstAttribute="top" secondItem="dIC-6C-YsW" secondAttribute="top" id="brD-3n-Z5H"/>
-                            <constraint firstItem="Wf1-FR-DcV" firstAttribute="leading" secondItem="dIC-6C-YsW" secondAttribute="leading" id="dha-2j-CYh"/>
-                            <constraint firstItem="oyA-KX-4XO" firstAttribute="bottom" secondItem="dIC-6C-YsW" secondAttribute="bottom" id="qZi-3A-u9M"/>
-                            <constraint firstItem="oyA-KX-4XO" firstAttribute="trailing" secondItem="dIC-6C-YsW" secondAttribute="trailing" id="u4r-bz-GHO"/>
-                            <constraint firstItem="Wf1-FR-DcV" firstAttribute="trailing" secondItem="dIC-6C-YsW" secondAttribute="trailing" id="xgO-6B-cFy"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AYH-Dq-1vH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="1tK-H4-zF0" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="668" y="-974"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
             <objects>
@@ -326,6 +264,56 @@ Today, 94 years later, San Gabriel Community Church, under the leadership of Pas
                 <exit id="lfH-50-Tfj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="668" y="-272"/>
+        </scene>
+        <!--Website View Controller-->
+        <scene sceneID="EaK-m3-QyZ">
+            <objects>
+                <viewController id="0Nu-mj-Bty" customClass="WebsiteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ThQ-1m-3Ox"/>
+                        <viewControllerLayoutGuide type="bottom" id="A5c-zN-PIu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tdL-sf-ely">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzG-9t-ZS3">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1M5-57-Pha">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="tintColor" red="0.25490197539999998" green="0.35294118520000001" blue="0.28627452250000002" alpha="1" colorSpace="deviceRGB"/>
+                                <items>
+                                    <navigationItem title="About Us" id="AGZ-ct-10l">
+                                        <barButtonItem key="leftBarButtonItem" title="Close" id="gzq-bS-PIW">
+                                            <connections>
+                                                <segue destination="rb4-tn-Sdw" kind="unwind" unwindAction="home:" id="Lzf-sx-JMc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qzG-9t-ZS3" firstAttribute="trailing" secondItem="tdL-sf-ely" secondAttribute="trailing" id="9HO-2a-NlK"/>
+                            <constraint firstItem="1M5-57-Pha" firstAttribute="top" secondItem="tdL-sf-ely" secondAttribute="top" id="AUc-xE-GzN"/>
+                            <constraint firstItem="qzG-9t-ZS3" firstAttribute="bottom" secondItem="tdL-sf-ely" secondAttribute="bottom" id="NTR-ku-3M9"/>
+                            <constraint firstItem="1M5-57-Pha" firstAttribute="leading" secondItem="tdL-sf-ely" secondAttribute="leading" id="Nd1-ll-oat"/>
+                            <constraint firstItem="qzG-9t-ZS3" firstAttribute="leading" secondItem="tdL-sf-ely" secondAttribute="leading" id="NjT-1n-6eC"/>
+                            <constraint firstItem="1M5-57-Pha" firstAttribute="bottom" secondItem="qzG-9t-ZS3" secondAttribute="top" id="U7H-zV-hgg"/>
+                            <constraint firstItem="1M5-57-Pha" firstAttribute="trailing" secondItem="tdL-sf-ely" secondAttribute="trailing" id="vco-Hp-VQc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="qzG-9t-ZS3" id="Xy5-Gc-yW9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bkh-za-MCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="rb4-tn-Sdw" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="668" y="-945"/>
         </scene>
     </scenes>
     <resources>

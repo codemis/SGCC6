@@ -11,9 +11,11 @@
 #import <MessageUI/MessageUI.h>
 
 //TODO: move defines to
-#define kFileName @"WhatWeBelieve"
-#define kFileType @"html"
-#define kJesusURL @"http://www.matthiasmedia.com.au/2wtl/2wtlonline.html"
+#define ABOUT_FILE_NAME @"AboutUs"
+#define ABOUT_FILE_TYPE @"rtf"
+#define BELIEVE_FILE_NAME @"WhatWeBelieve"
+#define BELIEVE_FILE_TYPE @"html"
+#define JESUS_URL @"http://www.matthiasmedia.com.au/2wtl/2wtlonline.html"
 #define SGCC_PHONE @"tel://16262870486"
 #define SGCC_EMAIL @"zombieonrails@gmail.com"
 @interface WelcomeViewController () <UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
@@ -29,10 +31,14 @@
 {
     WebsiteViewController *controller = [segue destinationViewController];
     if ([segue.identifier isEqualToString:@"whoIsJesusSegue"]) {
-        controller.websiteURL = [NSURL URLWithString:kJesusURL];
+        controller.websiteURL = [NSURL URLWithString:JESUS_URL];
     } else if ([segue.identifier isEqualToString:@"whatWeBelieveSegue"]) {
-        NSString *path = [NSBundle.mainBundle pathForResource:kFileName
-                                                       ofType:kFileType];
+        NSString *path = [NSBundle.mainBundle pathForResource:BELIEVE_FILE_NAME
+                                                       ofType:BELIEVE_FILE_TYPE];
+        controller.websiteURL = [NSURL fileURLWithPath:path];
+    } else if ([segue.identifier isEqualToString:@"aboutUsSegue"]) {
+        NSString *path = [NSBundle.mainBundle pathForResource:ABOUT_FILE_NAME
+                                                       ofType:ABOUT_FILE_TYPE];
         controller.websiteURL = [NSURL fileURLWithPath:path];
     }
 }
