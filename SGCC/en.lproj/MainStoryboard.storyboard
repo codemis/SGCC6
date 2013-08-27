@@ -65,7 +65,7 @@
                                     <constraint firstAttribute="height" constant="49" id="x1M-bK-qKI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Directions &amp; Contact Info">
+                                <state key="normal" title="Contact">
                                     <color key="titleColor" red="0.83137261870000001" green="0.72156864399999998" blue="0.37647062539999998" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -100,11 +100,40 @@
                     <navigationItem key="navigationItem" id="Z3x-eJ-LsF"/>
                     <connections>
                         <segue destination="M2p-Q0-BMV" kind="push" identifier="showWebsiteSegue" id="LVA-kX-WVj"/>
+                        <segue destination="DhJ-8e-yWf" kind="push" identifier="visitSegue" id="AGZ-BA-WAf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="642" y="-272"/>
+        </scene>
+        <!--Visit View Controller - Visit-->
+        <scene sceneID="Xo4-Yd-C2Q">
+            <objects>
+                <viewController id="DhJ-8e-yWf" customClass="VisitViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qBy-KW-pKN"/>
+                        <viewControllerLayoutGuide type="bottom" id="PYu-BE-kz2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G1U-Yb-kKM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JCm-u4-A6a">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Visit" id="RcK-jE-rzN"/>
+                    <connections>
+                        <outlet property="mapView" destination="JCm-u4-A6a" id="s2T-iX-aOG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fuc-iX-suh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1190" y="-957"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">

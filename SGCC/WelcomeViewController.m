@@ -2,13 +2,13 @@
 #import "WebsiteViewController.h"
 #import <MessageUI/MessageUI.h>
 
-//TODO: move defines to ?
+//TODO: move defines to plist
 #define ABOUT_FILE_NAME @"AboutUs"
 #define ABOUT_FILE_TYPE @"rtf"
 #define BELIEVE_FILE_NAME @"WhatWeBelieve"
 #define BELIEVE_FILE_TYPE @"html"
 #define JESUS_URL @"http://www.matthiasmedia.com.au/2wtl/2wtlonline.html"
-#define SGCC_PHONE @"tel://16262870486"
+#define SGCC_PHONE @"telprompt://16262870486"
 #define SGCC_EMAIL @"zombieonrails@gmail.com"
 #define SGCC_URL @"http://sgucandcs.org/#/home/welcome"
 
@@ -47,10 +47,10 @@
                                  delegate:self
                         cancelButtonTitle:@"Cancel"
                    destructiveButtonTitle:nil
-                        otherButtonTitles:@"Call Us",
-                                          @"Email Us",
-                                          @"Directions",
-                                          @"Visit Website",
+                        otherButtonTitles:@"Call",
+                                          @"Email",
+                                          @"Visit",
+                                          @"Website",
                                           nil]
       showFromTabBar:self.tabBarController.tabBar];
 }
@@ -68,16 +68,16 @@
 clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     switch (buttonIndex) {
-        case 0: //Call Us
+        case 0: //Call
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:SGCC_PHONE]];
             break;
-        case 1: //Email Us
+        case 1: //Email
             [self showEmail];
             break;
-        case 2: //Directions
-            //TODO: Maps
+        case 2: //Visit
+            [self performSegueWithIdentifier:@"visitSegue" sender:self];
             break;
-        case 3: //Visit Website
+        case 3: //Website
             [self performSegueWithIdentifier:@"showWebsiteSegue" sender:self];
             break;
     }

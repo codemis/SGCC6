@@ -1,0 +1,3 @@
+@interface VisitViewController : UIViewController
+
+@end
