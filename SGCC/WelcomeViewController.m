@@ -1,16 +1,8 @@
-//
-//  WelcomeViewController.m
-//  SGCC
-//
-//  Created by Johnathan Pulos on 1/3/13.
-//  Copyright (c) 2013 Johnathan Pulos. All rights reserved.
-//
-
 #import "WelcomeViewController.h"
 #import "WebsiteViewController.h"
 #import <MessageUI/MessageUI.h>
 
-//TODO: move defines to
+//TODO: move defines to ?
 #define ABOUT_FILE_NAME @"AboutUs"
 #define ABOUT_FILE_TYPE @"rtf"
 #define BELIEVE_FILE_NAME @"WhatWeBelieve"
@@ -18,8 +10,10 @@
 #define JESUS_URL @"http://www.matthiasmedia.com.au/2wtl/2wtlonline.html"
 #define SGCC_PHONE @"tel://16262870486"
 #define SGCC_EMAIL @"zombieonrails@gmail.com"
-@interface WelcomeViewController () <UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
-- (IBAction)contactButtonClicked:(id)sender;
+#define SGCC_URL @"http://sgucandcs.org/#/home/welcome"
+
+@interface WelcomeViewController ()
+  <UIActionSheetDelegate,MFMailComposeViewControllerDelegate>
 @end
 
 @implementation WelcomeViewController
@@ -28,8 +22,7 @@
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
 }
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     WebsiteViewController *controller = segue.destinationViewController;
     if ([segue.identifier isEqualToString:@"whoIsJesusSegue"]) {
         controller.websiteURL = [NSURL URLWithString:JESUS_URL];
@@ -46,21 +39,20 @@
         controller.title = @"About Us";
     }
 }
-- (IBAction)contactButtonClicked:(id)sender
-{
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Contact Us"
-                                                             delegate:self
-                                                    cancelButtonTitle:@"Cancel"
-                                               destructiveButtonTitle:nil
-                                                    otherButtonTitles:  @"Call Us",
-                                                                        @"Email Us",
-                                                                        @"Directions",
-                                                                        @"Visit Website",
-                                                                        nil];
-    [actionSheet showFromTabBar:self.tabBarController.tabBar];
+-(IBAction)contactButtonClicked:(id)sender {
+    [[[UIActionSheet alloc] initWithTitle:@"Contact Us"
+                                 delegate:self
+                        cancelButtonTitle:@"Cancel"
+                   destructiveButtonTitle:nil
+                        otherButtonTitles:@"Call Us",
+                                          @"Email Us",
+                                          @"Directions",
+                                          @"Visit Website",
+                                          nil]
+      showFromTabBar:self.tabBarController.tabBar];
 }
 #pragma mark - UIActionSheetDelegate Methods
--(void) showEmail
+-(void)showEmail
 {
     MFMailComposeViewController *mailComposeVC = MFMailComposeViewController.new;
     mailComposeVC.mailComposeDelegate = self;
@@ -68,39 +60,37 @@
     [mailComposeVC setMessageBody:@"" isHTML:NO];
     [mailComposeVC setToRecipients:@[SGCC_EMAIL]];
     [self presentViewController:mailComposeVC animated:YES completion:NULL];
-    
 }
--(void)     actionSheet:(UIActionSheet *)actionSheet
-   clickedButtonAtIndex:(NSInteger)buttonIndex
+-(void)  actionSheet:(UIActionSheet *)actionSheet
+clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     switch (buttonIndex) {
-        case 0:
-            //Call
+        case 0: //Call Us
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:SGCC_PHONE]];
             break;
-        case 1:
-            //Email
+        case 1: //Email Us
             [self showEmail];
             break;
-        case 2:
-            //Directions
+        case 2: //Directions
+            //TODO: Maps
             break;
-        case 3:
-            //Website
+        case 3: //Visit Website
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:SGCC_URL]];
             break;
     }
 }
 #pragma mark - MailComposeDelegate Methods
-- (void) mailComposeController:(MFMailComposeViewController *)controller
-           didFinishWithResult:(MFMailComposeResult)result
-                         error:(NSError *)error
+-(void)mailComposeController:(MFMailComposeViewController *)controller
+         didFinishWithResult:(MFMailComposeResult)result
+                       error:(NSError *)error
 {
     NSString *message = @"";
     NSString *messageTitle = @"";
     switch (result)
     {
         case MFMailComposeResultCancelled:
-            NSLog(@"Mail cancelled");
+            message = @"Your email will not be sent.";
+            messageTitle = @"Email Cancelled";
             break;
         case MFMailComposeResultSaved:
             message = @"Thank You!  We will contact you as soon as possible.";
@@ -115,7 +105,7 @@
         case MFMailComposeResultFailed:
             message = @"We had a problem!  Please try again later.";
             messageTitle = @"Sorry";
-            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            NSLog(@"Mail sent failure: %@", error.localizedDescription);
             break;
         default:
             break;
@@ -123,8 +113,11 @@
     // Close the Mail Interface
     [self dismissViewControllerAnimated:YES completion:^(void)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:messageTitle message:message delegate:self cancelButtonTitle:@"Done" otherButtonTitles:NULL, nil];
-        [alert show];
+        [[[UIAlertView alloc] initWithTitle:messageTitle
+                                    message:message
+                                   delegate:self
+                          cancelButtonTitle:@"Done"
+                          otherButtonTitles:nil] show];
     }];
 }
 @end

@@ -1,7 +1,7 @@
 #import "WebsiteViewController.h"
 
 @interface WebsiteViewController ()
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property(weak,nonatomic)IBOutlet UIWebView *webView;
 @end
 
 @implementation WebsiteViewController

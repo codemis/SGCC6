@@ -18,26 +18,9 @@
 		6684F68316968C980052A9C5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6684F68116968C980052A9C5 /* MainStoryboard.storyboard */; };
 		6684F68616968C980052A9C5 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6684F68516968C980052A9C5 /* WelcomeViewController.m */; };
 		6684F6A8169691C00052A9C5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6684F6A7169691C00052A9C5 /* README.md */; };
-		6684F6BC16969B6A0052A9C5 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6684F6BA16969B6A0052A9C5 /* logo.png */; };
-		6684F6BD16969B6A0052A9C5 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6684F6BB16969B6A0052A9C5 /* logo@2x.png */; };
-		6684F6C516969F780052A9C5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6684F6BE16969F780052A9C5 /* Default-568h@2x.png */; };
-		6684F6C616969F780052A9C5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6684F6BF16969F780052A9C5 /* Default.png */; };
-		6684F6C716969F780052A9C5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6684F6C016969F780052A9C5 /* Default@2x.png */; };
-		6684F6C816969F780052A9C5 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 6684F6C116969F780052A9C5 /* Icon-72.png */; };
-		6684F6C916969F780052A9C5 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6684F6C216969F780052A9C5 /* Icon.png */; };
-		6684F6CA16969F780052A9C5 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6684F6C316969F780052A9C5 /* Icon@2x.png */; };
-		6684F6CB16969F780052A9C5 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 6684F6C416969F780052A9C5 /* iTunesArtwork.png */; };
-		F454933617BAE78F007CA94D /* articles.png in Resources */ = {isa = PBXBuildFile; fileRef = F454932E17BAE78F007CA94D /* articles.png */; };
-		F454933717BAE78F007CA94D /* articles@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F454932F17BAE78F007CA94D /* articles@2x.png */; };
-		F454933817BAE78F007CA94D /* events.png in Resources */ = {isa = PBXBuildFile; fileRef = F454933017BAE78F007CA94D /* events.png */; };
-		F454933917BAE78F007CA94D /* events@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F454933117BAE78F007CA94D /* events@2x.png */; };
-		F454933A17BAE78F007CA94D /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = F454933217BAE78F007CA94D /* home.png */; };
-		F454933B17BAE78F007CA94D /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F454933317BAE78F007CA94D /* home@2x.png */; };
-		F454933C17BAE78F007CA94D /* sermons.png in Resources */ = {isa = PBXBuildFile; fileRef = F454933417BAE78F007CA94D /* sermons.png */; };
-		F454933D17BAE78F007CA94D /* sermons@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F454933517BAE78F007CA94D /* sermons@2x.png */; };
 		F454934017BAEBC3007CA94D /* TabBarControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F454933F17BAEBC3007CA94D /* TabBarControllerDelegate.m */; };
 		F4915F4817C4192E00071615 /* AboutUs.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F4915F4717C4192E00071615 /* AboutUs.rtf */; };
-		F4A7A65A17C4304F000BCF2C /* sgcc_church.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4A7A65917C4304F000BCF2C /* sgcc_church.jpg */; };
+		F4B6050B17CD4C6400011355 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4B6050A17CD4C6400011355 /* Images.xcassets */; };
 		F4E5932916CC298F0057F22D /* WhatWeBelieve.html in Resources */ = {isa = PBXBuildFile; fileRef = F4E5932816CC298F0057F22D /* WhatWeBelieve.html */; };
 /* End PBXBuildFile section */
 
@@ -59,27 +42,10 @@
 		6684F68416968C980052A9C5 /* WelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		6684F68516968C980052A9C5 /* WelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		6684F6A7169691C00052A9C5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		6684F6BA16969B6A0052A9C5 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		6684F6BB16969B6A0052A9C5 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
-		6684F6BE16969F780052A9C5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		6684F6BF16969F780052A9C5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		6684F6C016969F780052A9C5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		6684F6C116969F780052A9C5 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
-		6684F6C216969F780052A9C5 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		6684F6C316969F780052A9C5 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		6684F6C416969F780052A9C5 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
-		F454932E17BAE78F007CA94D /* articles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = articles.png; sourceTree = "<group>"; };
-		F454932F17BAE78F007CA94D /* articles@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "articles@2x.png"; sourceTree = "<group>"; };
-		F454933017BAE78F007CA94D /* events.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = events.png; sourceTree = "<group>"; };
-		F454933117BAE78F007CA94D /* events@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "events@2x.png"; sourceTree = "<group>"; };
-		F454933217BAE78F007CA94D /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
-		F454933317BAE78F007CA94D /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
-		F454933417BAE78F007CA94D /* sermons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sermons.png; sourceTree = "<group>"; };
-		F454933517BAE78F007CA94D /* sermons@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sermons@2x.png"; sourceTree = "<group>"; };
 		F454933E17BAEBC3007CA94D /* TabBarControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarControllerDelegate.h; sourceTree = "<group>"; };
 		F454933F17BAEBC3007CA94D /* TabBarControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarControllerDelegate.m; sourceTree = "<group>"; };
 		F4915F4717C4192E00071615 /* AboutUs.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = AboutUs.rtf; sourceTree = "<group>"; };
-		F4A7A65917C4304F000BCF2C /* sgcc_church.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sgcc_church.jpg; sourceTree = "<group>"; };
+		F4B6050A17CD4C6400011355 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F4E5932816CC298F0057F22D /* WhatWeBelieve.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = WhatWeBelieve.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +113,7 @@
 				6684F67816968C980052A9C5 /* AppDelegate.h */,
 				6684F67916968C980052A9C5 /* AppDelegate.m */,
 				6684F68116968C980052A9C5 /* MainStoryboard.storyboard */,
+				F4B6050A17CD4C6400011355 /* Images.xcassets */,
 				6684F67016968C980052A9C5 /* Supporting Files */,
 			);
 			path = SGCC;
@@ -157,38 +124,12 @@
 			children = (
 				F4915F4717C4192E00071615 /* AboutUs.rtf */,
 				F4E5932816CC298F0057F22D /* WhatWeBelieve.html */,
-				6684F6A9169699E70052A9C5 /* Images */,
 				6684F67116968C980052A9C5 /* SGCC-Info.plist */,
 				6684F67216968C980052A9C5 /* InfoPlist.strings */,
 				6684F67516968C980052A9C5 /* main.m */,
 				6684F67716968C980052A9C5 /* SGCC-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6684F6A9169699E70052A9C5 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				F4A7A65917C4304F000BCF2C /* sgcc_church.jpg */,
-				F454932E17BAE78F007CA94D /* articles.png */,
-				F454932F17BAE78F007CA94D /* articles@2x.png */,
-				F454933017BAE78F007CA94D /* events.png */,
-				F454933117BAE78F007CA94D /* events@2x.png */,
-				F454933217BAE78F007CA94D /* home.png */,
-				F454933317BAE78F007CA94D /* home@2x.png */,
-				F454933417BAE78F007CA94D /* sermons.png */,
-				F454933517BAE78F007CA94D /* sermons@2x.png */,
-				6684F6BE16969F780052A9C5 /* Default-568h@2x.png */,
-				6684F6BF16969F780052A9C5 /* Default.png */,
-				6684F6C016969F780052A9C5 /* Default@2x.png */,
-				6684F6C116969F780052A9C5 /* Icon-72.png */,
-				6684F6C216969F780052A9C5 /* Icon.png */,
-				6684F6C316969F780052A9C5 /* Icon@2x.png */,
-				6684F6C416969F780052A9C5 /* iTunesArtwork.png */,
-				6684F6BA16969B6A0052A9C5 /* logo.png */,
-				6684F6BB16969B6A0052A9C5 /* logo@2x.png */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,26 +185,9 @@
 			files = (
 				6684F67416968C980052A9C5 /* InfoPlist.strings in Resources */,
 				6684F68316968C980052A9C5 /* MainStoryboard.storyboard in Resources */,
-				F454933A17BAE78F007CA94D /* home.png in Resources */,
-				F454933B17BAE78F007CA94D /* home@2x.png in Resources */,
 				F4915F4817C4192E00071615 /* AboutUs.rtf in Resources */,
-				F454933D17BAE78F007CA94D /* sermons@2x.png in Resources */,
-				F454933817BAE78F007CA94D /* events.png in Resources */,
-				F4A7A65A17C4304F000BCF2C /* sgcc_church.jpg in Resources */,
 				6684F6A8169691C00052A9C5 /* README.md in Resources */,
-				F454933917BAE78F007CA94D /* events@2x.png in Resources */,
-				6684F6BC16969B6A0052A9C5 /* logo.png in Resources */,
-				6684F6BD16969B6A0052A9C5 /* logo@2x.png in Resources */,
-				6684F6C516969F780052A9C5 /* Default-568h@2x.png in Resources */,
-				6684F6C616969F780052A9C5 /* Default.png in Resources */,
-				F454933717BAE78F007CA94D /* articles@2x.png in Resources */,
-				6684F6C716969F780052A9C5 /* Default@2x.png in Resources */,
-				F454933C17BAE78F007CA94D /* sermons.png in Resources */,
-				6684F6C816969F780052A9C5 /* Icon-72.png in Resources */,
-				6684F6C916969F780052A9C5 /* Icon.png in Resources */,
-				F454933617BAE78F007CA94D /* articles.png in Resources */,
-				6684F6CA16969F780052A9C5 /* Icon@2x.png in Resources */,
-				6684F6CB16969F780052A9C5 /* iTunesArtwork.png in Resources */,
+				F4B6050B17CD4C6400011355 /* Images.xcassets in Resources */,
 				F4E5932916CC298F0057F22D /* WhatWeBelieve.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +288,8 @@
 		6684F69516968C980052A9C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGCC/SGCC-Prefix.pch";
 				INFOPLIST_FILE = "SGCC/SGCC-Info.plist";
@@ -375,6 +301,8 @@
 		6684F69616968C980052A9C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGCC/SGCC-Prefix.pch";
 				INFOPLIST_FILE = "SGCC/SGCC-Info.plist";
