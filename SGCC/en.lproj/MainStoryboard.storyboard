@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="SBg-wS-3uq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="SBg-wS-3uq">
                                 <rect key="frame" x="20" y="20" width="280" height="61"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYw-l6-gfw">
@@ -73,7 +73,7 @@
                                     <action selector="contactButtonClicked:" destination="2" eventType="touchUpInside" id="Ikq-W1-aY8"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="fLG-hk-oQH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Church" translatesAutoresizingMaskIntoConstraints="NO" id="fLG-hk-oQH">
                                 <rect key="frame" x="20" y="101" width="280" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -98,6 +98,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Z3x-eJ-LsF"/>
+                    <connections>
+                        <segue destination="M2p-Q0-BMV" kind="push" identifier="showWebsiteSegue" id="LVA-kX-WVj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,6 +153,7 @@
                             <constraint firstAttribute="bottom" secondItem="hXY-mf-8zd" secondAttribute="bottom" id="tty-fI-FcP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2nv-Wb-9yg"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="navigationController.navigationBarHidden" value="NO"/>
                     </userDefinedRuntimeAttributes>
@@ -235,10 +239,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="banner" width="280" height="160"/>
+        <image name="Church" width="280" height="160"/>
         <image name="events.png" width="28" height="28"/>
         <image name="home.png" width="28" height="28"/>
-        <image name="logo.png" width="280" height="61"/>
+        <image name="logo" width="280" height="61"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -246,6 +250,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="4Q8-bJ-3kC"/>
+        <segue reference="LVA-kX-WVj"/>
     </inferredMetricsTieBreakers>
 </document>

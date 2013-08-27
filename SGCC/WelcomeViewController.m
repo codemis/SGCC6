@@ -37,6 +37,9 @@
                                                        ofType:ABOUT_FILE_TYPE];
         controller.websiteURL = [NSURL fileURLWithPath:path];
         controller.title = @"About Us";
+    } else if ([segue.identifier isEqualToString:@"showWebsiteSegue"]) {
+        controller.websiteURL = [NSURL URLWithString:SGCC_URL];
+        controller.title = @"SGCCandCS.org";
     }
 }
 -(IBAction)contactButtonClicked:(id)sender {
@@ -75,7 +78,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
             //TODO: Maps
             break;
         case 3: //Visit Website
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:SGCC_URL]];
+            [self performSegueWithIdentifier:@"showWebsiteSegue" sender:self];
             break;
     }
 }
