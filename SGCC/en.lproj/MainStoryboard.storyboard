@@ -126,7 +126,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Visit" id="RcK-jE-rzN"/>
+                    <navigationItem key="navigationItem" title="Visit" id="RcK-jE-rzN">
+                        <barButtonItem key="rightBarButtonItem" title="Directions" id="usI-SU-yg1">
+                            <connections>
+                                <action selector="getDirections:" destination="DhJ-8e-yWf" id="3qJ-Bz-fyN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="JCm-u4-A6a" id="s2T-iX-aOG"/>
                     </connections>

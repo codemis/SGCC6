@@ -3,12 +3,19 @@
 #define SGCC_LAT 34.1040489
 #define SGCC_LONG -118.0924604
 #define SPAN_DELTA 0.1
+#define MAPS_DOMAIN @"http://maps.apple.com/"
+#define MAPS_SADDR @"Current+Location"
 
 @interface VisitViewController ()
 @property(weak,nonatomic)IBOutlet MKMapView *mapView;
 @end
 
 @implementation VisitViewController
+-(IBAction)getDirections:(id)sender {
+    NSString *directionsURL = [NSString stringWithFormat:@"%@?saddr=%@&daddr=%f,%f",
+                               MAPS_DOMAIN,MAPS_SADDR,SGCC_LAT,SGCC_LONG];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:directionsURL]];
+}
 -(MKPointAnnotation *)addPinToMapAtLocation:(CLLocationCoordinate2D)location
                                   withTitle:(NSString *)title
                                withSubtitle:(NSString *)subtitle {
