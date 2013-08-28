@@ -155,6 +155,7 @@
                     <connections>
                         <outlet property="delegate" destination="SQ3-a1-20S" id="29l-Pa-1K7"/>
                         <segue destination="zWj-aM-leS" kind="relationship" relationship="viewControllers" id="26"/>
+                        <segue destination="fIx-lv-qND" kind="relationship" relationship="viewControllers" id="GUh-Sl-pfA"/>
                         <segue destination="ljW-w5-y6S" kind="relationship" relationship="viewControllers" id="BOL-ye-MgG"/>
                     </connections>
                 </tabBarController>
@@ -272,9 +273,75 @@
             </objects>
             <point key="canvasLocation" x="642" y="423"/>
         </scene>
+        <!--Table View Controller - Articles-->
+        <scene sceneID="ES2-Ff-y1f">
+            <objects>
+                <tableViewController id="3st-FM-9C7" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xMe-Dp-Ir5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArticleCell" textLabel="h74-FP-3Ck" detailTextLabel="uAt-xm-adZ" style="IBUITableViewCellStyleSubtitle" id="R1P-Mg-wgQ">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="R1P-Mg-wgQ" id="2Kw-Xc-pba">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h74-FP-3Ck">
+                                            <rect key="frame" x="15" y="3" width="34" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uAt-xm-adZ">
+                                            <rect key="frame" x="15" y="25" width="43" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iRL-0l-h8W" id="nDE-ZT-gol"/>
+                            <outlet property="delegate" destination="3st-FM-9C7" id="gIE-he-G3u"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Articles" id="WD8-hb-WJK"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BpU-vh-3ji" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="iRL-0l-h8W" customClass="ArticlesDataSource"/>
+            </objects>
+            <point key="canvasLocation" x="642" y="1106"/>
+        </scene>
+        <!--Navigation Controller - Articles-->
+        <scene sceneID="lOe-aM-LeS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fIx-lv-qND" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Articles" image="articles" id="QcQ-Qf-Xcf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="raC-Ff-OmB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3st-FM-9C7" kind="relationship" relationship="rootViewController" id="89w-4R-yn5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XwO-VD-ZEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="1106"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Church" width="280" height="160"/>
+        <image name="articles" width="28" height="28"/>
         <image name="events.png" width="28" height="28"/>
         <image name="home.png" width="28" height="28"/>
         <image name="logo" width="280" height="61"/>

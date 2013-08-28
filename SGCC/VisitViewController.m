@@ -33,9 +33,9 @@
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     MKPointAnnotation *church =
-    [self addPinToMapAtLocation:CLLocationCoordinate2DMake(SGCC_LAT,SGCC_LONG)
-                      withTitle:@"San Gabriel Community Church"
-                   withSubtitle:@"117 N Pine St, San Gabriel, CA 91775"];
+      [self addPinToMapAtLocation:CLLocationCoordinate2DMake(SGCC_LAT,SGCC_LONG)
+                        withTitle:@"San Gabriel Community Church"
+                     withSubtitle:@"117 N Pine St, San Gabriel, CA 91775"];
     MKCoordinateRegion region;
     region.center = church.coordinate;
     region.span.longitudeDelta = SPAN_DELTA;
