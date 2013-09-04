@@ -22,6 +22,7 @@
 		F40C13E517CD71DF00F4ED66 /* ArticlesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F40C13E417CD71DF00F4ED66 /* ArticlesDataSource.m */; };
 		F454934017BAEBC3007CA94D /* TabBarControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F454933F17BAEBC3007CA94D /* TabBarControllerDelegate.m */; };
 		F4915F4817C4192E00071615 /* AboutUs.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F4915F4717C4192E00071615 /* AboutUs.rtf */; };
+		F4A76D0217D6D4D400C35084 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A76D0117D6D4D400C35084 /* Article.m */; };
 		F4B6050B17CD4C6400011355 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4B6050A17CD4C6400011355 /* Images.xcassets */; };
 		F4B6050E17CD597600011355 /* VisitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6050D17CD597600011355 /* VisitViewController.m */; };
 		F4B6051017CD5B9C00011355 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B6050F17CD5B9C00011355 /* MapKit.framework */; };
@@ -54,6 +55,8 @@
 		F454933E17BAEBC3007CA94D /* TabBarControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarControllerDelegate.h; sourceTree = "<group>"; };
 		F454933F17BAEBC3007CA94D /* TabBarControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarControllerDelegate.m; sourceTree = "<group>"; };
 		F4915F4717C4192E00071615 /* AboutUs.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = AboutUs.rtf; sourceTree = "<group>"; };
+		F4A76D0017D6D4D400C35084 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = SGCC/Article.h; sourceTree = "<group>"; };
+		F4A76D0117D6D4D400C35084 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = SGCC/Article.m; sourceTree = "<group>"; };
 		F4B6050A17CD4C6400011355 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F4B6050C17CD597600011355 /* VisitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisitViewController.h; sourceTree = "<group>"; };
 		F4B6050D17CD597600011355 /* VisitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisitViewController.m; sourceTree = "<group>"; };
@@ -128,6 +131,7 @@
 		6684F66F16968C980052A9C5 /* SGCC */ = {
 			isa = PBXGroup;
 			children = (
+				F4A76CFF17D6D49F00C35084 /* Models */,
 				F40C13E217CD71AA00F4ED66 /* Data Sources */,
 				F454933E17BAEBC3007CA94D /* TabBarControllerDelegate.h */,
 				F454933F17BAEBC3007CA94D /* TabBarControllerDelegate.m */,
@@ -161,6 +165,16 @@
 				F40C13E417CD71DF00F4ED66 /* ArticlesDataSource.m */,
 			);
 			name = "Data Sources";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		F4A76CFF17D6D49F00C35084 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4A76D0017D6D4D400C35084 /* Article.h */,
+				F4A76D0117D6D4D400C35084 /* Article.m */,
+			);
+			name = Models;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -233,6 +247,7 @@
 			files = (
 				6684F67616968C980052A9C5 /* main.m in Sources */,
 				F40C13E517CD71DF00F4ED66 /* ArticlesDataSource.m in Sources */,
+				F4A76D0217D6D4D400C35084 /* Article.m in Sources */,
 				F4B6050E17CD597600011355 /* VisitViewController.m in Sources */,
 				F40C13E117CD6F4200F4ED66 /* ArticlesTableViewController.m in Sources */,
 				6684F67A16968C980052A9C5 /* AppDelegate.m in Sources */,

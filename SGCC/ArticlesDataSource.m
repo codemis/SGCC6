@@ -1,18 +1,40 @@
 #import "ArticlesDataSource.h"
+#import "Article.h"
+
+@interface ArticlesDataSource () <UITableViewDataSource>
+
+@property(strong,nonatomic)NSMutableArray *articles;
+
+@end
 
 @implementation ArticlesDataSource
-
+-(id)init {
+    if (![super init]) return nil;
+    self.articles = [self getArticles];
+    return self;
+}
+-(NSMutableArray *)getArticles {
+    NSMutableArray *articles = [@[Article.new, Article.new] mutableCopy];
+    return articles;
+}
 #pragma mark - Table view data source
 -(NSInteger)tableView:(UITableView *)tableView
 numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return self.articles.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView
         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArticleCell"
-                                                            forIndexPath:indexPath];
-    cell.textLabel.text = @"I Am a Zombie!";
-    cell.detailTextLabel.text = @"8/27/2013: I want to eat your BRAINS!!";
+    UITableViewCell *cell =
+      [tableView dequeueReusableCellWithIdentifier:@"ArticleCell"
+                                      forIndexPath:indexPath];
+    Article *article =self.articles[indexPath.row];
+    cell.textLabel.text = article.title;
+    NSDateFormatter *mmddyyyy = NSDateFormatter.new;
+    [mmddyyyy setDateStyle:NSDateFormatterShortStyle];
+    NSString *detailText = [NSString stringWithFormat:@"%@: %@",
+                            [mmddyyyy stringFromDate:article.publishedOn],
+                            article.summary];
+    cell.detailTextLabel.text = detailText;
     return cell;
 }
 
