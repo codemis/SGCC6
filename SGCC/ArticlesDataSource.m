@@ -1,6 +1,8 @@
 #import "ArticlesDataSource.h"
 #import "Article.h"
 
+#define ARTICLES_URL @"http://www.sgucblog.com/feed"
+
 @interface ArticlesDataSource () <UITableViewDataSource>
 
 @property(strong,nonatomic)NSMutableArray *articles;
