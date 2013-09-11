@@ -1,5 +1,7 @@
 #import "ArticlesDataSource.h"
 #import "Article.h"
+#import <AFNetworking.h>
+#import <AFKissXMLRequestOperation.h>
 
 #define ARTICLES_URL @"http://www.sgucblog.com/feed"
 
@@ -12,12 +14,26 @@
 @implementation ArticlesDataSource
 -(id)init {
     if (![super init]) return nil;
-    self.articles = [self getArticles];
+    [self getArticles];
     return self;
 }
--(NSMutableArray *)getArticles {
-    NSMutableArray *articles = [@[Article.new, Article.new] mutableCopy];
-    return articles;
+-(void)getArticles {
+    [AFKissXMLRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"application/rss+xml"]];
+    AFKissXMLRequestOperation *operation =
+      [AFKissXMLRequestOperation XMLDocumentRequestOperationWithRequest:
+         [NSURLRequest requestWithURL:[NSURL URLWithString:ARTICLES_URL]]
+                                                                success:
+       ^(NSURLRequest *request,NSHTTPURLResponse *response,
+         DDXMLDocument *XMLDocument) {
+           NSLog(@"XMLDocument: %@",XMLDocument);
+           NSLog(@"Got document");
+    }
+                                                                failure:
+       ^(NSURLRequest *request,NSHTTPURLResponse *response,
+         NSError *error, DDXMLDocument *XMLDocument) {
+           NSLog(@"Failure:%@",error.localizedDescription);
+    }];
+    [operation start];
 }
 #pragma mark - Table view data source
 -(NSInteger)tableView:(UITableView *)tableView
