@@ -13,6 +13,7 @@
 @implementation ArticlesDataSource
 -(id)init {
     if (![super init]) return nil;
+    self.articles = NSMutableArray.new;
     [self getArticles];
     return self;
 }
@@ -20,21 +21,22 @@
     AFHTTPRequestOperationManager *manager =
       [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    NSDateFormatter *dateFormatter = NSDateFormatter.new;
+    dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
     [manager GET:ARTICLES_URL
       parameters:nil
          success:^(AFHTTPRequestOperation *operation,id responseObject) {
-             NSLog(@"%@",responseObject);
-             NSArray *rawArticles = responseObject;
-             NSDictionary *rawArticle = rawArticles[0];
+            for (NSDictionary *rawArticle in responseObject) {
+                NSLog(@"Date = %@",rawArticle[@"date"]);
              Article *article =
                [[Article alloc] initWithTitle:rawArticle[@"title"]
           author:rawArticle[@"author"]
          content:rawArticle[@"content"]
          summary:rawArticle[@"excerpt"]
-     publishedOn:nil
+     publishedOn:[dateFormatter dateFromString:rawArticle[@"date"]]
     urlString:rawArticle[@"permalink"]];
-             NSLog(@"first article = %@",article);
-             NSLog(@"Success!");
+                [self.articles addObject:article];
+            }
          }
          failure:^(AFHTTPRequestOperation *operation,NSError *error) {
              NSLog(@"Error: %@",error.localizedDescription);
@@ -54,7 +56,7 @@ numberOfRowsInSection:(NSInteger)section {
     Article *article =self.articles[indexPath.row];
     cell.textLabel.text = article.title;
     NSDateFormatter *mmddyyyy = NSDateFormatter.new;
-    [mmddyyyy setDateStyle:NSDateFormatterShortStyle];
+    mmddyyyy.dateFormat = @"MM/dd/yyyy";
     NSString *detailText = [NSString stringWithFormat:@"%@: %@",
                             [mmddyyyy stringFromDate:article.publishedOn],
                             article.summary];
