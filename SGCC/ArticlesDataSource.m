@@ -1,9 +1,8 @@
 #import "ArticlesDataSource.h"
 #import "Article.h"
 #import <AFNetworking.h>
-#import <AFKissXMLRequestOperation.h>
 
-#define ARTICLES_URL @"http://www.sgucblog.com/feed"
+#define ARTICLES_URL @"http://sgucblog.com/feed/json"
 
 @interface ArticlesDataSource () <UITableViewDataSource>
 
@@ -18,22 +17,29 @@
     return self;
 }
 -(void)getArticles {
-    [AFKissXMLRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"application/rss+xml"]];
-    AFKissXMLRequestOperation *operation =
-      [AFKissXMLRequestOperation XMLDocumentRequestOperationWithRequest:
-         [NSURLRequest requestWithURL:[NSURL URLWithString:ARTICLES_URL]]
-                                                                success:
-       ^(NSURLRequest *request,NSHTTPURLResponse *response,
-         DDXMLDocument *XMLDocument) {
-           NSLog(@"XMLDocument: %@",XMLDocument);
-           NSLog(@"Got document");
-    }
-                                                                failure:
-       ^(NSURLRequest *request,NSHTTPURLResponse *response,
-         NSError *error, DDXMLDocument *XMLDocument) {
-           NSLog(@"Failure:%@",error.localizedDescription);
-    }];
-    [operation start];
+    AFHTTPRequestOperationManager *manager =
+      [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [manager GET:ARTICLES_URL
+      parameters:nil
+         success:^(AFHTTPRequestOperation *operation,id responseObject) {
+             NSLog(@"%@",responseObject);
+             NSArray *rawArticles = responseObject;
+             NSDictionary *rawArticle = rawArticles[0];
+             Article *article =
+               [[Article alloc] initWithTitle:rawArticle[@"title"]
+          author:rawArticle[@"author"]
+         content:rawArticle[@"content"]
+         summary:rawArticle[@"excerpt"]
+     publishedOn:nil
+    urlString:rawArticle[@"permalink"]];
+             NSLog(@"first article = %@",article);
+             NSLog(@"Success!");
+         }
+         failure:^(AFHTTPRequestOperation *operation,NSError *error) {
+             NSLog(@"Error: %@",error.localizedDescription);
+             NSLog(@"Failure :-(");
+         }];
 }
 #pragma mark - Table view data source
 -(NSInteger)tableView:(UITableView *)tableView
