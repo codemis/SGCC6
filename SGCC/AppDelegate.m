@@ -1,18 +1,11 @@
-//
-//  AppDelegate.m
-//  SGCC
-//
-//  Created by Johnathan Pulos on 1/3/13.
-//  Copyright (c) 2013 Johnathan Pulos. All rights reserved.
-//
-
 #import "AppDelegate.h"
+#import "ArticlesStore.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [[ArticlesStore sharedStore] getArticles];
     return YES;
 }
 							

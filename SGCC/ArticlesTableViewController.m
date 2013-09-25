@@ -7,5 +7,6 @@
 @implementation ArticlesTableViewController
 -(void)viewDidLoad {
     [super viewDidLoad];
+    [self.tableView reloadData];
 }
 @end
