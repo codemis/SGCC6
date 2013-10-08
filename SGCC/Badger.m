@@ -20,6 +20,7 @@
 -(void)updateBadgeValue:(NSNotification *)notification {
     NSString *itemTitle = notification.userInfo[@"itemTitle"];
     NSString *badgeValue = notification.userInfo[@"badgeValue"];
+    if ([badgeValue isEqualToString:@""]) badgeValue = nil;
     for (UITabBarItem *tabBarItem in self.tabBarController.tabBar.items) {
         if ([tabBarItem.title isEqualToString:itemTitle]) {
             tabBarItem.badgeValue = badgeValue;

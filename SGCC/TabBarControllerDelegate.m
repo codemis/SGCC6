@@ -9,12 +9,20 @@
 @implementation TabBarControllerDelegate
 -(BOOL)   tabBarController:(UITabBarController *)tabBarController
 shouldSelectViewController:(UIViewController *)viewController {
-    if ([tabBarController.tabBar.selectedItem.title isEqualToString:@"Events"]) {
+    UITabBarItem *tabBarItem = tabBarController.tabBar.selectedItem;
+    if ([tabBarItem.title isEqualToString:@"Events"]) {
         UINavigationController *navC = (UINavigationController *)viewController;
         WebsiteViewController *websiteVC =
           (WebsiteViewController *)navC.viewControllers[0];
         websiteVC.websiteURL = [NSURL URLWithString: EVENTS_URL];
         websiteVC.title = tabBarController.tabBar.selectedItem.title;
+    }
+    if (tabBarItem.badgeValue) {
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"shouldUpdateBadgeValue"
+         object:nil
+         userInfo:@{@"itemTitle":tabBarItem.title,
+                    @"badgeValue":@""}];
     }
     return YES;
 }
