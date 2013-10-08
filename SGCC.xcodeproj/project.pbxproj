@@ -25,6 +25,7 @@
 		F45F39EF17F25A9A00668E4A /* ArticlesStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F45F39EE17F25A9A00668E4A /* ArticlesStore.m */; };
 		F4915F4817C4192E00071615 /* AboutUs.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F4915F4717C4192E00071615 /* AboutUs.rtf */; };
 		F4A76D0217D6D4D400C35084 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A76D0117D6D4D400C35084 /* Article.m */; };
+		F4B121581804B26E0039BE7E /* Badger.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B121571804B26E0039BE7E /* Badger.m */; };
 		F4B6050B17CD4C6400011355 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4B6050A17CD4C6400011355 /* Images.xcassets */; };
 		F4B6050E17CD597600011355 /* VisitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6050D17CD597600011355 /* VisitViewController.m */; };
 		F4B6051017CD5B9C00011355 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B6050F17CD5B9C00011355 /* MapKit.framework */; };
@@ -63,6 +64,8 @@
 		F4915F4717C4192E00071615 /* AboutUs.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = AboutUs.rtf; sourceTree = "<group>"; };
 		F4A76D0017D6D4D400C35084 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = SGCC/Article.h; sourceTree = "<group>"; };
 		F4A76D0117D6D4D400C35084 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = SGCC/Article.m; sourceTree = "<group>"; };
+		F4B121561804B26E0039BE7E /* Badger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Badger.h; sourceTree = "<group>"; };
+		F4B121571804B26E0039BE7E /* Badger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Badger.m; sourceTree = "<group>"; };
 		F4B6050A17CD4C6400011355 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F4B6050C17CD597600011355 /* VisitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisitViewController.h; sourceTree = "<group>"; };
 		F4B6050D17CD597600011355 /* VisitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisitViewController.m; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 				6684F67816968C980052A9C5 /* AppDelegate.h */,
 				6684F67916968C980052A9C5 /* AppDelegate.m */,
 				6684F68116968C980052A9C5 /* MainStoryboard.storyboard */,
+				F4B121561804B26E0039BE7E /* Badger.h */,
+				F4B121571804B26E0039BE7E /* Badger.m */,
 				F4B6050A17CD4C6400011355 /* Images.xcassets */,
 				6684F67016968C980052A9C5 /* Supporting Files */,
 			);
@@ -306,6 +311,7 @@
 				F4A76D0217D6D4D400C35084 /* Article.m in Sources */,
 				F4B6050E17CD597600011355 /* VisitViewController.m in Sources */,
 				F40C13E117CD6F4200F4ED66 /* ArticlesTableViewController.m in Sources */,
+				F4B121581804B26E0039BE7E /* Badger.m in Sources */,
 				6684F67A16968C980052A9C5 /* AppDelegate.m in Sources */,
 				6684F68616968C980052A9C5 /* WelcomeViewController.m in Sources */,
 				662ED47616B259EE00CBDBDA /* WebsiteViewController.m in Sources */,

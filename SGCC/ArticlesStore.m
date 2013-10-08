@@ -48,6 +48,11 @@
                                       urlString:rawArticle[@"permalink"]];
                  [self.articles addObject:article];
              }
+             [[NSNotificationCenter defaultCenter]
+              postNotificationName:@"shouldUpdateBadgeValue"
+              object:nil
+              userInfo:@{@"itemTitle":@"Articles",
+                         @"badgeValue":[NSString stringWithFormat:@"%i",self.count]}];
          }
          failure:^(AFHTTPRequestOperation *operation,NSError *error) {
              NSLog(@"Error: %@",error.localizedDescription);
