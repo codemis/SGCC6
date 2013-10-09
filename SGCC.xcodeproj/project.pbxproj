@@ -26,6 +26,7 @@
 		F4915F4817C4192E00071615 /* AboutUs.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F4915F4717C4192E00071615 /* AboutUs.rtf */; };
 		F4A76D0217D6D4D400C35084 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A76D0117D6D4D400C35084 /* Article.m */; };
 		F4B121581804B26E0039BE7E /* Badger.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B121571804B26E0039BE7E /* Badger.m */; };
+		F4B1215B1804D0E50039BE7E /* SGCCDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4B121591804D0E50039BE7E /* SGCCDataModel.xcdatamodeld */; };
 		F4B6050B17CD4C6400011355 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4B6050A17CD4C6400011355 /* Images.xcassets */; };
 		F4B6050E17CD597600011355 /* VisitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6050D17CD597600011355 /* VisitViewController.m */; };
 		F4B6051017CD5B9C00011355 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B6050F17CD5B9C00011355 /* MapKit.framework */; };
@@ -66,6 +67,7 @@
 		F4A76D0117D6D4D400C35084 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = SGCC/Article.m; sourceTree = "<group>"; };
 		F4B121561804B26E0039BE7E /* Badger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Badger.h; sourceTree = "<group>"; };
 		F4B121571804B26E0039BE7E /* Badger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Badger.m; sourceTree = "<group>"; };
+		F4B1215A1804D0E50039BE7E /* SGCCDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SGCCDataModel.xcdatamodel; sourceTree = "<group>"; };
 		F4B6050A17CD4C6400011355 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F4B6050C17CD597600011355 /* VisitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisitViewController.h; sourceTree = "<group>"; };
 		F4B6050D17CD597600011355 /* VisitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisitViewController.m; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 		F4A76CFF17D6D49F00C35084 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F4B121591804D0E50039BE7E /* SGCCDataModel.xcdatamodeld */,
 				F4A76D0017D6D4D400C35084 /* Article.h */,
 				F4A76D0117D6D4D400C35084 /* Article.m */,
 			);
@@ -310,6 +313,7 @@
 				F45F39EF17F25A9A00668E4A /* ArticlesStore.m in Sources */,
 				F4A76D0217D6D4D400C35084 /* Article.m in Sources */,
 				F4B6050E17CD597600011355 /* VisitViewController.m in Sources */,
+				F4B1215B1804D0E50039BE7E /* SGCCDataModel.xcdatamodeld in Sources */,
 				F40C13E117CD6F4200F4ED66 /* ArticlesTableViewController.m in Sources */,
 				F4B121581804B26E0039BE7E /* Badger.m in Sources */,
 				6684F67A16968C980052A9C5 /* AppDelegate.m in Sources */,
@@ -447,6 +451,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F4B121591804D0E50039BE7E /* SGCCDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F4B1215A1804D0E50039BE7E /* SGCCDataModel.xcdatamodel */,
+			);
+			currentVersion = F4B1215A1804D0E50039BE7E /* SGCCDataModel.xcdatamodel */;
+			path = SGCCDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6684F65E16968C970052A9C5 /* Project object */;
 }
