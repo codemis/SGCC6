@@ -23,10 +23,11 @@
 		F40C13E517CD71DF00F4ED66 /* ArticlesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F40C13E417CD71DF00F4ED66 /* ArticlesDataSource.m */; };
 		F454934017BAEBC3007CA94D /* TabBarControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F454933F17BAEBC3007CA94D /* TabBarControllerDelegate.m */; };
 		F45F39EF17F25A9A00668E4A /* ArticlesStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F45F39EE17F25A9A00668E4A /* ArticlesStore.m */; };
+		F47C7136180DF8F9008579A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47C7135180DF8F9008579A3 /* CoreData.framework */; };
+		F47C7139181724E2008579A3 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = F47C7138181724E2008579A3 /* Article.m */; };
 		F4915F4817C4192E00071615 /* AboutUs.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F4915F4717C4192E00071615 /* AboutUs.rtf */; };
-		F4A76D0217D6D4D400C35084 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A76D0117D6D4D400C35084 /* Article.m */; };
 		F4B121581804B26E0039BE7E /* Badger.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B121571804B26E0039BE7E /* Badger.m */; };
-		F4B1215B1804D0E50039BE7E /* SGCCDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4B121591804D0E50039BE7E /* SGCCDataModel.xcdatamodeld */; };
+		F4B1215B1804D0E50039BE7E /* SGCC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4B121591804D0E50039BE7E /* SGCC.xcdatamodeld */; };
 		F4B6050B17CD4C6400011355 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4B6050A17CD4C6400011355 /* Images.xcassets */; };
 		F4B6050E17CD597600011355 /* VisitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6050D17CD597600011355 /* VisitViewController.m */; };
 		F4B6051017CD5B9C00011355 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B6050F17CD5B9C00011355 /* MapKit.framework */; };
@@ -62,12 +63,13 @@
 		F454933F17BAEBC3007CA94D /* TabBarControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarControllerDelegate.m; sourceTree = "<group>"; };
 		F45F39ED17F25A9A00668E4A /* ArticlesStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticlesStore.h; path = SGCC/ArticlesStore.h; sourceTree = "<group>"; };
 		F45F39EE17F25A9A00668E4A /* ArticlesStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticlesStore.m; path = SGCC/ArticlesStore.m; sourceTree = "<group>"; };
+		F47C7135180DF8F9008579A3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F47C7137181724E2008579A3 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = SGCC.xcworkspace/Article.h; sourceTree = "<group>"; };
+		F47C7138181724E2008579A3 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = SGCC.xcworkspace/Article.m; sourceTree = "<group>"; };
 		F4915F4717C4192E00071615 /* AboutUs.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = AboutUs.rtf; sourceTree = "<group>"; };
-		F4A76D0017D6D4D400C35084 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = SGCC/Article.h; sourceTree = "<group>"; };
-		F4A76D0117D6D4D400C35084 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = SGCC/Article.m; sourceTree = "<group>"; };
 		F4B121561804B26E0039BE7E /* Badger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Badger.h; sourceTree = "<group>"; };
 		F4B121571804B26E0039BE7E /* Badger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Badger.m; sourceTree = "<group>"; };
-		F4B1215A1804D0E50039BE7E /* SGCCDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SGCCDataModel.xcdatamodel; sourceTree = "<group>"; };
+		F4B1215A1804D0E50039BE7E /* SGCC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SGCC.xcdatamodel; sourceTree = "<group>"; };
 		F4B6050A17CD4C6400011355 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F4B6050C17CD597600011355 /* VisitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisitViewController.h; sourceTree = "<group>"; };
 		F4B6050D17CD597600011355 /* VisitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisitViewController.m; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47C7136180DF8F9008579A3 /* CoreData.framework in Frameworks */,
 				F4B6051217CD5D4500011355 /* CoreLocation.framework in Frameworks */,
 				F4B6051017CD5B9C00011355 /* MapKit.framework in Frameworks */,
 				663725A01724BD1F00ED4396 /* MessageUI.framework in Frameworks */,
@@ -131,6 +134,7 @@
 		6684F66816968C970052A9C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F47C7135180DF8F9008579A3 /* CoreData.framework */,
 				F4B6051117CD5D4500011355 /* CoreLocation.framework */,
 				F4B6050F17CD5B9C00011355 /* MapKit.framework */,
 				6637259F1724BD1F00ED4396 /* MessageUI.framework */,
@@ -198,9 +202,9 @@
 		F4A76CFF17D6D49F00C35084 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F4B121591804D0E50039BE7E /* SGCCDataModel.xcdatamodeld */,
-				F4A76D0017D6D4D400C35084 /* Article.h */,
-				F4A76D0117D6D4D400C35084 /* Article.m */,
+				F4B121591804D0E50039BE7E /* SGCC.xcdatamodeld */,
+				F47C7137181724E2008579A3 /* Article.h */,
+				F47C7138181724E2008579A3 /* Article.m */,
 			);
 			name = Models;
 			path = ..;
@@ -311,9 +315,9 @@
 				6684F67616968C980052A9C5 /* main.m in Sources */,
 				F40C13E517CD71DF00F4ED66 /* ArticlesDataSource.m in Sources */,
 				F45F39EF17F25A9A00668E4A /* ArticlesStore.m in Sources */,
-				F4A76D0217D6D4D400C35084 /* Article.m in Sources */,
 				F4B6050E17CD597600011355 /* VisitViewController.m in Sources */,
-				F4B1215B1804D0E50039BE7E /* SGCCDataModel.xcdatamodeld in Sources */,
+				F4B1215B1804D0E50039BE7E /* SGCC.xcdatamodeld in Sources */,
+				F47C7139181724E2008579A3 /* Article.m in Sources */,
 				F40C13E117CD6F4200F4ED66 /* ArticlesTableViewController.m in Sources */,
 				F4B121581804B26E0039BE7E /* Badger.m in Sources */,
 				6684F67A16968C980052A9C5 /* AppDelegate.m in Sources */,
@@ -453,13 +457,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F4B121591804D0E50039BE7E /* SGCCDataModel.xcdatamodeld */ = {
+		F4B121591804D0E50039BE7E /* SGCC.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F4B1215A1804D0E50039BE7E /* SGCCDataModel.xcdatamodel */,
+				F4B1215A1804D0E50039BE7E /* SGCC.xcdatamodel */,
 			);
-			currentVersion = F4B1215A1804D0E50039BE7E /* SGCCDataModel.xcdatamodel */;
-			path = SGCCDataModel.xcdatamodeld;
+			currentVersion = F4B1215A1804D0E50039BE7E /* SGCC.xcdatamodel */;
+			path = SGCC.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

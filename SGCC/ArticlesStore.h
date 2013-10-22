@@ -6,6 +6,6 @@
 
 +(ArticlesStore *)sharedStore;
 -(id)objectAtIndexedSubscript:(NSUInteger)index;
--(void)getArticles;
+-(void)updateArticlesFromWeb;
 
 @end

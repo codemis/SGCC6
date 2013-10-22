@@ -163,7 +163,7 @@
                 <customObject id="SQ3-a1-20S" customClass="TabBarControllerDelegate"/>
                 <customObject id="2RT-r3-p1U" customClass="Badger">
                     <connections>
-                        <outlet property="tabBarController" destination="4" id="w87-Tv-hWd"/>
+                        <outlet property="tabBar" destination="5" id="aay-TI-56g"/>
                     </connections>
                 </customObject>
             </objects>

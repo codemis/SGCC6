@@ -3,8 +3,51 @@
 
 @implementation AppDelegate
 
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize managedObjectModel = _managedObjectModel;
+@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
+#pragma mark - Core Data
+-(NSManagedObjectContext *) managedObjectContext {
+    if (_managedObjectContext != nil) return _managedObjectContext; //FIXME: ?
+    NSPersistentStoreCoordinator *coordinator = self.persistentStoreCoordinator;
+    if (coordinator != nil) { //FIXME: if (coordinator) ?
+        _managedObjectContext = NSManagedObjectContext.new;
+        _managedObjectContext.persistentStoreCoordinator = coordinator;
+    }
+    return _managedObjectContext;
+}
+-(NSManagedObjectModel *)managedObjectModel {
+    if (_managedObjectModel != nil) return _managedObjectModel;
+    _managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+    return _managedObjectModel;
+}
+-(NSPersistentStoreCoordinator *)persistentStoreCoordinator {
+    if (_persistentStoreCoordinator != nil) return _persistentStoreCoordinator;
+    NSURL *storeUrl =
+      [NSURL fileURLWithPath: [[self applicationDocumentsDirectory]
+                               stringByAppendingPathComponent: @"SGCC.sqlite"]];
+    NSError *error = nil;
+    _persistentStoreCoordinator =
+      [[NSPersistentStoreCoordinator alloc]
+       initWithManagedObjectModel:[self managedObjectModel]];
+    if(![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
+                                                  configuration:nil
+                                                            URL:storeUrl
+                                                        options:nil
+                                                          error:&error]) {
+        NSLog(@"PSC error: %@",error.localizedDescription);
+    }
+    return _persistentStoreCoordinator;
+}
+-(NSString *)applicationDocumentsDirectory {
+    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                NSUserDomainMask,
+                                                YES) lastObject];
+}
+#pragma mark - ApplicationDelegate protocol
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[ArticlesStore sharedStore] getArticles];
+    [ArticlesStore sharedStore];
     return YES;
 }
 -(void)applicationWillResignActive:(UIApplication *)application {
