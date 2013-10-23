@@ -21,9 +21,9 @@
 }
 -(void)getArticles {
     NSFetchRequest *request = NSFetchRequest.new;
-    [request setEntity:[NSEntityDescription entityForName:@"Article"
-                                   inManagedObjectContext:self.managedObjectContext]];
-    request.includesPropertyValues = NO;
+    request.entity =
+      [NSEntityDescription entityForName:@"Article"
+                  inManagedObjectContext:self.managedObjectContext];
     NSError *error;
     self.articles = [self.managedObjectContext executeFetchRequest:request
                                                              error:&error];
@@ -74,11 +74,14 @@
 }
 -(BOOL)articleExists:(NSString *)id {
     NSFetchRequest *request = NSFetchRequest.new;
-    request.entity = [NSEntityDescription entityForName:@"Article"
-                                 inManagedObjectContext:self.managedObjectContext];
-    request.predicate = [NSPredicate predicateWithFormat:@"supplierId == %@",id];
+    request.entity =
+      [NSEntityDescription entityForName:@"Article"
+                  inManagedObjectContext:self.managedObjectContext];
+    request.predicate =
+      [NSPredicate predicateWithFormat:@"supplierId == %@",id];
     NSError *error;
-    NSUInteger count = [self.managedObjectContext countForFetchRequest:request error:&error];
+    NSUInteger count =
+      [self.managedObjectContext countForFetchRequest:request error:&error];
     if (error) {
         NSLog(@"countForFetchRequest failed!");
         return NO;
@@ -87,9 +90,11 @@
 -(void)addArticle:(NSDictionary *)rawArticle {
     NSDateFormatter *dateFormatter = NSDateFormatter.new;
     dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-    Article *article = [NSEntityDescription insertNewObjectForEntityForName:@"Article"
-                                                     inManagedObjectContext:self.managedObjectContext];
-    article.supplierId = [NSNumber numberWithInteger:[rawArticle[@"id"] integerValue]];
+    Article *article = [NSEntityDescription
+                        insertNewObjectForEntityForName:@"Article"
+                        inManagedObjectContext:self.managedObjectContext];
+    article.supplierId =
+      [NSNumber numberWithInteger:[rawArticle[@"id"] integerValue]];
     article.title = rawArticle[@"title"];
     article.author = rawArticle[@"author"];
     article.content = rawArticle[@"content"];

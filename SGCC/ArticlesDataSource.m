@@ -3,6 +3,8 @@
 
 @interface ArticlesDataSource () <UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet NSDateFormatter *displayDate;
+
 @end
 
 @implementation ArticlesDataSource
