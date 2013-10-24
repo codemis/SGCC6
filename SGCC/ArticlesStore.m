@@ -8,34 +8,30 @@
 
 @property(nonatomic,weak)NSManagedObjectContext *managedObjectContext;
 @property(nonatomic)NSArray *articles;
+@property(nonatomic)NSDateFormatter *sqlDateFormatter;
+@property(nonatomic)NSFetchRequest *request;
 
 @end
 @implementation ArticlesStore
-+(ArticlesStore *)sharedStore {
+
++(ArticlesStore *)sharedStore { //FIXME: instancetype?
     static ArticlesStore *__instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        __instance = ArticlesStore.new;
+        __instance = ArticlesStore.new; //FIXME: self.new?
     });
     return __instance;
 }
--(void)getArticles {
-    NSFetchRequest *request = NSFetchRequest.new;
-    request.entity =
-      [NSEntityDescription entityForName:@"Article"
-                  inManagedObjectContext:self.managedObjectContext];
-    NSError *error;
-    self.articles = [self.managedObjectContext executeFetchRequest:request
-                                                             error:&error];
-    if (error) {
-        NSLog(@"Unable to fetch Articles: %@",error.localizedDescription);
-    }
-}
-
 -(id)init {
     if (![super init]) return nil;
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     self.managedObjectContext = appDelegate.managedObjectContext;
+    self.request = NSFetchRequest.new;
+    self.request.entity =
+      [NSEntityDescription entityForName:@"Article"
+                  inManagedObjectContext:self.managedObjectContext];
+    self.sqlDateFormatter = NSDateFormatter.new;
+    self.sqlDateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
     [self updateArticlesFromWeb]; //TODO: Only if network is reachable
     return self;
 }
@@ -44,6 +40,15 @@
 }
 -(id)objectAtIndexedSubscript:(NSUInteger)index {
     return self.articles[index];
+}
+-(void)getArticles { //TODO: Ever used?
+    NSError *error;
+    self.request.predicate = nil;
+    self.articles = [self.managedObjectContext executeFetchRequest:self.request
+                                                             error:&error];
+    if (error) {
+        NSLog(@"Unable to fetch Articles: %@",error.localizedDescription);
+    }
 }
 -(void)updateArticlesFromWeb {
     AFHTTPRequestOperationManager *manager =
@@ -68,38 +73,34 @@
              [self getArticles];
          }
          failure:^(AFHTTPRequestOperation *operation,NSError *error) {
-             NSLog(@"Error: %@",error.localizedDescription);
+             NSLog(@"Get %@ failed: %@",ARTICLES_URL,error.localizedDescription);
              NSLog(@"Failure :-(");
          }];
 }
 -(BOOL)articleExists:(NSString *)id {
-    NSFetchRequest *request = NSFetchRequest.new;
-    request.entity =
-      [NSEntityDescription entityForName:@"Article"
-                  inManagedObjectContext:self.managedObjectContext];
-    request.predicate =
+    self.request.predicate =
       [NSPredicate predicateWithFormat:@"supplierId == %@",id];
     NSError *error;
     NSUInteger count =
-      [self.managedObjectContext countForFetchRequest:request error:&error];
+      [self.managedObjectContext countForFetchRequest:self.request
+                                                error:&error];
     if (error) {
         NSLog(@"countForFetchRequest failed!");
         return NO;
     } else return count > 0 ? YES : NO;
 }
 -(void)addArticle:(NSDictionary *)rawArticle {
-    NSDateFormatter *dateFormatter = NSDateFormatter.new;
-    dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
     Article *article = [NSEntityDescription
                         insertNewObjectForEntityForName:@"Article"
                         inManagedObjectContext:self.managedObjectContext];
-    article.supplierId =
-      [NSNumber numberWithInteger:[rawArticle[@"id"] integerValue]];
+    article.supplierId = @([rawArticle[@"id"] integerValue]);
+//      [NSNumber numberWithInteger:[rawArticle[@"id"] integerValue]];
     article.title = rawArticle[@"title"];
     article.author = rawArticle[@"author"];
     article.content = rawArticle[@"content"];
     article.summary = rawArticle[@"excerpt"];
-    article.publishedOn = [dateFormatter dateFromString:rawArticle[@"date"]];
+    article.publishedOn =
+      [self.sqlDateFormatter dateFromString:rawArticle[@"date"]];
     article.urlString = rawArticle[@"permalink"];
     NSError *error;
     if (![self.managedObjectContext save:&error]) {

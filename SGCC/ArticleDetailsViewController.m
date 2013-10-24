@@ -4,8 +4,8 @@
 
 @property(weak,nonatomic)IBOutlet UILabel *author;
 @property(weak,nonatomic)IBOutlet UILabel *date;
-@property(weak,nonatomic)IBOutlet UITextView *content;
-@property(strong,nonatomic)IBOutlet NSDateFormatter *dateToStringFormatter;
+@property(weak,nonatomic)IBOutlet UIWebView *content;
+@property(nonatomic)IBOutlet NSDateFormatter *mmmmdyyyyFormatter;
 
 @end
 
@@ -16,9 +16,7 @@
     self.title = self.article.title;
     self.author.text = self.article.author;
     self.date.text =
-      [self.dateToStringFormatter stringFromDate:self.article.publishedOn];
-
-    self.content.text = self.article.content;
+      [self.mmmmdyyyyFormatter stringFromDate:self.article.publishedOn];
+    [self.content loadHTMLString:self.article.content baseURL:nil];
 }
-
 @end
