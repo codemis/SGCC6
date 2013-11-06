@@ -7,11 +7,11 @@
 @interface ArticlesStore ()
 
 @property(nonatomic,weak)NSManagedObjectContext *managedObjectContext;
-@property(nonatomic)NSArray *articles;
 @property(nonatomic)NSDateFormatter *sqlDateFormatter;
 @property(nonatomic)NSFetchRequest *request;
 
 @end
+
 @implementation ArticlesStore
 
 +(ArticlesStore *)sharedStore { //FIXME: instancetype?
@@ -23,8 +23,8 @@
     return __instance;
 }
 -(id)init {
-    if (![super init]) return nil;
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    if (!super.init) return nil;
+    AppDelegate *appDelegate = UIApplication.sharedApplication.delegate;
     self.managedObjectContext = appDelegate.managedObjectContext;
     self.request = NSFetchRequest.new;
     self.request.entity =
@@ -35,25 +35,10 @@
     [self updateArticlesFromWeb]; //TODO: Only if network is reachable
     return self;
 }
--(NSUInteger)count {
-    return self.articles.count;
-}
--(id)objectAtIndexedSubscript:(NSUInteger)index {
-    return self.articles[index];
-}
--(void)getArticles { //TODO: Ever used?
-    NSError *error;
-    self.request.predicate = nil;
-    self.articles = [self.managedObjectContext executeFetchRequest:self.request
-                                                             error:&error];
-    if (error) {
-        NSLog(@"Unable to fetch Articles: %@",error.localizedDescription);
-    }
-}
 -(void)updateArticlesFromWeb {
     AFHTTPRequestOperationManager *manager =
-    [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+      AFHTTPRequestOperationManager.manager;
+    manager.responseSerializer = AFJSONResponseSerializer.serializer;
     [manager GET:ARTICLES_URL
       parameters:nil
          success:^(AFHTTPRequestOperation *operation,id responseObject) {
@@ -63,14 +48,15 @@
                     [self addArticle:rawArticle];
                     newArticleCount++;
                 }
-             if (newArticleCount > 0)
-                [[NSNotificationCenter defaultCenter]
-                 postNotificationName:@"shouldUpdateBadgeValue"
-                 object:nil
-                 userInfo:@{@"itemTitle":@"Articles",
-                            @"badgeValue":[NSString stringWithFormat:@"%i",
-                                           newArticleCount]}];
-             [self getArticles];
+             if (newArticleCount > 0) {
+                 [NSFetchedResultsController deleteCacheWithName:@"Articles"];
+                 [NSNotificationCenter.defaultCenter
+                   postNotificationName:@"shouldUpdateBadgeValue"
+                   object:nil
+                   userInfo:@{@"itemTitle":@"Articles",
+                              @"badgeValue":[NSString stringWithFormat:@"%i",
+                                            newArticleCount]}];
+             }
          }
          failure:^(AFHTTPRequestOperation *operation,NSError *error) {
              NSLog(@"Get %@ failed: %@",ARTICLES_URL,error.localizedDescription);
@@ -94,7 +80,6 @@
                         insertNewObjectForEntityForName:@"Article"
                         inManagedObjectContext:self.managedObjectContext];
     article.supplierId = @([rawArticle[@"id"] integerValue]);
-//      [NSNumber numberWithInteger:[rawArticle[@"id"] integerValue]];
     article.title = rawArticle[@"title"];
     article.author = rawArticle[@"author"];
     article.content = rawArticle[@"content"];
@@ -104,7 +89,7 @@
     article.urlString = rawArticle[@"permalink"];
     NSError *error;
     if (![self.managedObjectContext save:&error]) {
-        NSLog(@"Whoops, couldn't save: %@",error.localizedDescription);
+        NSLog(@"Whoops, couldn't save Article: %@",error.localizedDescription);
     }
 }
 @end

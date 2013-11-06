@@ -1,19 +1,20 @@
 #import "ArticlesTableViewController.h"
 #import "ArticleDetailsViewController.h"
-#import "ArticlesStore.h"
+#import "ArticlesDataSource.h"
 #import "Article.h"
 
 @implementation ArticlesTableViewController
 -(void)viewDidLoad {
     [super viewDidLoad];
-    [self.tableView reloadData];
+    [(ArticlesDataSource *)self.tableView.dataSource fetchArticles];
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"articleDetailsSegue"]) {
         ArticleDetailsViewController *destinationVC =
           segue.destinationViewController;
-        int row = self.tableView.indexPathForSelectedRow.row;
-        destinationVC.article = [ArticlesStore sharedStore][row];
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        destinationVC.article =
+          [(ArticlesDataSource *)self.tableView.dataSource articleForIndexPath:indexPath];
     }
 }
 @end

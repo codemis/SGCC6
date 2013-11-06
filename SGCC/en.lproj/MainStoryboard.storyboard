@@ -323,7 +323,11 @@
                     <navigationItem key="navigationItem" title="Articles" id="WD8-hb-WJK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BpU-vh-3ji" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="iRL-0l-h8W" customClass="ArticlesDataSource"/>
+                <customObject id="iRL-0l-h8W" customClass="ArticlesDataSource">
+                    <connections>
+                        <outlet property="tableView" destination="xMe-Dp-Ir5" id="Dof-ak-Nor"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="642" y="1106"/>
         </scene>
@@ -369,11 +373,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="401"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <webView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" allowsInlineMediaPlayback="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1u-Vo-onc">
+                                                <webView contentMode="scaleToFill" fixedFrame="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1u-Vo-onc">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                    <dataDetectorType key="dataDetectorTypes"/>
                                                 </webView>
                                             </subviews>
                                         </tableViewCellContentView>

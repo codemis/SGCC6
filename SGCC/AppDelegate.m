@@ -1,6 +1,14 @@
 #import "AppDelegate.h"
 #import "ArticlesStore.h"
 
+@interface AppDelegate()
+
+@property(nonatomic,readonly)NSManagedObjectModel *managedObjectModel;
+@property(nonatomic,readonly)
+  NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+@end
+
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -9,33 +17,31 @@
 
 #pragma mark - Core Data
 -(NSManagedObjectContext *) managedObjectContext {
-    if (_managedObjectContext != nil) return _managedObjectContext; //FIXME: ?
+    if (_managedObjectContext) return _managedObjectContext;
     NSPersistentStoreCoordinator *coordinator = self.persistentStoreCoordinator;
-    if (coordinator != nil) { //FIXME: if (coordinator) ?
+    if (coordinator) {
         _managedObjectContext = NSManagedObjectContext.new;
         _managedObjectContext.persistentStoreCoordinator = coordinator;
     }
     return _managedObjectContext;
 }
 -(NSManagedObjectModel *)managedObjectModel {
-    if (_managedObjectModel != nil) return _managedObjectModel;
+    if (_managedObjectModel) return _managedObjectModel;
     _managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
     return _managedObjectModel;
 }
 -(NSPersistentStoreCoordinator *)persistentStoreCoordinator {
-    if (_persistentStoreCoordinator != nil) return _persistentStoreCoordinator;
+    if (_persistentStoreCoordinator) return _persistentStoreCoordinator;
     NSURL *storeUrl =
-      [NSURL fileURLWithPath: [[self applicationDocumentsDirectory]
+      [NSURL fileURLWithPath: [self.applicationDocumentsDirectory
                                stringByAppendingPathComponent: @"SGCC.sqlite"]];
     NSError *error = nil;
     _persistentStoreCoordinator =
-      [[NSPersistentStoreCoordinator alloc]
-       initWithManagedObjectModel:[self managedObjectModel]];
-    if(![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
-                                                  configuration:nil
-                                                            URL:storeUrl
-                                                        options:nil
-                                                          error:&error]) {
+      [NSPersistentStoreCoordinator.alloc
+        initWithManagedObjectModel:self.managedObjectModel];
+    if(![_persistentStoreCoordinator
+          addPersistentStoreWithType:NSSQLiteStoreType configuration:nil
+                                 URL:storeUrl options:nil error:&error]) {
         NSLog(@"PSC error: %@",error.localizedDescription);
     }
     return _persistentStoreCoordinator;
@@ -46,7 +52,8 @@
                                                 YES) lastObject];
 }
 #pragma mark - ApplicationDelegate protocol
--(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+-(BOOL)           application:(UIApplication *)application
+didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [ArticlesStore sharedStore];
     return YES;
 }
