@@ -9,6 +9,7 @@
 @property(nonatomic,weak)NSManagedObjectContext *managedObjectContext;
 @property(nonatomic)NSDateFormatter *sqlDateFormatter;
 @property(nonatomic)NSFetchRequest *request;
+@property(nonatomic)AppDelegate *appDelegate;
 
 @end
 
@@ -24,8 +25,8 @@
 }
 -(id)init {
     if (!super.init) return nil;
-    AppDelegate *appDelegate = UIApplication.sharedApplication.delegate;
-    self.managedObjectContext = appDelegate.managedObjectContext;
+    self.appDelegate = UIApplication.sharedApplication.delegate;
+    self.managedObjectContext = self.appDelegate.managedObjectContext;
     self.request = NSFetchRequest.new;
     self.request.entity =
       [NSEntityDescription entityForName:@"Article"
@@ -36,6 +37,10 @@
     return self;
 }
 -(void)updateArticlesFromWeb {
+    if (!self.appDelegate.networkReachable) {
+        NSLog(@"In updateArticlesFromWeb: Network not reachable :-(");
+        return;
+    }
     AFHTTPRequestOperationManager *manager =
       AFHTTPRequestOperationManager.manager;
     manager.responseSerializer = AFJSONResponseSerializer.serializer;

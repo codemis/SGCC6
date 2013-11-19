@@ -1,11 +1,13 @@
 #import "AppDelegate.h"
 #import "ArticlesStore.h"
+#import <AFNetworkReachabilityManager.h>
 
 @interface AppDelegate()
 
 @property(nonatomic,readonly)NSManagedObjectModel *managedObjectModel;
 @property(nonatomic,readonly)
   NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property(nonatomic,readwrite)BOOL networkReachable;
 
 @end
 
@@ -54,8 +56,23 @@
 #pragma mark - ApplicationDelegate protocol
 -(BOOL)           application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    AFNetworkReachabilityManager *manager =
+      AFNetworkReachabilityManager.sharedManager;
+    [manager startMonitoring];
+    self.networkReachable = manager.reachable;
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(updateNetworkReachability:)
+     name:AFNetworkingReachabilityDidChangeNotification
+     object:nil];
     [ArticlesStore sharedStore];
     return YES;
+}
+-(void)updateNetworkReachability:(NSNotification *)notification {
+    NSNumber *status = (NSNumber *)notification.userInfo[AFNetworkingReachabilityNotificationStatusItem];
+    NSLog(@"AFNetworkReachabilityStatus %@",status);
+    self.networkReachable = status > 0 ? YES : NO;
 }
 -(void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -73,6 +90,9 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 }
 -(void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

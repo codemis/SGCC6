@@ -1,6 +1,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property(strong,nonatomic)UIWindow *window;
+@property(nonatomic)UIWindow *window;
 @property(nonatomic,readonly)NSManagedObjectContext *managedObjectContext;
+@property(nonatomic,readonly)BOOL networkReachable;
 
 @end
