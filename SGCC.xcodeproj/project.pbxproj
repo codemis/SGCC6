@@ -422,6 +422,7 @@
 				INFOPLIST_FILE = "SGCC/SGCC-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
+					"-ObjC",
 					"-framework",
 					CoreGraphics,
 					"-framework",
@@ -430,8 +431,6 @@
 					Security,
 					"-framework",
 					SystemConfiguration,
-					"-force_load",
-					"$(TARGET_BUILD_DIR)/libPods.a",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -449,6 +448,7 @@
 				INFOPLIST_FILE = "SGCC/SGCC-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
+					"-ObjC",
 					"-framework",
 					CoreGraphics,
 					"-framework",
@@ -457,8 +457,6 @@
 					Security,
 					"-framework",
 					SystemConfiguration,
-					"-force_load",
-					"$(TARGET_BUILD_DIR)/libPods.a",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
