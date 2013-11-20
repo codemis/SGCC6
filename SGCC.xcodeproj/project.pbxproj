@@ -422,7 +422,6 @@
 				INFOPLIST_FILE = "SGCC/SGCC-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
-					"-ObjC",
 					"-framework",
 					CoreGraphics,
 					"-framework",
@@ -450,7 +449,6 @@
 				INFOPLIST_FILE = "SGCC/SGCC-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
-					"-ObjC",
 					"-framework",
 					CoreGraphics,
 					"-framework",
