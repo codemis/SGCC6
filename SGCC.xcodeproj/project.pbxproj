@@ -435,6 +435,7 @@
 					SystemConfiguration,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1DE324A7-5549-4175-840C-FB65F2F7A626";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -461,6 +462,7 @@
 					SystemConfiguration,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1DE324A7-5549-4175-840C-FB65F2F7A626";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
