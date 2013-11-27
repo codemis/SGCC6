@@ -70,7 +70,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     return YES;
 }
 -(void)updateNetworkReachability:(NSNotification *)notification {
-    NSNumber *status = (NSNumber *)notification.userInfo[AFNetworkingReachabilityNotificationStatusItem];
+    NSNumber *status = (NSNumber *)notification.userInfo
+      [AFNetworkingReachabilityNotificationStatusItem];
     NSLog(@"AFNetworkReachabilityStatus %@",status);
     self.networkReachable = status > 0 ? YES : NO;
 }
