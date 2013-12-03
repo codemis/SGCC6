@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13B27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13B35" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
@@ -73,7 +73,7 @@
                                     <action selector="contactButtonClicked:" destination="2" eventType="touchUpInside" id="Ikq-W1-aY8"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Church" translatesAutoresizingMaskIntoConstraints="NO" id="fLG-hk-oQH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Church" translatesAutoresizingMaskIntoConstraints="NO" id="fLG-hk-oQH">
                                 <rect key="frame" x="20" y="101" width="280" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -82,7 +82,6 @@
                         <constraints>
                             <constraint firstItem="MYw-l6-gfw" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" id="0Yu-EI-5Pj"/>
                             <constraint firstItem="MYw-l6-gfw" firstAttribute="centerY" secondItem="16" secondAttribute="centerY" id="8zj-lk-uXb"/>
-                            <constraint firstItem="MYw-l6-gfw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="16" secondAttribute="top" constant="81" id="AKd-UJ-LMB"/>
                             <constraint firstItem="2bd-BJ-w90" firstAttribute="top" secondItem="ZCW-do-m6i" secondAttribute="bottom" constant="10" id="GBt-3q-3fn"/>
                             <constraint firstItem="ZCW-do-m6i" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" id="MBy-Wg-B4j"/>
                             <constraint firstItem="2bd-BJ-w90" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" id="SAb-l1-6FP"/>
@@ -92,6 +91,7 @@
                             <constraint firstAttribute="trailing" secondItem="paM-qG-XP2" secondAttribute="trailing" constant="20" symbolic="YES" id="dS2-DX-Ogi"/>
                             <constraint firstItem="paM-qG-XP2" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" id="eJW-A3-UEW"/>
                             <constraint firstItem="SBg-wS-3uq" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" id="fRw-aa-hpB"/>
+                            <constraint firstItem="MYw-l6-gfw" firstAttribute="top" secondItem="fLG-hk-oQH" secondAttribute="bottom" constant="8" id="nYF-9U-PeL"/>
                             <constraint firstItem="SBg-wS-3uq" firstAttribute="top" secondItem="16" secondAttribute="top" constant="20" symbolic="YES" id="qKe-9k-XVy"/>
                             <constraint firstAttribute="trailing" secondItem="ZCW-do-m6i" secondAttribute="trailing" constant="20" symbolic="YES" id="saU-22-Gvd"/>
                             <constraint firstItem="paM-qG-XP2" firstAttribute="top" secondItem="MYw-l6-gfw" secondAttribute="bottom" constant="10" id="t2d-l6-jFf"/>
@@ -440,6 +440,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="LVA-kX-WVj"/>
+        <segue reference="5Zd-Se-dGg"/>
     </inferredMetricsTieBreakers>
 </document>
