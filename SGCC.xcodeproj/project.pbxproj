@@ -21,6 +21,7 @@
 		7199BF7DC8A240819885BC13 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 745F0A26D2904F9285583EE4 /* libPods.a */; };
 		F40C13E117CD6F4200F4ED66 /* ArticlesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40C13E017CD6F4200F4ED66 /* ArticlesTableViewController.m */; };
 		F40C13E517CD71DF00F4ED66 /* ArticlesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F40C13E417CD71DF00F4ED66 /* ArticlesDataSource.m */; };
+		F42266B2184E93A300DD93BA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F42266B1184E93A300DD93BA /* SystemConfiguration.framework */; };
 		F454934017BAEBC3007CA94D /* TabBarControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F454933F17BAEBC3007CA94D /* TabBarControllerDelegate.m */; };
 		F45F39EF17F25A9A00668E4A /* ArticlesStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F45F39EE17F25A9A00668E4A /* ArticlesStore.m */; };
 		F47C7136180DF8F9008579A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47C7135180DF8F9008579A3 /* CoreData.framework */; };
@@ -60,6 +61,7 @@
 		F40C13E017CD6F4200F4ED66 /* ArticlesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticlesTableViewController.m; sourceTree = "<group>"; };
 		F40C13E317CD71DF00F4ED66 /* ArticlesDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticlesDataSource.h; path = SGCC/ArticlesDataSource.h; sourceTree = "<group>"; };
 		F40C13E417CD71DF00F4ED66 /* ArticlesDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticlesDataSource.m; path = SGCC/ArticlesDataSource.m; sourceTree = "<group>"; };
+		F42266B1184E93A300DD93BA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F454933E17BAEBC3007CA94D /* TabBarControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarControllerDelegate.h; sourceTree = "<group>"; };
 		F454933F17BAEBC3007CA94D /* TabBarControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarControllerDelegate.m; sourceTree = "<group>"; };
 		F45F39ED17F25A9A00668E4A /* ArticlesStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticlesStore.h; path = SGCC/ArticlesStore.h; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F42266B2184E93A300DD93BA /* SystemConfiguration.framework in Frameworks */,
 				F47C7136180DF8F9008579A3 /* CoreData.framework in Frameworks */,
 				F4B6051217CD5D4500011355 /* CoreLocation.framework in Frameworks */,
 				F4B6051017CD5B9C00011355 /* MapKit.framework in Frameworks */,
@@ -139,6 +142,7 @@
 		6684F66816968C970052A9C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F42266B1184E93A300DD93BA /* SystemConfiguration.framework */,
 				F47C7135180DF8F9008579A3 /* CoreData.framework */,
 				F4B6051117CD5D4500011355 /* CoreLocation.framework */,
 				F4B6050F17CD5B9C00011355 /* MapKit.framework */,

@@ -18,7 +18,7 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 #pragma mark - Core Data
--(NSManagedObjectContext *) managedObjectContext {
+-(NSManagedObjectContext *)managedObjectContext {
     if (_managedObjectContext) return _managedObjectContext;
     NSPersistentStoreCoordinator *coordinator = self.persistentStoreCoordinator;
     if (coordinator) {
@@ -56,16 +56,15 @@
 #pragma mark - ApplicationDelegate protocol
 -(BOOL)           application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
     AFNetworkReachabilityManager *manager =
       AFNetworkReachabilityManager.sharedManager;
     [manager startMonitoring];
     self.networkReachable = manager.reachable;
-    [[NSNotificationCenter defaultCenter]
-     addObserver:self
-     selector:@selector(updateNetworkReachability:)
-     name:AFNetworkingReachabilityDidChangeNotification
-     object:nil];
+    [NSNotificationCenter.defaultCenter
+      addObserver:self
+      selector:@selector(updateNetworkReachability:)
+      name:AFNetworkingReachabilityDidChangeNotification
+      object:nil];
     [ArticlesStore sharedStore];
     return YES;
 }
@@ -90,10 +89,10 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 -(void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    // Called when the application is about to terminate.
+    // Save data if appropriate. See also applicationDidEnterBackground:.
 }
 -(void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-
 @end
