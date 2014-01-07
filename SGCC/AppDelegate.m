@@ -66,6 +66,11 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
       name:AFNetworkingReachabilityDidChangeNotification
       object:nil];
     [ArticlesStore sharedStore];
+    [Parse setApplicationId:@"JPjs1lOtFvyV0mqvbQ4l6dhJMzl63ZkoUv3BY7ax"
+                  clientKey:@"9GOYWAsKIqMkn58NXbGU3lJ5TPCFyMv95LbrmGjq"];
+    [application registerForRemoteNotificationTypes:
+     (UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge |
+      UIRemoteNotificationTypeSound)];
     return YES;
 }
 -(void)updateNetworkReachability:(NSNotification *)notification {
@@ -94,5 +99,16 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 }
 -(void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+#pragma mark - Parse delegate
+-(void)                              application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    PFInstallation *currentInstallation = PFInstallation.currentInstallation;
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+-(void)          application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
 }
 @end

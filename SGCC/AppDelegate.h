@@ -1,3 +1,5 @@
+#import <Parse/Parse.h>
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property(nonatomic)UIWindow *window;
