@@ -1,4 +1,5 @@
 #import <Parse/Parse.h>
+#import "TestFlight.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

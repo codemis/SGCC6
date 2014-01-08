@@ -32,6 +32,9 @@
 		F4786EA3187CC16D0021308A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4786EA2187CC16D0021308A /* QuartzCore.framework */; };
 		F4786EA5187CC1770021308A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4786EA4187CC1760021308A /* Security.framework */; };
 		F4786EA7187CC1800021308A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4786EA6187CC1800021308A /* StoreKit.framework */; };
+		F4786EB3187CD0630021308A /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4786EAD187CD0630021308A /* libTestFlight.a */; };
+		F4786EB4187CD0630021308A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F4786EAE187CD0630021308A /* README.md */; };
+		F4786EB5187CD0630021308A /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = F4786EAF187CD0630021308A /* release_notes.md */; };
 		F47C7136180DF8F9008579A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47C7135180DF8F9008579A3 /* CoreData.framework */; };
 		F47C7139181724E2008579A3 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = F47C7138181724E2008579A3 /* Article.m */; };
 		F4915F4817C4192E00071615 /* AboutUs.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F4915F4717C4192E00071615 /* AboutUs.rtf */; };
@@ -84,6 +87,12 @@
 		F4786EA6187CC1800021308A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F4786EA8187CC4660021308A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F4786EAA187CC4800021308A /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		F4786EAD187CD0630021308A /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		F4786EAE187CD0630021308A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		F4786EAF187CD0630021308A /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		F4786EB0187CD0630021308A /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		F4786EB1187CD0630021308A /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		F4786EB2187CD0630021308A /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		F47C7135180DF8F9008579A3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F47C7137181724E2008579A3 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = SGCC.xcworkspace/Article.h; sourceTree = "<group>"; };
 		F47C7138181724E2008579A3 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = SGCC.xcworkspace/Article.m; sourceTree = "<group>"; };
@@ -115,6 +124,7 @@
 				F4786E9D187CC1360021308A /* CFNetwork.framework in Frameworks */,
 				F4786E9B187CC12C0021308A /* AudioToolbox.framework in Frameworks */,
 				F42266B2184E93A300DD93BA /* SystemConfiguration.framework in Frameworks */,
+				F4786EB3187CD0630021308A /* libTestFlight.a in Frameworks */,
 				F47C7136180DF8F9008579A3 /* CoreData.framework in Frameworks */,
 				F4B6051217CD5D4500011355 /* CoreLocation.framework in Frameworks */,
 				F4B6051017CD5B9C00011355 /* MapKit.framework in Frameworks */,
@@ -150,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				6684F6A7169691C00052A9C5 /* README.md */,
+				F4786EAC187CD0630021308A /* TestFlightSDK2.0.2 */,
 				6684F66F16968C980052A9C5 /* SGCC */,
 				6684F66816968C970052A9C5 /* Frameworks */,
 				6684F66716968C970052A9C5 /* Products */,
@@ -244,6 +255,19 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		F4786EAC187CD0630021308A /* TestFlightSDK2.0.2 */ = {
+			isa = PBXGroup;
+			children = (
+				F4786EAD187CD0630021308A /* libTestFlight.a */,
+				F4786EAE187CD0630021308A /* README.md */,
+				F4786EAF187CD0630021308A /* release_notes.md */,
+				F4786EB0187CD0630021308A /* TestFlight+AsyncLogging.h */,
+				F4786EB1187CD0630021308A /* TestFlight+ManualSessions.h */,
+				F4786EB2187CD0630021308A /* TestFlight.h */,
+			);
+			path = TestFlightSDK2.0.2;
+			sourceTree = "<group>";
+		};
 		F4A76CFF17D6D49F00C35084 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,9 +332,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4786EB5187CD0630021308A /* release_notes.md in Resources */,
 				6684F67416968C980052A9C5 /* InfoPlist.strings in Resources */,
 				6684F68316968C980052A9C5 /* MainStoryboard.storyboard in Resources */,
 				F4915F4817C4192E00071615 /* AboutUs.rtf in Resources */,
+				F4786EB4187CD0630021308A /* README.md in Resources */,
 				6684F6A8169691C00052A9C5 /* README.md in Resources */,
 				F4B6050B17CD4C6400011355 /* Images.xcassets in Resources */,
 				F4E5932916CC298F0057F22D /* WhatWeBelieve.html in Resources */,
@@ -467,6 +493,10 @@
 				GCC_PREFIX_HEADER = "SGCC/SGCC-Prefix.pch";
 				INFOPLIST_FILE = "SGCC/SGCC-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestFlightSDK2.0.2",
+				);
 				OTHER_LDFLAGS = (
 					"-framework",
 					CoreGraphics,
@@ -498,6 +528,10 @@
 				GCC_PREFIX_HEADER = "SGCC/SGCC-Prefix.pch";
 				INFOPLIST_FILE = "SGCC/SGCC-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestFlightSDK2.0.2",
+				);
 				OTHER_LDFLAGS = (
 					"-framework",
 					CoreGraphics,
