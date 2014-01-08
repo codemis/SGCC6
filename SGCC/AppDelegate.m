@@ -72,6 +72,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
      (UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge |
       UIRemoteNotificationTypeSound)];
     [TestFlight takeOff:@"c7092e73-4699-4963-a07c-c25bb7e20153"];
+    TFLog(@"application:didFinishLaunchingWithOptions:");
     return YES;
 }
 -(void)updateNetworkReachability:(NSNotification *)notification {
@@ -121,7 +122,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 }
 -(void)          application:(UIApplication *)application
 didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    TFLog(@"application:didReceiveRemoteNotification");
+    TFLog(@"application:didReceiveRemoteNotification:");
     [PFPush handlePush:userInfo];
 }
 @end
