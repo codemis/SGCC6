@@ -2,7 +2,7 @@
 #import "AppDelegate.h"
 #import <AFNetworking.h>
 
-#define ARTICLES_URL @"http://431e6d07.ngrok.com/?feed=json"
+#define ARTICLES_URL @"http://366d6b90.ngrok.com/?feed=json"
 
 @interface ArticlesStore ()
 
@@ -39,7 +39,7 @@
 -(void)updateArticlesFromWeb {
     if (!self.appDelegate.networkReachable) {
         NSLog(@"In updateArticlesFromWeb: Network not reachable :-(");
-        return;
+//        return;
     }
     AFHTTPRequestOperationManager *manager =
       AFHTTPRequestOperationManager.manager;
