@@ -80,8 +80,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
       [AFNetworkingReachabilityNotificationStatusItem];
     NSLog(@"AFNetworkReachabilityStatus %@",status);
     self.networkReachable = status > 0 ? YES : NO;
-}
--(void)applicationWillResignActive:(UIApplication *)application {
+}-(void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state.
     // This can occur for certain types of temporary interruptions (such as an
     // incoming phone call or SMS message) or when the user quits the
@@ -109,6 +108,12 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 -(void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate.
     // Save data if appropriate. See also applicationDidEnterBackground:.
+}
+-(void)          application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo
+      fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    self.silentRemoteNotificationCompletionHandler = completionHandler;
+    [ArticlesStore.sharedStore updateArticlesFromWeb];
 }
 -(void)dealloc {
     [NSNotificationCenter.defaultCenter removeObserver:self];

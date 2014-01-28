@@ -309,6 +309,15 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Johnathan Pulos";
+				TargetAttributes = {
+					6684F66516968C970052A9C5 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = 6684F66116968C970052A9C5 /* Build configuration list for PBXProject "SGCC" */;
 			compatibilityVersion = "Xcode 3.2";

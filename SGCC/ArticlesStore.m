@@ -2,7 +2,7 @@
 #import "AppDelegate.h"
 #import <AFNetworking.h>
 
-#define ARTICLES_URL @"http://sgucblog.com/feed/json"
+#define ARTICLES_URL @"http://431e6d07.ngrok.com/?feed=json"
 
 @interface ArticlesStore ()
 
