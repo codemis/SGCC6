@@ -113,6 +113,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 didReceiveRemoteNotification:(NSDictionary *)userInfo
       fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     self.silentRemoteNotificationCompletionHandler = completionHandler;
+    TFLog(@"application:didReceiveRemoteNotification:fetchCompletionHandler:");
     [ArticlesStore.sharedStore updateArticlesFromWeb];
 }
 -(void)dealloc {
