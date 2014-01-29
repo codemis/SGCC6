@@ -104,6 +104,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Restart any tasks that were paused (or not yet started) while the
     // application was inactive. If the application was previously in the
     // background, optionally refresh the user interface.
+    TFLog(@"applicationDidBecomeActive:");
 }
 -(void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate.
@@ -125,10 +126,5 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     PFInstallation *currentInstallation = PFInstallation.currentInstallation;
     [currentInstallation setDeviceTokenFromData:deviceToken];
     [currentInstallation saveInBackground];
-}
--(void)          application:(UIApplication *)application
-didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    TFLog(@"application:didReceiveRemoteNotification:");
-    [PFPush handlePush:userInfo];
 }
 @end
