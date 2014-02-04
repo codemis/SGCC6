@@ -10,6 +10,13 @@
 @end
 
 @implementation ArticleDetailsViewController
+- (IBAction)shareButtonClicked:(id)sender {
+    UIActivityViewController *activityVC =
+    [[UIActivityViewController alloc]
+     initWithActivityItems:@[[NSURL URLWithString:self.article.urlString]]
+     applicationActivities:nil];
+    [self presentViewController:activityVC animated:YES completion:nil];
+}
 
 -(void)viewDidLoad {
     [super viewDidLoad];
