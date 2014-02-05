@@ -18,6 +18,8 @@
 		6684F68316968C980052A9C5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6684F68116968C980052A9C5 /* MainStoryboard.storyboard */; };
 		6684F68616968C980052A9C5 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6684F68516968C980052A9C5 /* WelcomeViewController.m */; };
 		6684F6A8169691C00052A9C5 /* SGCC-README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6684F6A7169691C00052A9C5 /* SGCC-README.md */; };
+		668F5BB618A1B94100045494 /* SermonsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 668F5BB518A1B94100045494 /* SermonsTableViewController.m */; };
+		668F5BB918A1BD7700045494 /* Sermon.m in Sources */ = {isa = PBXBuildFile; fileRef = 668F5BB818A1BD7700045494 /* Sermon.m */; };
 		7199BF7DC8A240819885BC13 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 745F0A26D2904F9285583EE4 /* libPods.a */; };
 		F40C13E117CD6F4200F4ED66 /* ArticlesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40C13E017CD6F4200F4ED66 /* ArticlesTableViewController.m */; };
 		F40C13E517CD71DF00F4ED66 /* ArticlesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F40C13E417CD71DF00F4ED66 /* ArticlesDataSource.m */; };
@@ -67,6 +69,10 @@
 		6684F68416968C980052A9C5 /* WelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		6684F68516968C980052A9C5 /* WelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		6684F6A7169691C00052A9C5 /* SGCC-README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SGCC-README.md"; sourceTree = "<group>"; };
+		668F5BB418A1B94100045494 /* SermonsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SermonsTableViewController.h; sourceTree = "<group>"; };
+		668F5BB518A1B94100045494 /* SermonsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SermonsTableViewController.m; sourceTree = "<group>"; };
+		668F5BB718A1BD7700045494 /* Sermon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sermon.h; sourceTree = "<group>"; };
+		668F5BB818A1BD7700045494 /* Sermon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sermon.m; sourceTree = "<group>"; };
 		745F0A26D2904F9285583EE4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40C13DF17CD6F4200F4ED66 /* ArticlesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticlesTableViewController.h; sourceTree = "<group>"; };
 		F40C13E017CD6F4200F4ED66 /* ArticlesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticlesTableViewController.m; sourceTree = "<group>"; };
@@ -152,6 +158,8 @@
 				6684F68516968C980052A9C5 /* WelcomeViewController.m */,
 				662ED47416B259EE00CBDBDA /* WebsiteViewController.h */,
 				662ED47516B259EE00CBDBDA /* WebsiteViewController.m */,
+				668F5BB418A1B94100045494 /* SermonsTableViewController.h */,
+				668F5BB518A1B94100045494 /* SermonsTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -272,6 +280,8 @@
 			isa = PBXGroup;
 			children = (
 				F4B121591804D0E50039BE7E /* SGCC.xcdatamodeld */,
+				668F5BB718A1BD7700045494 /* Sermon.h */,
+				668F5BB818A1BD7700045494 /* Sermon.m */,
 				F47C7137181724E2008579A3 /* Article.h */,
 				F47C7138181724E2008579A3 /* Article.m */,
 			);
@@ -404,7 +414,9 @@
 				6684F67A16968C980052A9C5 /* AppDelegate.m in Sources */,
 				6684F68616968C980052A9C5 /* WelcomeViewController.m in Sources */,
 				662ED47616B259EE00CBDBDA /* WebsiteViewController.m in Sources */,
+				668F5BB918A1BD7700045494 /* Sermon.m in Sources */,
 				F454934017BAEBC3007CA94D /* TabBarControllerDelegate.m in Sources */,
+				668F5BB618A1B94100045494 /* SermonsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
