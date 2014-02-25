@@ -1,4 +1,7 @@
 #import "SermonsTableViewController.h"
+#import "SermonsDataSource.h"
+#import "Sermon.h"
+
 @interface SermonsTableViewController ()
 @end
 

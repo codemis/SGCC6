@@ -21,6 +21,7 @@
 		668F5BB618A1B94100045494 /* SermonsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 668F5BB518A1B94100045494 /* SermonsTableViewController.m */; };
 		668F5BB918A1BD7700045494 /* Sermon.m in Sources */ = {isa = PBXBuildFile; fileRef = 668F5BB818A1BD7700045494 /* Sermon.m */; };
 		668F5BBC18A1BDF400045494 /* SermonsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 668F5BBB18A1BDF300045494 /* SermonsStore.m */; };
+		66C833F418BD4D5900501530 /* SermonsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C833F318BD4D5900501530 /* SermonsDataSource.m */; };
 		7199BF7DC8A240819885BC13 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 745F0A26D2904F9285583EE4 /* libPods.a */; };
 		F40C13E117CD6F4200F4ED66 /* ArticlesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40C13E017CD6F4200F4ED66 /* ArticlesTableViewController.m */; };
 		F40C13E517CD71DF00F4ED66 /* ArticlesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F40C13E417CD71DF00F4ED66 /* ArticlesDataSource.m */; };
@@ -76,6 +77,8 @@
 		668F5BB818A1BD7700045494 /* Sermon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sermon.m; sourceTree = "<group>"; };
 		668F5BBA18A1BDF300045494 /* SermonsStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SermonsStore.h; sourceTree = "<group>"; };
 		668F5BBB18A1BDF300045494 /* SermonsStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SermonsStore.m; sourceTree = "<group>"; };
+		66C833F218BD4D5800501530 /* SermonsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SermonsDataSource.h; sourceTree = "<group>"; };
+		66C833F318BD4D5900501530 /* SermonsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SermonsDataSource.m; sourceTree = "<group>"; };
 		745F0A26D2904F9285583EE4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40C13DF17CD6F4200F4ED66 /* ArticlesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticlesTableViewController.h; sourceTree = "<group>"; };
 		F40C13E017CD6F4200F4ED66 /* ArticlesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticlesTableViewController.m; sourceTree = "<group>"; };
@@ -251,6 +254,8 @@
 			children = (
 				F40C13E317CD71DF00F4ED66 /* ArticlesDataSource.h */,
 				F40C13E417CD71DF00F4ED66 /* ArticlesDataSource.m */,
+				66C833F218BD4D5800501530 /* SermonsDataSource.h */,
+				66C833F318BD4D5900501530 /* SermonsDataSource.m */,
 			);
 			name = "Data Sources";
 			path = ..;
@@ -421,6 +426,7 @@
 				662ED47616B259EE00CBDBDA /* WebsiteViewController.m in Sources */,
 				668F5BB918A1BD7700045494 /* Sermon.m in Sources */,
 				668F5BBC18A1BDF400045494 /* SermonsStore.m in Sources */,
+				66C833F418BD4D5900501530 /* SermonsDataSource.m in Sources */,
 				F454934017BAEBC3007CA94D /* TabBarControllerDelegate.m in Sources */,
 				668F5BB618A1B94100045494 /* SermonsTableViewController.m in Sources */,
 			);

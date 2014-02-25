@@ -367,13 +367,18 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="1O1-dz-Jjz" id="X8i-tA-yKx"/>
+                            <outlet property="dataSource" destination="w2v-Hc-Waa" id="HHu-dQ-hez"/>
                             <outlet property="delegate" destination="1O1-dz-Jjz" id="euJ-iY-I55"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Sermons" id="LUs-Kv-fiM"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3b-d0-g2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="w2v-Hc-Waa" customClass="SermonsDataSource">
+                    <connections>
+                        <outlet property="tableView" destination="lwV-5v-V9A" id="Fbj-b2-qJU"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="642" y="1820"/>
         </scene>
@@ -481,6 +486,7 @@
         <!--Navigation Controller - Sermons-->
         <scene sceneID="wgM-5T-GOT">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lrR-pk-mij" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="19N-UC-Nq5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Sermons" image="sermons" id="Ajv-1A-NpQ"/>
                     <toolbarItems/>
@@ -493,7 +499,6 @@
                         <segue destination="1O1-dz-Jjz" kind="relationship" relationship="rootViewController" id="t0T-1h-5G8"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lrR-pk-mij" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="116" y="1820"/>
         </scene>
