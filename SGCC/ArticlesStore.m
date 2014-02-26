@@ -70,7 +70,7 @@
 }
 -(BOOL)articleExists:(NSString *)id {
     self.request.predicate =
-      [NSPredicate predicateWithFormat:@"supplierId == %@",id];
+      [NSPredicate predicateWithFormat:@"supplierID == %@",id];
     NSError *error;
     NSUInteger count =
       [self.managedObjectContext countForFetchRequest:self.request
@@ -84,7 +84,7 @@
     Article *article = [NSEntityDescription
                         insertNewObjectForEntityForName:@"Article"
                         inManagedObjectContext:self.managedObjectContext];
-    article.supplierId = @([rawArticle[@"id"] integerValue]);
+    article.supplierID = @([rawArticle[@"id"] integerValue]);
     article.title = rawArticle[@"title"];
     article.author = rawArticle[@"author"];
     article.content = rawArticle[@"content"];

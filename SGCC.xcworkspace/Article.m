@@ -6,7 +6,7 @@
 @dynamic content;
 @dynamic publishedOn;
 @dynamic summary;
-@dynamic supplierId;
+@dynamic supplierID;
 @dynamic title;
 @dynamic urlString;
 
