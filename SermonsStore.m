@@ -1,7 +1,8 @@
 #import "SermonsStore.h"
 #import "AppDelegate.h"
+#import <AFNetworking.h>
 
-#define SERMONS_URL @"http://sgucandcs.org/podcast.php?pageID=38"
+#define SERMONS_URL @"http://189cd99c.ngrok.com/podcast.php"
 @interface SermonsStore ()
 
 @property(nonatomic,weak)NSManagedObjectContext *managedObjectContext;
@@ -35,11 +36,36 @@
     return self;
 }
 -(void)updateSermonsFromWeb {
-    
+    AFHTTPRequestOperationManager *manager = AFHTTPRequestOperationManager.manager;
+    manager.responseSerializer = AFJSONResponseSerializer.serializer;
+    [manager GET:SERMONS_URL
+      parameters:nil
+         success:^(AFHTTPRequestOperation *operation,id responseObject) {
+             int newSermonCount = 0;
+             for (NSDictionary *rawSermon in responseObject)
+                 if (![self sermonExists:rawSermon[@"id"]]) {
+                     [self addSermon:rawSermon];
+                     newSermonCount++;
+                 }
+             if (newSermonCount > 0) {
+                 [NSFetchedResultsController deleteCacheWithName:@"Sermons"];
+                 [NSNotificationCenter.defaultCenter
+                  postNotificationName:@"shouldUpdateBadgeValue"
+                  object:nil
+                  userInfo:@{@"itemTitle":@"Sermons",
+                             @"badgeValue":[NSString stringWithFormat:@"%i",
+                                            newSermonCount]}];
+             }
+         }
+         failure:^(AFHTTPRequestOperation *operation,NSError *error) {
+             NSLog(@"Get %@ failed: %@",SERMONS_URL,error.localizedDescription);
+             NSLog(@"Failure :-(");
+         }
+     ];
 }
 -(BOOL)sermonExists:(NSString *)id {
     self.request.predicate =
-    [NSPredicate predicateWithFormat:@"supplierId == %@",id];
+    [NSPredicate predicateWithFormat:@"supplierID == %@",id];
     NSError *error;
     NSUInteger count =
     [self.managedObjectContext countForFetchRequest:self.request
@@ -55,10 +81,10 @@
     sermon.supplierID = @([rawSermon[@"id"] integerValue]);
     sermon.title = rawSermon[@"title"];
     sermon.author = rawSermon[@"author"];
-    sermon.summary = rawSermon[@"excerpt"];
+    sermon.summary = rawSermon[@"summary"];
     sermon.publishedOn =
-    [self.sqlDateFormatter dateFromString:rawSermon[@"date"]];
-    sermon.remoteUrlString = rawSermon[@"permalink"];
+    [self.sqlDateFormatter dateFromString:rawSermon[@"publishedOn"]];
+    sermon.remoteUrlString = rawSermon[@"url"];
     NSError *error;
     if (![self.managedObjectContext save:&error]) {
         NSLog(@"Whoops, couldn't save Sermon: %@",error.localizedDescription);

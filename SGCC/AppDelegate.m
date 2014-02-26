@@ -1,5 +1,6 @@
 #import "AppDelegate.h"
 #import "ArticlesStore.h"
+#import "SermonsStore.h"
 #import <AFNetworkReachabilityManager.h>
 
 @interface AppDelegate()
@@ -66,6 +67,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
       name:AFNetworkingReachabilityDidChangeNotification
       object:nil];
     [ArticlesStore sharedStore];
+    [SermonsStore sharedStore];
     [Parse setApplicationId:@"JPjs1lOtFvyV0mqvbQ4l6dhJMzl63ZkoUv3BY7ax"
                   clientKey:@"9GOYWAsKIqMkn58NXbGU3lJ5TPCFyMv95LbrmGjq"];
     [application registerForRemoteNotificationTypes:
