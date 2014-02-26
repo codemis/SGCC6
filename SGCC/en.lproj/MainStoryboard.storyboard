@@ -332,10 +332,10 @@
             </objects>
             <point key="canvasLocation" x="642" y="1106"/>
         </scene>
-        <!--Table View Controller - Sermons-->
+        <!--Sermons Table View Controller - Sermons-->
         <scene sceneID="js6-sA-02E">
             <objects>
-                <tableViewController id="1O1-dz-Jjz" sceneMemberID="viewController">
+                <tableViewController id="1O1-dz-Jjz" customClass="SermonsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lwV-5v-V9A">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -486,7 +486,6 @@
         <!--Navigation Controller - Sermons-->
         <scene sceneID="wgM-5T-GOT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lrR-pk-mij" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="19N-UC-Nq5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Sermons" image="sermons" id="Ajv-1A-NpQ"/>
                     <toolbarItems/>
@@ -499,6 +498,7 @@
                         <segue destination="1O1-dz-Jjz" kind="relationship" relationship="rootViewController" id="t0T-1h-5G8"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lrR-pk-mij" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="116" y="1820"/>
         </scene>

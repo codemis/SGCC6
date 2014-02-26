@@ -31,7 +31,9 @@
     [NSEntityDescription entityForName:@"Sermon"
                 inManagedObjectContext:self.managedObjectContext];
     self.sqlDateFormatter = NSDateFormatter.new;
-    self.sqlDateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    //Sun, 16 Feb 2014 12:00:00 -0800
+    //2014-02-04 23:04:33
+    self.sqlDateFormatter.dateFormat = @"EEE, dd MMM YYYY HH:mm:ss Z";
     [self updateSermonsFromWeb]; //TODO: Only if network is reachable
     return self;
 }

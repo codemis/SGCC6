@@ -3,6 +3,6 @@
 @interface SermonsDataSource : NSObject
 
 -(void)fetchSermons;
--(Sermon *)sermonAtIndexPath:(NSIndexPath *) indexPath;
+-(Sermon *)sermonForIndexPath:(NSIndexPath *) indexPath;
 
 @end

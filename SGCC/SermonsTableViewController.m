@@ -10,6 +10,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [(SermonsDataSource *)self.tableView.dataSource fetchSermons];
 }
 
 @end
