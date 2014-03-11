@@ -65,10 +65,15 @@ numberOfRowsInSection:(NSInteger)section {
          atIndexPath:(NSIndexPath *)indexPath {
     Sermon *sermon = [self sermonForIndexPath:indexPath];
     cell.textLabel.text = sermon.title;
-    NSString *detailText =
-    [NSString stringWithFormat:@"%@: %@",
-     [self.mdyyyyFormatter stringFromDate:sermon.publishedOn],
-     sermon.summary];
+    NSString *detailText;
+    if (sermon.summary.length > 0) {
+        detailText =
+        [NSString stringWithFormat:@"%@: %@",
+         [self.mdyyyyFormatter stringFromDate:sermon.publishedOn],
+         sermon.summary];
+    } else {
+        detailText = [self.mdyyyyFormatter stringFromDate:sermon.publishedOn];
+    }
     cell.detailTextLabel.text = detailText;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView

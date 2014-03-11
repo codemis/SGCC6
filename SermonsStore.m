@@ -2,7 +2,7 @@
 #import "AppDelegate.h"
 #import <AFNetworking.h>
 
-#define SERMONS_URL @"http://189cd99c.ngrok.com/podcast.php"
+#define SERMONS_URL @"http://2047102b.ngrok.com/podcast.php"
 @interface SermonsStore ()
 
 @property(nonatomic,weak)NSManagedObjectContext *managedObjectContext;
@@ -33,7 +33,7 @@
     self.sqlDateFormatter = NSDateFormatter.new;
     //Sun, 16 Feb 2014 12:00:00 -0800
     //2014-02-04 23:04:33
-    self.sqlDateFormatter.dateFormat = @"EEE, dd MMM YYYY HH:mm:ss Z";
+    self.sqlDateFormatter.dateFormat = @"EEE, d MMM yyyy HH:mm:ss Z";
     [self updateSermonsFromWeb]; //TODO: Only if network is reachable
     return self;
 }
@@ -84,8 +84,7 @@
     sermon.title = rawSermon[@"title"];
     sermon.author = rawSermon[@"author"];
     sermon.summary = rawSermon[@"summary"];
-    sermon.publishedOn =
-    [self.sqlDateFormatter dateFromString:rawSermon[@"publishedOn"]];
+    sermon.publishedOn = [self.sqlDateFormatter dateFromString:rawSermon[@"publishedOn"]];
     sermon.remoteUrlString = rawSermon[@"url"];
     NSError *error;
     if (![self.managedObjectContext save:&error]) {
