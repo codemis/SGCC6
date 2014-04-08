@@ -90,7 +90,5 @@
     if (![self.managedObjectContext save:&error]) {
         NSLog(@"Whoops, couldn't save Sermon: %@",error.localizedDescription);
     }
-
-    
 }
 @end

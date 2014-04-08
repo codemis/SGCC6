@@ -49,8 +49,7 @@
     }
 }
 
--(Sermon *)sermonForIndexPath:(NSIndexPath *)
-    indexPath {
+-(Sermon *)sermonForIndexPath:(NSIndexPath *)indexPath {
     return [self.fetchedResultsController objectAtIndexPath:indexPath];
 }
 
