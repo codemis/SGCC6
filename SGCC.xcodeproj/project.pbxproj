@@ -42,6 +42,10 @@
 		F47C7136180DF8F9008579A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47C7135180DF8F9008579A3 /* CoreData.framework */; };
 		F47C7139181724E2008579A3 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = F47C7138181724E2008579A3 /* Article.m */; };
 		F4915F4817C4192E00071615 /* AboutUs.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F4915F4717C4192E00071615 /* AboutUs.rtf */; };
+		F4A2960718F47B8E00D781FE /* AudioPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A2960618F47B8E00D781FE /* AudioPlayerViewController.m */; };
+		F4A2960918F49E7B00D781FE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A2960818F49E7B00D781FE /* AVFoundation.framework */; };
+		F4A2960B18F49F0500D781FE /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A2960A18F49F0500D781FE /* CoreMedia.framework */; };
+		F4A2960D18F4A0E400D781FE /* code_monkey.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4A2960C18F4A0E400D781FE /* code_monkey.mp3 */; };
 		F4B121581804B26E0039BE7E /* Badger.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B121571804B26E0039BE7E /* Badger.m */; };
 		F4B1215B1804D0E50039BE7E /* SGCC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4B121591804D0E50039BE7E /* SGCC.xcdatamodeld */; };
 		F4B6050B17CD4C6400011355 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4B6050A17CD4C6400011355 /* Images.xcassets */; };
@@ -109,6 +113,11 @@
 		F47C7137181724E2008579A3 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = SGCC.xcworkspace/Article.h; sourceTree = "<group>"; };
 		F47C7138181724E2008579A3 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = SGCC.xcworkspace/Article.m; sourceTree = "<group>"; };
 		F4915F4717C4192E00071615 /* AboutUs.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = AboutUs.rtf; sourceTree = "<group>"; };
+		F4A2960518F47B8E00D781FE /* AudioPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioPlayerViewController.h; path = ../../ZGMusicPlayer/ZGMusicPlayer/AudioPlayerViewController.h; sourceTree = "<group>"; };
+		F4A2960618F47B8E00D781FE /* AudioPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioPlayerViewController.m; path = ../../ZGMusicPlayer/ZGMusicPlayer/AudioPlayerViewController.m; sourceTree = "<group>"; };
+		F4A2960818F49E7B00D781FE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F4A2960A18F49F0500D781FE /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		F4A2960C18F4A0E400D781FE /* code_monkey.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = code_monkey.mp3; path = ../../ZGMusicPlayer/ZGMusicPlayer/code_monkey.mp3; sourceTree = "<group>"; };
 		F4B121561804B26E0039BE7E /* Badger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Badger.h; sourceTree = "<group>"; };
 		F4B121571804B26E0039BE7E /* Badger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Badger.m; sourceTree = "<group>"; };
 		F4B1215A1804D0E50039BE7E /* SGCC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SGCC.xcdatamodel; sourceTree = "<group>"; };
@@ -127,6 +136,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A2960B18F49F0500D781FE /* CoreMedia.framework in Frameworks */,
+				F4A2960918F49E7B00D781FE /* AVFoundation.framework in Frameworks */,
 				F4786EA7187CC1800021308A /* StoreKit.framework in Frameworks */,
 				F4786EA5187CC1770021308A /* Security.framework in Frameworks */,
 				F4786EA3187CC16D0021308A /* QuartzCore.framework in Frameworks */,
@@ -154,6 +165,8 @@
 		6616DAB916B4A04900413D45 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F4A2960518F47B8E00D781FE /* AudioPlayerViewController.h */,
+				F4A2960618F47B8E00D781FE /* AudioPlayerViewController.m */,
 				F4F6A89418173F780090855D /* ArticleDetailsViewController.h */,
 				F4F6A89518173F780090855D /* ArticleDetailsViewController.m */,
 				F40C13DF17CD6F4200F4ED66 /* ArticlesTableViewController.h */,
@@ -193,6 +206,8 @@
 		6684F66816968C970052A9C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4A2960A18F49F0500D781FE /* CoreMedia.framework */,
+				F4A2960818F49E7B00D781FE /* AVFoundation.framework */,
 				F4786EAA187CC4800021308A /* Accounts.framework */,
 				F4786EA8187CC4660021308A /* Social.framework */,
 				F4786EA6187CC1800021308A /* StoreKit.framework */,
@@ -219,6 +234,7 @@
 		6684F66F16968C980052A9C5 /* SGCC */ = {
 			isa = PBXGroup;
 			children = (
+				F4A2960E18F4A15700D781FE /* Audio Files */,
 				F4A76CFF17D6D49F00C35084 /* Models */,
 				F45F39EC17F25A5800668E4A /* Stores */,
 				F40C13E217CD71AA00F4ED66 /* Data Sources */,
@@ -284,6 +300,14 @@
 				F4786EBC187CD9470021308A /* TestFlight.h */,
 			);
 			path = TestFlightSDK2.2.0;
+			sourceTree = "<group>";
+		};
+		F4A2960E18F4A15700D781FE /* Audio Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4A2960C18F4A0E400D781FE /* code_monkey.mp3 */,
+			);
+			name = "Audio Files";
 			sourceTree = "<group>";
 		};
 		F4A76CFF17D6D49F00C35084 /* Models */ = {
@@ -366,6 +390,7 @@
 				6684F68316968C980052A9C5 /* MainStoryboard.storyboard in Resources */,
 				F4915F4817C4192E00071615 /* AboutUs.rtf in Resources */,
 				F4786EBE187CD9470021308A /* README.md in Resources */,
+				F4A2960D18F4A0E400D781FE /* code_monkey.mp3 in Resources */,
 				6684F6A8169691C00052A9C5 /* SGCC-README.md in Resources */,
 				F4B6050B17CD4C6400011355 /* Images.xcassets in Resources */,
 				F4E5932916CC298F0057F22D /* WhatWeBelieve.html in Resources */,
@@ -426,6 +451,7 @@
 				662ED47616B259EE00CBDBDA /* WebsiteViewController.m in Sources */,
 				668F5BB918A1BD7700045494 /* Sermon.m in Sources */,
 				668F5BBC18A1BDF400045494 /* SermonsStore.m in Sources */,
+				F4A2960718F47B8E00D781FE /* AudioPlayerViewController.m in Sources */,
 				66C833F418BD4D5900501530 /* SermonsDataSource.m in Sources */,
 				F454934017BAEBC3007CA94D /* TabBarControllerDelegate.m in Sources */,
 				668F5BB618A1B94100045494 /* SermonsTableViewController.m in Sources */,

@@ -2,7 +2,7 @@
 #import "AppDelegate.h"
 #import <AFNetworking.h>
 
-#define SERMONS_URL @"http://2047102b.ngrok.com/podcast.php"
+#define SERMONS_URL @"http://1ac275bb.ngrok.com/podcast.php"
 @interface SermonsStore ()
 
 @property(nonatomic,weak)NSManagedObjectContext *managedObjectContext;
