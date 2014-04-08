@@ -1,6 +1,6 @@
 # SGCC iPhone App
 
-This is the iOS 7 version of the [SGCC](https://itunes.apple.com/us/app/sgcc/id449459787?mt=8) app.  This is currently under development.
+This is the iOS 7 version of the [SGCC](https://itunes.apple.com/us/app/sgcc/id449459787?mt=8) app. Under development.
 
 Note: JSON must NOT be cached!
 
