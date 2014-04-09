@@ -73,6 +73,12 @@ numberOfRowsInSection:(NSInteger)section {
     } else {
         detailText = [self.mdyyyyFormatter stringFromDate:sermon.publishedOn];
     }
+    //TODO: We need to implement this in Storyboard
+    UIImageView *accessoryImageView = [[UIImageView alloc]
+                                       initWithFrame:CGRectMake(0, 0, 25.0, 25.0)];
+    accessoryImageView.image = [UIImage imageNamed:@"download.png"];
+    cell.accessoryView = accessoryImageView;
+    
     cell.detailTextLabel.text = detailText;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView
