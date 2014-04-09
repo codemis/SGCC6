@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="SBg-wS-3uq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="SBg-wS-3uq">
                                 <rect key="frame" x="20" y="20" width="280" height="61"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYw-l6-gfw">

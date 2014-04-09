@@ -1,7 +1,7 @@
 #import "AudioPlayerViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #define STREAM_URL @"http://sgucandcs.org/podcast_item/38/268/2014.1.12.mp3"
-#define FILE_URL @"code_monkey"
+#define FILE_URL @"code_monkey.mp3"
 
 @interface AudioPlayerViewController ()
 @property(nonatomic,retain)AVPlayer *audioPlayer;
@@ -57,7 +57,9 @@
 }
 -(void)viewDidLoad {
     [super viewDidLoad];
-    NSURL *audioFileLocationURL =
+    NSURL *audioFileLocationURL = self.sermon.localUrlString ?
+      [NSBundle.mainBundle URLForResource:self.sermon.localUrlString
+                            withExtension:nil] :
       [NSURL URLWithString:self.sermon.remoteUrlString];
     self.title = self.sermon.title;
     self.audioPlayer = [AVPlayer playerWithURL:audioFileLocationURL];
