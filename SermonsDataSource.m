@@ -74,12 +74,18 @@ numberOfRowsInSection:(NSInteger)section {
         detailText = [self.mdyyyyFormatter stringFromDate:sermon.publishedOn];
     }
     //TODO: We need to implement this in Storyboard
-    UIImageView *accessoryImageView = [[UIImageView alloc]
-                                       initWithFrame:CGRectMake(0, 0, 25.0, 25.0)];
-    accessoryImageView.image = [UIImage imageNamed:@"download.png"];
-    cell.accessoryView = accessoryImageView;
-    
+    UIButton *accessoryButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    accessoryButton.frame = CGRectMake(0, 0, 25.0, 25.0);
+    [accessoryButton setBackgroundImage:[UIImage imageNamed:@"download.png"]
+                               forState:UIControlStateNormal];
+    [accessoryButton addTarget:self
+                        action:@selector(beginDownload:)
+              forControlEvents:UIControlEventTouchUpInside];
+    cell.accessoryView = accessoryButton;
     cell.detailTextLabel.text = detailText;
+}
+-(void)beginDownload:(UIButton *)sender {
+    
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView
         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
