@@ -1,5 +1,6 @@
 #import "SermonsDataSource.h"
 #import "AppDelegate.h"
+#import "DownloadCell.h"
 
 @interface SermonsDataSource ()
     <UITableViewDataSource, NSFetchedResultsControllerDelegate>
@@ -7,7 +8,7 @@
 @property(nonatomic)NSDateFormatter *mdyyyyFormatter;
 @property(nonatomic,weak)NSManagedObjectContext *managedObjectContext;
 @property(nonatomic)NSFetchedResultsController *fetchedResultsController;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property(weak,nonatomic)IBOutlet UITableView *tableView;
 
 @end
 
@@ -52,7 +53,6 @@
 -(Sermon *)sermonForIndexPath:(NSIndexPath *)indexPath {
     return [self.fetchedResultsController objectAtIndexPath:indexPath];
 }
-
 #pragma mark - Table view data source
 -(NSInteger)tableView:(UITableView *)tableView
 numberOfRowsInSection:(NSInteger)section {
@@ -60,10 +60,10 @@ numberOfRowsInSection:(NSInteger)section {
     self.fetchedResultsController.sections[section];
     return sectionInfo.numberOfObjects;
 }
--(void)configureCell:(UITableViewCell *)cell
+-(void)configureCell:(DownloadCell *)cell
          atIndexPath:(NSIndexPath *)indexPath {
     Sermon *sermon = [self sermonForIndexPath:indexPath];
-    cell.textLabel.text = sermon.title;
+    cell.titleLabel.text = sermon.title;
     NSString *detailText;
     if (sermon.summary.length > 0) {
         detailText =
@@ -73,23 +73,12 @@ numberOfRowsInSection:(NSInteger)section {
     } else {
         detailText = [self.mdyyyyFormatter stringFromDate:sermon.publishedOn];
     }
-    //TODO: We need to implement this in Storyboard
-    UIButton *accessoryButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    accessoryButton.frame = CGRectMake(0, 0, 25.0, 25.0);
-    [accessoryButton setBackgroundImage:[UIImage imageNamed:@"download.png"]
-                               forState:UIControlStateNormal];
-    [accessoryButton addTarget:self
-                        action:@selector(beginDownload:)
-              forControlEvents:UIControlEventTouchUpInside];
-    cell.accessoryView = accessoryButton;
-    cell.detailTextLabel.text = detailText;
-}
--(void)beginDownload:(UIButton *)sender {
-    
+    cell.subtitleLabel.text = detailText;
+    cell.tableView = self.tableView;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView
         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell =
+    DownloadCell *cell =
     [tableView dequeueReusableCellWithIdentifier:@"SermonCell"
                                     forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
@@ -115,7 +104,7 @@ numberOfRowsInSection:(NSInteger)section {
                              withRowAnimation:UITableViewRowAnimationFade];
             break;
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath]
+            [self configureCell:(DownloadCell *)[tableView cellForRowAtIndexPath:indexPath]
                     atIndexPath:indexPath];
             break;
         case NSFetchedResultsChangeMove:

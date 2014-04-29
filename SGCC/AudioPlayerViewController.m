@@ -22,7 +22,8 @@
     [self changePlayerTime:CMTimeMake((int)roundf(slider.value),1)];
 }
 -(IBAction)movePlayerTimeBackward {
-    CMTime newTime = CMTimeSubtract(self.audioPlayer.currentTime,CMTimeMake(15,1));
+    CMTime newTime = CMTimeSubtract(self.audioPlayer.currentTime,
+                                    CMTimeMake(15,1));
     [self changePlayerTime:newTime];
 }
 -(IBAction)movePlayerTimeForward {
@@ -37,7 +38,8 @@
     return CMTimeMake(CMTimeGetSeconds(time),1);
 }
 -(void)updatePlayerUIWithTime:(CMTime)time {
-    CMTime remainingTime = CMTimeSubtract(self.audioDuration,[self makeTimeScale1ForTime:time]);
+    CMTime remainingTime = CMTimeSubtract(self.audioDuration,
+                                          [self makeTimeScale1ForTime:time]);
     if (CMTimeGetSeconds(remainingTime) <= 0) {
         [self.playButton setBackgroundImage:[UIImage imageNamed:@"play.png"]
                                    forState:UIControlStateNormal];

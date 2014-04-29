@@ -41,6 +41,7 @@
 		F4786EBF187CD9470021308A /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = F4786EB9187CD9470021308A /* release_notes.md */; };
 		F47C7136180DF8F9008579A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47C7135180DF8F9008579A3 /* CoreData.framework */; };
 		F47C7139181724E2008579A3 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = F47C7138181724E2008579A3 /* Article.m */; };
+		F483EB1819072ECF0041D1D8 /* DownloadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F483EB1719072ECF0041D1D8 /* DownloadCell.m */; };
 		F4915F4817C4192E00071615 /* AboutUs.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F4915F4717C4192E00071615 /* AboutUs.rtf */; };
 		F4A2960918F49E7B00D781FE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A2960818F49E7B00D781FE /* AVFoundation.framework */; };
 		F4A2960B18F49F0500D781FE /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A2960A18F49F0500D781FE /* CoreMedia.framework */; };
@@ -112,6 +113,8 @@
 		F47C7135180DF8F9008579A3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F47C7137181724E2008579A3 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = SGCC.xcworkspace/Article.h; sourceTree = "<group>"; };
 		F47C7138181724E2008579A3 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = SGCC.xcworkspace/Article.m; sourceTree = "<group>"; };
+		F483EB1619072ECF0041D1D8 /* DownloadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadCell.h; sourceTree = "<group>"; };
+		F483EB1719072ECF0041D1D8 /* DownloadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadCell.m; sourceTree = "<group>"; };
 		F4915F4717C4192E00071615 /* AboutUs.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = AboutUs.rtf; sourceTree = "<group>"; };
 		F4A2960818F49E7B00D781FE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F4A2960A18F49F0500D781FE /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -234,6 +237,7 @@
 		6684F66F16968C980052A9C5 /* SGCC */ = {
 			isa = PBXGroup;
 			children = (
+				F483EB1519072E450041D1D8 /* Views */,
 				F4A2960E18F4A15700D781FE /* Audio Files */,
 				F4A76CFF17D6D49F00C35084 /* Models */,
 				F45F39EC17F25A5800668E4A /* Stores */,
@@ -300,6 +304,15 @@
 				F4786EBC187CD9470021308A /* TestFlight.h */,
 			);
 			path = TestFlightSDK2.2.0;
+			sourceTree = "<group>";
+		};
+		F483EB1519072E450041D1D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F483EB1619072ECF0041D1D8 /* DownloadCell.h */,
+				F483EB1719072ECF0041D1D8 /* DownloadCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		F4A2960E18F4A15700D781FE /* Audio Files */ = {
@@ -454,6 +467,7 @@
 				F4A2961118F4ABC500D781FE /* AudioPlayerViewController.m in Sources */,
 				66C833F418BD4D5900501530 /* SermonsDataSource.m in Sources */,
 				F454934017BAEBC3007CA94D /* TabBarControllerDelegate.m in Sources */,
+				F483EB1819072ECF0041D1D8 /* DownloadCell.m in Sources */,
 				668F5BB618A1B94100045494 /* SermonsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
