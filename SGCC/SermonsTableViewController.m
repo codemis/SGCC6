@@ -22,14 +22,31 @@ accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
     Sermon *sermon = [(SermonsDataSource *)self.tableView.dataSource sermonForIndexPath:indexPath];
     NSURL *URL = [NSURL URLWithString:sermon.remoteUrlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-    
-    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
-        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+    NSProgress *progress;
+    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request
+                                                                     progress:&progress
+                                                                  destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory
+                                                                              inDomain:NSUserDomainMask
+                                                                     appropriateForURL:nil create:NO error:nil];
         return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
     } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
         NSLog(@"File downloaded to: %@", filePath);
     }];
+    [progress addObserver:self
+               forKeyPath:@"fractionCompleted"
+                  options:NSKeyValueObservingOptionNew context:NULL];
     [downloadTask resume];
+}
+#pragma mark - Observers
+-(void)observeValueForKeyPath:(NSString *)keyPath
+                     ofObject:(id)object
+                       change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"fractionCompleted"] &&
+        [object isKindOfClass:[NSProgress class]]) {
+        NSProgress *progress = (NSProgress *)object;
+        NSLog(@"Progress is %f",progress.fractionCompleted);
+    }
 }
 #pragma mark - Segue
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
