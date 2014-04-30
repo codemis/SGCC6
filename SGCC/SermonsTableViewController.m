@@ -3,8 +3,11 @@
 #import "Sermon.h"
 #import "AudioPlayerViewController.h"
 #import <AFNetworking.h>
+#import "DownloadCell.h"
 
 @interface SermonsTableViewController () <UITableViewDelegate>
+@property(nonatomic)NSIndexPath *downloadIndexPath;
+@property(nonatomic)DownloadCell *downloadCell;
 @end
 
 @implementation SermonsTableViewController
@@ -25,7 +28,8 @@ accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
     NSProgress *progress;
     NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request
                                                                      progress:&progress
-                                                                  destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+                                                                  destination:
+        ^NSURL *(NSURL *targetPath, NSURLResponse *response) {
         NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory
                                                                               inDomain:NSUserDomainMask
                                                                      appropriateForURL:nil create:NO error:nil];
@@ -36,6 +40,7 @@ accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
     [progress addObserver:self
                forKeyPath:@"fractionCompleted"
                   options:NSKeyValueObservingOptionNew context:NULL];
+    self.downloadCell = (DownloadCell *)[self.tableView cellForRowAtIndexPath:indexPath];
     [downloadTask resume];
 }
 #pragma mark - Observers
@@ -46,6 +51,7 @@ accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
         [object isKindOfClass:[NSProgress class]]) {
         NSProgress *progress = (NSProgress *)object;
         NSLog(@"Progress is %f",progress.fractionCompleted);
+        [self.downloadCell updateProgressView:progress.fractionCompleted];
     }
 }
 #pragma mark - Segue

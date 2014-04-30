@@ -371,6 +371,10 @@
                                                 <action selector="downloadButtonTapped" destination="Oh4-az-Hd2" eventType="touchUpInside" id="x6q-Fd-q9J"/>
                                             </connections>
                                         </button>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xxK-As-UqJ">
+                                            <rect key="frame" x="0.0" y="21" width="320" height="2"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </progressView>
                                     </subviews>
                                     <attributedString key="userComments">
                                         <fragment content="Is this a note that we can save at this point?">
@@ -382,6 +386,7 @@
                                     </attributedString>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="progressView" destination="xxK-As-UqJ" id="VqL-l6-i0z"/>
                                     <outlet property="subtitleLabel" destination="32v-iz-GYc" id="YXu-p9-oBv"/>
                                     <outlet property="titleLabel" destination="vRX-wQ-QSA" id="SLf-CD-Ewz"/>
                                     <segue destination="gFY-1R-1GV" kind="push" id="v0A-uw-3u7"/>
