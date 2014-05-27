@@ -1,5 +1,6 @@
 #import "AudioPlayerViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface AudioPlayerViewController ()
 @property(nonatomic,retain)AVPlayer *audioPlayer;
