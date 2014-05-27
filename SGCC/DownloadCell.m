@@ -6,6 +6,6 @@
 accessoryButtonTappedForRowWithIndexPath:[self.tableView indexPathForCell:self]];
 }
 -(void)updateProgressView:(float)percentCompleted {
-    [self.progressView setProgress:percentCompleted animated:NO];
+    [self.progressView setProgress:percentCompleted animated:YES];
 }
 @end

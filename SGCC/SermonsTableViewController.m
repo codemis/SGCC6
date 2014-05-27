@@ -2,7 +2,6 @@
 #import "SermonsDataSource.h"
 #import "Sermon.h"
 #import "AudioPlayerViewController.h"
-#import <AFNetworking.h>
 #import "DownloadCell.h"
 
 @interface SermonsTableViewController () <UITableViewDelegate>
@@ -22,12 +21,15 @@
 accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    [manager setDidFinishEventsForBackgroundURLSessionBlock:^(NSURLSession *session) {
+        //TODO: invoke app delegate's background download completion handler
+    }];
     Sermon *sermon = [(SermonsDataSource *)self.tableView.dataSource sermonForIndexPath:indexPath];
     NSURL *URL = [NSURL URLWithString:sermon.remoteUrlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-    NSProgress *progress;
+//    NSProgress *progress;
     NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request
-                                                                     progress:&progress
+                                                                     progress:nil
                                                                   destination:
         ^NSURL *(NSURL *targetPath, NSURLResponse *response) {
         NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory
@@ -37,10 +39,12 @@ accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
     } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
         NSLog(@"File downloaded to: %@", filePath);
     }];
-    [progress addObserver:self
-               forKeyPath:@"fractionCompleted"
-                  options:NSKeyValueObservingOptionNew context:NULL];
+//    [progress addObserver:self
+//               forKeyPath:@"fractionCompleted"
+//                  options:NSKeyValueObservingOptionNew context:NULL];
     self.downloadCell = (DownloadCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    [self.downloadCell.progressView setProgressWithDownloadProgressOfTask:downloadTask
+                                                                 animated:YES];
     [downloadTask resume];
 }
 #pragma mark - Observers

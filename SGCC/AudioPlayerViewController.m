@@ -1,7 +1,5 @@
 #import "AudioPlayerViewController.h"
 #import <AVFoundation/AVFoundation.h>
-#define STREAM_URL @"http://sgucandcs.org/podcast_item/38/268/2014.1.12.mp3"
-#define FILE_URL @"code_monkey.mp3"
 
 @interface AudioPlayerViewController ()
 @property(nonatomic,retain)AVPlayer *audioPlayer;
@@ -14,7 +12,6 @@
 @property(weak,nonatomic)IBOutlet UISlider *timeSlider;
 @property(weak,nonatomic)IBOutlet UIButton *backwardButton;
 @property(weak,nonatomic)IBOutlet UIButton *forwardButton;
-@property(weak,nonatomic)IBOutlet UISlider *volumeSlider;
 @end
 
 @implementation AudioPlayerViewController
@@ -66,7 +63,6 @@
     self.title = self.sermon.title;
     self.audioPlayer = [AVPlayer playerWithURL:audioFileLocationURL];
     self.audioDuration = [self makeTimeScale1ForTime:self.audioPlayer.currentItem.asset.duration];
-    self.audioPlayer.volume = self.volumeSlider.value;
     self.remainingLabel.text = [self timeFormattedWith:self.audioDuration];
     self.timeSlider.maximumValue = CMTimeGetSeconds(self.audioDuration);
     self.isPlaying = NO;
